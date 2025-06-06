@@ -1,0 +1,36 @@
+name: Run WW3 Risk Model Hourly
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # every hour on the hour UTC
+  workflow_dispatch:      # allows manual runs from GitHub UI
+
+jobs:
+  run-model:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance feedparser
+
+      - name: Run risk model
+        run: python main.py
+
+      - name: Commit and push scores
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add scores.json errors.json
+          git commit -m "Update scores [CI]" || echo "No changes to commit"
+          git push

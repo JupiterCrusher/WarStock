@@ -59,7 +59,7 @@ def main():
         append_error("news_fetch_failed", str(e))
         news_score = scores[-1]["news_score"] if scores else 0.5
 
-    raw_score = round((0.6 * stock_score + 0.4 * news_score) * 100, 2)
+    raw_score = round(min((0.8 * stock_score + 0.2 * news_score) * 100, 100), 2)
 
     scores.append({
         "timestamp": timestamp,

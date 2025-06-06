@@ -7,12 +7,19 @@ from pathlib import Path
 SCORES_PATH = Path("backend/scores.json")
 ERRORS_PATH = Path("backend/errors.json")
 
+# ✅ Ensure backend/ folder and data files exist
+SCORES_PATH.parent.mkdir(parents=True, exist_ok=True)
+if not SCORES_PATH.exists():
+    with open(SCORES_PATH, "w") as f:
+        json.dump([], f)
+if not ERRORS_PATH.exists():
+    with open(ERRORS_PATH, "w") as f:
+        json.dump([], f)
+
 def get_timestamp():
     return datetime.utcnow().isoformat() + "Z"
 
 def load_scores():
-    if not SCORES_PATH.exists():
-        return []
     with open(SCORES_PATH, "r") as f:
         return json.load(f)
 
@@ -26,10 +33,8 @@ def append_error(error_type, details):
         "error_type": error_type,
         "details": details
     }
-    errors = []
-    if ERRORS_PATH.exists():
-        with open(ERRORS_PATH, "r") as f:
-            errors = json.load(f)
+    with open(ERRORS_PATH, "r") as f:
+        errors = json.load(f)
     errors.append(entry)
     with open(ERRORS_PATH, "w") as f:
         json.dump(errors, f, indent=2)

@@ -5,12 +5,12 @@ FEED_URLS = [
     "http://rss.cnn.com/rss/edition_world.rss"
 ]
 
-# Keywords to trigger escalation points
 BASE_KEYWORDS = [
     "missile", "military exercise", "border clash", "airstrike",
     "defense system", "warships", "drone strike", "troop movement",
     "airspace violation", "combat drills", "mobilization"
 ]
+
 HIGH_KEYWORDS = [
     "nuclear", "invasion", "chemical weapon", "intercontinental missile", "world war"
 ]
@@ -20,7 +20,8 @@ def get_news_signal():
     for url in FEED_URLS:
         feed = feedparser.parse(url)
         for entry in feed.entries:
-            text = f"{entry.title} {entry.summary}".lower()
+            summary = entry.get("summary", "")
+            text = f"{entry.title} {summary}".lower()
             score += sum(1 for word in BASE_KEYWORDS if word in text)
             score += sum(2 for word in HIGH_KEYWORDS if word in text)
     return min(score / 10, 1.0)

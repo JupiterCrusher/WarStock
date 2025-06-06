@@ -2,8 +2,8 @@ name: Run WW3 Risk Model Hourly
 
 on:
   schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch:
+    - cron: '0 * * * *'     # runs every hour (UTC)
+  workflow_dispatch:         # allows manual testing
 
 jobs:
   run-model:
@@ -28,7 +28,7 @@ jobs:
         working-directory: backend
         run: python main.py
 
-      - name: Debug Git status (optional)
+      - name: Git status debug
         run: git status
 
       - name: Commit and push updated scores

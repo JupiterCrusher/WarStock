@@ -4,10 +4,10 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-SCORES_PATH = Path("backend/scores.json")
-ERRORS_PATH = Path("backend/errors.json")
+SCORES_PATH = Path("scores.json")   # ⬅️ fixed
+ERRORS_PATH = Path("errors.json")   # ⬅️ fixed
 
-# ✅ Ensure backend/ folder and data files exist
+# Ensure files exist
 SCORES_PATH.parent.mkdir(parents=True, exist_ok=True)
 if not SCORES_PATH.exists():
     with open(SCORES_PATH, "w") as f:
@@ -26,7 +26,6 @@ def load_scores():
 def save_scores(scores):
     with open(SCORES_PATH, "w") as f:
         json.dump(scores, f, indent=2)
-    print(f"Saved {len(scores)} score entries.")
 
 def append_error(error_type, details):
     entry = {
@@ -71,6 +70,7 @@ def main():
 
     final_score = calculate_moving_average(scores)
     print(f"[{timestamp}] Final Score: {final_score}")
+    print(f"Saved {len(scores)} score entries.")  # Debug print
 
     save_scores(scores)
 

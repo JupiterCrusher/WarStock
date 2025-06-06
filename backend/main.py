@@ -26,6 +26,7 @@ def load_scores():
 def save_scores(scores):
     with open(SCORES_PATH, "w") as f:
         json.dump(scores, f, indent=2)
+    print(f"Saved {len(scores)} score entries.")
 
 def append_error(error_type, details):
     entry = {

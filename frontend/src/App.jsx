@@ -28,8 +28,8 @@ function formatTimestamp(iso) {
 
 export default function App() {
   const [scores, setScores] = useState([]);
-  const [logs, setLogs] = useState([]);
-  const [showLogs, setShowLogs] = useState(false);
+  const [range, setRange] = useState("week");
+  const ranges = { week: 7, month: 30, year: 365 };
 
   const fetchScores = () => {
     fetch(fetchURL)
@@ -67,15 +67,6 @@ export default function App() {
     download(csv, filename, "text/csv");
   };
 
-  const toggleLogs = () => {
-    if (!logs.length) {
-      fetch("/logs.json")
-        .then((res) => res.json())
-        .then((data) => setLogs(data));
-    }
-    setShowLogs((p) => !p);
-  };
-
   const latest = scores[scores.length - 1];
   const previous = scores[scores.length - 2];
   const change = latest && previous ? (latest.raw_score - previous.raw_score).toFixed(2) : "0.00";
@@ -104,8 +95,13 @@ export default function App() {
     ? Date.now() - new Date(latest.timestamp).getTime() <= 2 * 60 * 60 * 1000
     : false;
 
+  const filteredScores = scores.filter((s) => {
+    const threshold = Date.now() - ranges[range] * 24 * 60 * 60 * 1000;
+    return new Date(s.timestamp).getTime() >= threshold;
+  });
+
   return (
-    <div className="relative bg-black text-green-400 font-mono min-h-screen p-4">
+    <div className="relative scanlines bg-black text-green-400 font-mono min-h-screen p-4">
       <div className="absolute top-2 right-2">
         <span
           className={`inline-block h-3 w-3 rounded-full animate-pulse ${isLive ? "bg-green-500" : "bg-red-500"}`}
@@ -126,16 +122,57 @@ export default function App() {
         </div>
       )}
 
+      <div className="flex gap-2 mb-2">
+        {[
+          ["week", "Week"],
+          ["month", "Month"],
+          ["year", "Year"],
+        ].map(([key, label]) => (
+          <button
+            key={key}
+            onClick={() => setRange(key)}
+            className={`px-2 py-1 border border-green-700 ${
+              range === key ? "bg-green-600" : "bg-green-800 hover:bg-green-700"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
       <div className="bg-green-900 p-2 mb-4">
         <h2 className="text-sm mb-1">RAW SCORE GRAPH</h2>
         <ResponsiveContainer width="100%" height={200}>
-          <LineChart data={scores}>
+          <LineChart data={filteredScores}>
             <XAxis dataKey="timestamp" tick={false} hide />
             <YAxis domain={[0, 100]} tick={{ fill: "#0f0" }} />
             <Tooltip contentStyle={{ backgroundColor: "#003300", borderColor: "#0f0" }} labelFormatter={formatTimestamp} />
             <Line type="monotone" dataKey="raw_score" stroke="#0f0" strokeWidth={2} dot={false} />
           </LineChart>
         </ResponsiveContainer>
+      </div>
+
+      <div className="h-48 overflow-y-auto mb-4 border border-green-700">
+        <table className="w-full text-green-500 text-sm font-mono">
+          <thead className="sticky top-0 bg-black">
+            <tr>
+              <th className="px-2 text-left border-b border-green-700">Time</th>
+              <th className="px-2 text-left border-b border-green-700">Stock</th>
+              <th className="px-2 text-left border-b border-green-700">News</th>
+              <th className="px-2 text-left border-b border-green-700">Raw</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredScores.map((s, i) => (
+              <tr key={i} className="whitespace-nowrap">
+                <td className="px-2 py-0.5">{formatTimestamp(s.timestamp)}</td>
+                <td className="px-2 py-0.5">{s.stock_score}</td>
+                <td className="px-2 py-0.5">{s.news_score}</td>
+                <td className="px-2 py-0.5">{s.raw_score}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
       {latest && (
@@ -164,27 +201,28 @@ export default function App() {
         >
           Export CSV
         </button>
-        <button
-          onClick={toggleLogs}
-          className="px-2 py-1 bg-green-800 text-green-200 hover:bg-green-700"
-        >
-          {showLogs ? "Hide Logs" : "Show Logs"}
-        </button>
       </div>
-
-      {showLogs && (
-        <div className="bg-black border border-green-700 p-2 text-xs mb-4 h-40 overflow-y-auto">
-          {logs.map((l, i) => (
-            <p key={i} className="whitespace-pre">
-              [{formatTimestamp(l.time)}] {l.msg}
-            </p>
-          ))}
-        </div>
-      )}
 
       <div className="mt-4 border-t border-green-700 pt-2 text-xs text-green-600">
         ↳ press [X] to export history | [Z] to refresh feed
       </div>
+
+      <div className="mt-6">
+        <h2 className="text-lg mb-1">About WarStock</h2>
+        <p className="text-sm text-green-500">
+          WarStock is an experimental terminal that monitors global escalation
+          signals by combining defense stock movement with keyword-based news
+          parsing. Data updates hourly via GitHub Actions. Built using React,
+          Tailwind CSS, and Recharts.
+        </p>
+      </div>
+
+      <footer className="mt-6 border-t border-green-700 pt-2 text-center text-green-600 text-sm">
+        Project by{' '}
+        <a href="https://colekreiling.com" target="_blank" rel="noopener noreferrer" className="underline">
+          Cole Kreiling
+        </a>
+      </footer>
     </div>
   );
 }

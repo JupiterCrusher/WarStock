@@ -8,8 +8,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const fetchURL =
-  "https://raw.githubusercontent.com/JupiterCrusher/WarStock/main/backend/scores.json";
+// Use the Vercel serverless function to fetch scores so private repo access
+// can be handled server-side.
+const fetchURL = "/api/scores";
 
 function download(content, filename, type) {
   const blob = new Blob([content], { type });

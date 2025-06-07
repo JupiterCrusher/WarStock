@@ -3,6 +3,8 @@ export default async function handler(req, res) {
     const headers = {};
     if (process.env.GITHUB_TOKEN) {
       headers['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
+    } else {
+      console.warn('GITHUB_TOKEN is not set');
     }
     const response = await fetch(
       'https://raw.githubusercontent.com/JupiterCrusher/WarStock/main/backend/scores.json',

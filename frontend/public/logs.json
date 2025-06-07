@@ -1,0 +1,7 @@
+[
+  {"time": "2023-01-01T12:00:00Z", "msg": "System initialized"},
+  {"time": "2023-01-01T12:05:00Z", "msg": "Fetched new scores"},
+  {"time": "2023-01-01T13:00:00Z", "msg": "Stock API unreachable"},
+  {"time": "2023-01-01T13:10:00Z", "msg": "Recovered from error"},
+  {"time": "2023-01-01T14:00:00Z", "msg": "News parsing completed"}
+]

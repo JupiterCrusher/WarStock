@@ -1,11 +1,10 @@
 export default async function handler(req, res) {
   try {
     const response = await fetch(
-      'https://api.github.com/repos/JupiterCrusher/WarStock/contents/backend/scores.json?ref=main',
+      'https://raw.githubusercontent.com/JupiterCrusher/WarStock/main/backend/scores.json',
       {
         headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-          Accept: 'application/vnd.github.v3.raw',
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`, main
         },
       }
     );

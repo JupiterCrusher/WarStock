@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   try {
     const response = await fetch(
       'https://raw.githubusercontent.com/JupiterCrusher/WarStock/main/backend/scores.json',

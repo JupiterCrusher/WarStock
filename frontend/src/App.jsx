@@ -168,7 +168,7 @@ export default function App() {
       <div className="bg-green-900/70 p-2">
         <h2 className="text-sm mb-1">RAW SCORE GRAPH</h2>
         <ResponsiveContainer width="100%" height={200}>
-          <LineChart data={filteredScores}>
+          <LineChart data={filteredScores.slice().reverse()}>
             <XAxis dataKey="timestamp" tick={false} hide />
             <YAxis domain={[0, 100]} tick={{ fill: "#0f0" }} />
             <Tooltip contentStyle={{ backgroundColor: "#003300", borderColor: "#0f0" }} labelFormatter={formatTimestamp} />

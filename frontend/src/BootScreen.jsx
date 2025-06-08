@@ -23,20 +23,21 @@ export default function BootScreen({ onComplete }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black flex flex-col items-center justify-center text-green-400 text-xl font-mono z-50 boot-overlay"
+      className="fixed inset-0 bg-black flex flex-col items-center justify-start p-4 text-green-400 text-xl font-mono z-50 boot-overlay"
       style={{ animationDelay: `${totalTime}s` }}
     >
       {messages.map((msg, i) => {
         const typingDuration = `${msg.length * charDuration}s`;
+        const delay = `${delays[i]}s`;
+        const blinkLoops = i === messages.length - 1 ? 'infinite' : 2;
         return (
           <p
             key={i}
             className="boot-line"
             style={{
-              animationDelay: `${delays[i]}s`,
               "--width": `${msg.length}ch`,
               "--steps": msg.length,
-              animation: `typing ${typingDuration} steps(var(--steps)) forwards, blink 0.75s step-end infinite`
+              animation: `typing ${typingDuration} steps(var(--steps)) ${delay} forwards, blink 0.75s step-end ${delay} ${blinkLoops}`
             }}
           >
             {msg}

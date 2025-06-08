@@ -196,7 +196,7 @@ export default function App() {
       </div>
       </section>
 
-      <section className="h-48 overflow-y-auto mb-4 border border-green-800 p-2">
+      <section className="h-48 overflow-y-auto overflow-x-auto mb-4 border border-green-800 p-2">
         <table className="w-full text-green-500 text-sm font-mono">
           <thead className="sticky top-0 bg-black">
             <tr>

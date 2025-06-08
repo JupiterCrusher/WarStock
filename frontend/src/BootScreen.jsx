@@ -32,7 +32,7 @@ export default function BootScreen({ onComplete }) {
   return (
     <div
       className="fixed inset-0 bg-black flex flex-col items-center justify-center p-4 text-green-400 text-xl sm:text-3xl font-mono z-50 boot-overlay w-full overflow-hidden text-center"
-      style={{ animationDelay: `${totalTime}s` }}
+      style={{ animationDelay: `${totalTime}s`, height: "100dvh" }}
     >
       {messages.map((msg, i) => {
         const typingDuration = `${msg.length * charDuration}s`;
@@ -41,7 +41,7 @@ export default function BootScreen({ onComplete }) {
         return (
             <p
               key={i}
-              className="boot-line mx-auto text-center my-0 leading-none"
+              className="boot-line mx-auto text-center my-1 leading-none"
               style={{
               "--width": `${msg.length}ch`,
               "--steps": msg.length,

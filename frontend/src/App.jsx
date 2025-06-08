@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import BootScreen from "./BootScreen";
 import {
   LineChart,
   Line,
@@ -28,6 +29,7 @@ function formatTimestamp(iso) {
 }
 
 export default function App() {
+  const [boot, setBoot] = useState(true);
   const [scores, setScores] = useState([]);
   const [range, setRange] = useState("week");
   const ranges = { day: 1, week: 7, month: 30, year: 365 };
@@ -40,14 +42,30 @@ export default function App() {
   };
 
   useEffect(() => {
+    const handleMouse = (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 10;
+      const y = (e.clientY / window.innerHeight - 0.5) * 10;
+      document.documentElement.style.setProperty("--parallax-x", `${x}px`);
+      document.documentElement.style.setProperty("--parallax-y", `${y}px`);
+    };
+    window.addEventListener("mousemove", handleMouse);
+    return () => window.removeEventListener("mousemove", handleMouse);
+  }, []);
+
+  useEffect(() => {
     fetchScores();
+
+    const bootTimer = setTimeout(() => setBoot(false), 5600);
 
     const handleKey = (e) => {
       if (e.key === "z" || e.key === "Z") fetchScores();
       if (e.key === "x" || e.key === "X") exportJSON();
     };
     window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+      clearTimeout(bootTimer);
+    };
   }, []);
 
   const exportJSON = () => {
@@ -76,7 +94,15 @@ export default function App() {
 
   const latest = scores[scores.length - 1];
   const previous = scores[scores.length - 2];
-  const change = latest && previous ? (latest.raw_score - previous.raw_score).toFixed(2) : "0.00";
+  const change =
+    latest && previous ? (latest.raw_score - previous.raw_score).toFixed(2) : "0.00";
+
+  const movingAvg =
+    scores.slice(-5).reduce((sum, s) => sum + s.raw_score, 0) /
+    (scores.slice(-5).length || 1);
+  const prevMovingAvg =
+    scores.slice(-6, -1).reduce((sum, s) => sum + s.raw_score, 0) /
+    (scores.slice(-6, -1).length || 1);
   const calcDefcon = (score) =>
     score >= 80
       ? 1
@@ -88,8 +114,8 @@ export default function App() {
       ? 4
       : 5;
 
-  const defcon = latest ? calcDefcon(latest.raw_score) : 5;
-  const prevDefcon = previous ? calcDefcon(previous.raw_score) : defcon;
+  const defcon = latest ? calcDefcon(movingAvg) : 5;
+  const prevDefcon = previous ? calcDefcon(prevMovingAvg) : defcon;
   const defconChanged = defcon !== prevDefcon;
   const isLive = latest
     ? Date.now() - new Date(latest.timestamp).getTime() <= 2 * 60 * 60 * 1000
@@ -101,27 +127,25 @@ export default function App() {
     .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
   return (
-    <div className="relative scanlines bg-black text-green-400 font-mono min-h-screen p-4">
+    <div className="relative scanlines parallax bg-black text-green-400 font-mono min-h-screen p-4">
+      {boot && <BootScreen onComplete={() => setBoot(false)} />}
       <div className="absolute top-2 right-2">
         <span
           className={`inline-block h-3 w-3 rounded-full animate-pulse ${isLive ? "bg-green-500" : "bg-red-500"}`}
         ></span>
       </div>
-      <h1 className="text-2xl mb-2 border-b border-green-700 pb-1">
+      <h1 className="text-xl mb-4 text-center border-b border-green-700 pb-1">
         WARSTOCK TERMINAL ▐ WW3 RISK MONITOR
       </h1>
 
       {latest && (
-        <section className="mb-4 p-2 border border-green-700">
-          <p className="text-xl">
-            RISK INDEX: <span className="text-green-200">{latest.raw_score}</span>
-            {change > 0 ? ` ↑ ${change}` : change < 0 ? ` ↓ ${change}` : " ↔ 0.00"}
-          </p>
-          <p className={`text-sm font-bold text-green-200 ${defconChanged ? "animate-pulse" : ""}`}>DEFCON LEVEL: {defcon} / 5</p>
+        <section className="mb-6 text-center">
+          <div className={`risk-index text-6xl font-bold text-green-200 ${change !== "0.00" ? "animate-scale" : ""}`}>{latest.raw_score}</div>
+          <p className={`mt-1 text-lg text-green-300 ${defconChanged ? "animate-pulse" : ""}`}>DEFCON {defcon}</p>
           <p className="text-xs text-green-600">Last updated: {formatTimestamp(latest.timestamp)}</p>
         </section>
       )}
-      <section className="mb-4 p-2 border border-green-700">
+      <section className="mb-4 p-2 border-t border-b border-green-800">
         <div className="flex gap-2 mb-2">
         {[
           ["day", "Day"],
@@ -141,7 +165,7 @@ export default function App() {
         ))}
       </div>
 
-      <div className="bg-green-900 p-2">
+      <div className="bg-green-900/70 p-2">
         <h2 className="text-sm mb-1">RAW SCORE GRAPH</h2>
         <ResponsiveContainer width="100%" height={200}>
           <LineChart data={filteredScores}>
@@ -154,7 +178,7 @@ export default function App() {
       </div>
       </section>
 
-      <section className="h-48 overflow-y-auto mb-4 border border-green-700 p-2">
+      <section className="h-48 overflow-y-auto mb-4 border border-green-800 p-2">
         <table className="w-full text-green-500 text-sm font-mono">
           <thead className="sticky top-0 bg-black">
             <tr>
@@ -184,7 +208,7 @@ export default function App() {
         </div>
       )}
 
-      <section className="flex gap-2 my-4 p-2 border border-green-700">
+      <section className="flex gap-2 my-4 p-2 border border-green-800">
         <button
           onClick={fetchScores}
           className="px-2 py-1 bg-green-800 text-green-200 hover:bg-green-700"
@@ -205,7 +229,7 @@ export default function App() {
         </button>
       </section>
 
-      <div className="mt-4 border-t border-green-700 pt-2 text-xs text-green-600">
+      <div className="mt-4 border-t border-green-800 pt-2 text-xs text-green-600">
         ↳ press [X] to export history | [Z] to refresh feed
       </div>
 
@@ -219,7 +243,7 @@ export default function App() {
         </p>
       </div>
 
-      <footer className="mt-6 border-t border-green-700 pt-2 text-center text-green-600 text-sm">
+      <footer className="mt-6 border-t border-green-800 pt-2 text-center text-green-600 text-sm">
         Project by{' '}
         <a href="https://colekreiling.com" target="_blank" rel="noopener noreferrer" className="underline">
           Cole Kreiling

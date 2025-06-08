@@ -26,3 +26,60 @@ body {
     rgba(0, 0, 0, 0.2) 4px
   );
 }
+
+@keyframes scanline {
+  from { background-position: 0 0; }
+  to { background-position: 0 4px; }
+}
+@keyframes flicker {
+  0%, 100% { opacity: 0.98; }
+  50% { opacity: 1; }
+  51% { opacity: 0.97; }
+}
+.scanlines::before {
+  animation: scanline 1s linear infinite;
+}
+.scanlines {
+  animation: flicker 0.2s infinite;
+}
+
+.boot-overlay {
+  animation: fadeOut 0.5s ease forwards;
+  animation-delay: 5s;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.boot-line {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #0f0;
+  width: 0;
+  animation: typing 1.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.risk-index {
+  text-shadow: 0 0 8px #0f0, 0 0 16px rgba(0,255,0,0.6);
+}
+@keyframes scalePulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.animate-scale {
+  animation: scalePulse 1s ease-in-out;
+}
+
+.parallax {
+  transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
+  transition: transform 0.1s ease-out;
+}

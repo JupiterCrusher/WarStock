@@ -41,8 +41,9 @@ export default function BootScreen({ onComplete }) {
         return (
             <p
               key={i}
-              className="boot-line mx-auto text-center my-0 leading-tight"
+              className="boot-line mx-auto text-center my-0"
               style={{
+              lineHeight: "0.5",
               "--width": `${msg.length}ch`,
               "--steps": msg.length,
               animation: `typing ${typingDuration} steps(var(--steps)) ${delay} forwards, blink 0.75s step-end ${delay} ${blinkLoops}`

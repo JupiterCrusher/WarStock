@@ -57,7 +57,7 @@ body {
   white-space: nowrap;
   border-right: 2px solid #0f0;
   width: 0ch;
-  line-height: 0.5;
+  line-height: 1;
 }
 
 @keyframes typing {

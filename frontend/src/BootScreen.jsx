@@ -17,6 +17,14 @@ export default function BootScreen({ onComplete }) {
   }
 
   useEffect(() => {
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, []);
+
+  useEffect(() => {
     const timer = setTimeout(onComplete, (totalTime + 0.5) * 1000);
     return () => clearTimeout(timer);
   }, [onComplete, totalTime]);
@@ -33,7 +41,7 @@ export default function BootScreen({ onComplete }) {
         return (
           <p
             key={i}
-            className="boot-line"
+            className="boot-line mx-auto text-center"
             style={{
               "--width": `${msg.length}ch`,
               "--steps": msg.length,

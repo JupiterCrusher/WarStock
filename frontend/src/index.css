@@ -45,7 +45,6 @@ body {
 
 .boot-overlay {
   animation: fadeOut 0.5s ease forwards;
-  animation-delay: 4s;
 }
 
 @keyframes fadeOut {

@@ -138,13 +138,31 @@ export default function App() {
         WARSTOCK TERMINAL ▐ WW3 RISK MONITOR
       </h1>
 
-      {latest && (
-        <section className="mb-6 text-center">
-          <div className={`risk-index text-6xl font-bold text-green-200 ${change !== "0.00" ? "animate-scale" : ""}`}>{latest.raw_score}<span className="text-green-200/50 text-3xl ml-1">/100</span></div>
-          <p className={`mt-1 text-lg text-green-300 ${defconChanged ? "animate-pulse" : ""}`}>DEFCON {defcon}</p>
-          <p className="text-xs text-green-600">Last updated: {formatTimestamp(latest.timestamp)}</p>
-        </section>
-      )}
+        {latest && (
+          <section className="mb-6 text-center">
+            <div
+              className={`risk-index text-6xl font-bold text-green-200 ${
+                change !== "0.00" ? "animate-scale" : ""
+              }`}
+            >
+              {latest.raw_score}
+              <span className="text-green-200/50 text-3xl ml-1">/100</span>
+            </div>
+            <p
+              className={`mt-1 text-lg text-green-300 ${
+                defconChanged ? "animate-pulse" : ""
+              }`}
+            >
+              DEFCON {defcon}
+            </p>
+            <p className="text-sm text-green-400 mt-1">
+              STOCK SIGNAL: {latest.stock_score} | NEWS SIGNAL: {latest.news_score}
+            </p>
+            <p className="text-xs text-green-600">
+              Last updated: {formatTimestamp(latest.timestamp)}
+            </p>
+          </section>
+        )}
       <section className="mb-4 p-2 border-t border-b border-green-800">
         <div className="flex gap-2 mb-2">
         {[
@@ -200,13 +218,6 @@ export default function App() {
           </tbody>
         </table>
       </section>
-
-      {latest && (
-        <div className="text-sm">
-          <p>STOCK SIGNAL: {latest.stock_score}</p>
-          <p>NEWS SIGNAL: {latest.news_score}</p>
-        </div>
-      )}
 
       <section className="flex gap-2 my-4 p-2 border border-green-800">
         <button

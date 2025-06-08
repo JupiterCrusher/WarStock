@@ -45,7 +45,7 @@ body {
 
 .boot-overlay {
   animation: fadeOut 0.5s ease forwards;
-  animation-delay: 5s;
+  animation-delay: 4s;
 }
 
 @keyframes fadeOut {
@@ -57,7 +57,7 @@ body {
   white-space: nowrap;
   border-right: 2px solid #0f0;
   width: 0;
-  animation: typing 1.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+  animation: typing 1.2s steps(40, end) forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {

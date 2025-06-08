@@ -39,10 +39,10 @@ export default function BootScreen({ onComplete }) {
         const delay = `${delays[i]}s`;
         const blinkLoops = i === messages.length - 1 ? 'infinite' : 2;
         return (
-          <p
-            key={i}
-            className="boot-line mx-auto text-center"
-            style={{
+            <p
+              key={i}
+              className="boot-line mx-auto text-center my-0 leading-tight"
+              style={{
               "--width": `${msg.length}ch`,
               "--steps": msg.length,
               animation: `typing ${typingDuration} steps(var(--steps)) ${delay} forwards, blink 0.75s step-end ${delay} ${blinkLoops}`

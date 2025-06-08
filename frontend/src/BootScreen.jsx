@@ -23,7 +23,7 @@ export default function BootScreen({ onComplete }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black flex flex-col items-center justify-start p-4 text-green-400 text-xl font-mono z-50 boot-overlay"
+      className="fixed inset-0 bg-black flex flex-col items-center justify-center p-4 text-green-400 text-3xl font-mono z-50 boot-overlay"
       style={{ animationDelay: `${totalTime}s` }}
     >
       {messages.map((msg, i) => {

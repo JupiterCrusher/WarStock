@@ -23,7 +23,9 @@ export default function BootScreen({ onComplete }) {
             className="boot-line"
             style={{
               animationDelay: `${i * 1.2}s`,
-              animation: `typing ${typingDuration} steps(${msg.length}, end) forwards, blink 0.75s step-end infinite`
+              "--width": `${msg.length}ch`,
+              "--steps": msg.length,
+              animation: `typing ${typingDuration} steps(var(--steps)) forwards, blink 0.75s step-end infinite`
             }}
           >
             {msg}

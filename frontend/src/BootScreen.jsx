@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 
 export default function BootScreen({ onComplete }) {
   useEffect(() => {
-    const timer = setTimeout(onComplete, 5500);
+    const timer = setTimeout(onComplete, 4500);
     return () => clearTimeout(timer);
   }, [onComplete]);
 
   const messages = [
-    "Initializing WarStock Systems…",
-    "Fetching global defense telemetry…",
-    "Terminal secure. Welcome, Analyst."
+    "Booting WarStock Terminal…",
+    "Syncing threat data…",
+    "Ready. Press Z to refresh."
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function BootScreen({ onComplete }) {
         <p
           key={i}
           className="boot-line"
-          style={{ animationDelay: `${i * 1.8}s` }}
+          style={{ animationDelay: `${i * 1.2}s` }}
         >
           {msg}
         </p>

@@ -140,7 +140,7 @@ export default function App() {
 
       {latest && (
         <section className="mb-6 text-center">
-          <div className={`risk-index text-6xl font-bold text-green-200 ${change !== "0.00" ? "animate-scale" : ""}`}>{latest.raw_score}</div>
+          <div className={`risk-index text-6xl font-bold text-green-200 ${change !== "0.00" ? "animate-scale" : ""}`}>{latest.raw_score}<span className="text-green-200/50 text-3xl ml-1">/100</span></div>
           <p className={`mt-1 text-lg text-green-300 ${defconChanged ? "animate-pulse" : ""}`}>DEFCON {defcon}</p>
           <p className="text-xs text-green-600">Last updated: {formatTimestamp(latest.timestamp)}</p>
         </section>

@@ -14,15 +14,22 @@ export default function BootScreen({ onComplete }) {
 
   return (
     <div className="fixed inset-0 bg-black flex flex-col items-center justify-center text-green-400 text-xl font-mono z-50 boot-overlay">
-      {messages.map((msg, i) => (
-        <p
-          key={i}
-          className="boot-line"
-          style={{ animationDelay: `${i * 1.2}s` }}
-        >
-          {msg}
-        </p>
-      ))}
+      {messages.map((msg, i) => {
+        const charDuration = 0.05;
+        const typingDuration = `${msg.length * charDuration}s`;
+        return (
+          <p
+            key={i}
+            className="boot-line"
+            style={{
+              animationDelay: `${i * 1.2}s`,
+              animation: `typing ${typingDuration} steps(${msg.length}, end) forwards, blink 0.75s step-end infinite`
+            }}
+          >
+            {msg}
+          </p>
+        );
+      })}
     </div>
   );
 }

@@ -8,7 +8,10 @@ FEED_URLS = [
 BASE_KEYWORDS = [
     "missile", "military exercise", "border clash", "airstrike",
     "defense system", "warships", "drone strike", "troop movement",
-    "airspace violation", "combat drills", "mobilization"
+    "airspace violation", "combat drills", "mobilization",
+    "iran", "strike", "attack", "conflict", "hezbollah",
+    "idf", "nato", "russia", "usa", "israel", "drone",
+    "shelling", "airspace", "tensions"
 ]
 
 HIGH_KEYWORDS = [
@@ -20,8 +23,14 @@ def get_news_signal():
     for url in FEED_URLS:
         feed = feedparser.parse(url)
         for entry in feed.entries:
-            summary = entry.get("summary", "")
-            text = f"{entry.title} {summary}".lower()
-            score += sum(1 for word in BASE_KEYWORDS if word in text)
-            score += sum(2 for word in HIGH_KEYWORDS if word in text)
+            title = entry.get("title", "") if hasattr(entry, "get") else getattr(entry, "title", "")
+            summary = entry.get("summary", "") if hasattr(entry, "get") else getattr(entry, "summary", "")
+
+            # Log raw headline for debugging
+            print(f"Title: {title} | Summary: {summary}")
+
+            text = f"{title} {summary}".lower()
+            score += sum(1 for word in BASE_KEYWORDS if word.lower() in text)
+            score += sum(2 for word in HIGH_KEYWORDS if word.lower() in text)
+
     return min(score / 10, 1.0)

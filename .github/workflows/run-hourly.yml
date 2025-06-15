@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: backend
-        run: pip install yfinance feedparser
+        run: pip install yfinance feedparser requests
 
       - name: Run risk model
         working-directory: backend

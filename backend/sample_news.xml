@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sample News</title>
+    <item>
+      <title>Military drone strike escalates conflict</title>
+      <description>The attack targeted major defense systems.</description>
+    </item>
+  </channel>
+</rss>

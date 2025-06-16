@@ -19,6 +19,5 @@ Install dependencies with:
 pip install -r requirements.txt
 ```
 
-The news feed uses public RSS endpoints and does **not** require an API key. If
-the app cannot reach those feeds due to network restrictions, it falls back to a
-sample feed bundled in `backend/sample_news.xml` so scoring still works.
+The news feed retrieves headlines from Google News via RSS and does **not** require an API key.
+Network access is required for news scoring because the previous offline fallback has been removed.

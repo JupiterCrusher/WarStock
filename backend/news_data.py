@@ -35,7 +35,8 @@ def fetch_feed(url: str):
 
 
 def get_news_signal():
-    score = 0
+    total_hits = 0
+    entry_count = 0
     fetched_any = False
     for url in FEED_URLS:
         try:
@@ -57,16 +58,26 @@ def get_news_signal():
                 else getattr(entry, "summary", "")
             )
             if not summary:
-                summary = entry.get("description", "") if hasattr(entry, "get") else getattr(entry, "description", "")
+                summary = (
+                    entry.get("description", "")
+                    if hasattr(entry, "get")
+                    else getattr(entry, "description", "")
+                )
 
             # Log raw headline for debugging
             print(f"Title: {title} | Summary: {summary}")
 
             text = f"{title} {summary}".lower()
-            score += sum(1 for word in BASE_KEYWORDS if word.lower() in text)
-            score += sum(2 for word in HIGH_KEYWORDS if word.lower() in text)
+            hits = sum(1 for word in BASE_KEYWORDS if word.lower() in text)
+            hits += sum(2 for word in HIGH_KEYWORDS if word.lower() in text)
+            total_hits += hits
+            entry_count += 1
 
+    if not fetched_any or entry_count == 0:
+        final = 0
+    else:
+        avg_hits = total_hits / entry_count
+        final = min(avg_hits / 5, 1.0)
 
-    final = min(score / 10, 1.0)
     print(f"News score: {final}")
     return final

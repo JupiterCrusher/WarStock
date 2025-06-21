@@ -2008,5 +2008,11 @@
     "stock_score": 0.088,
     "news_score": 0.581,
     "raw_score": 18.64
+  },
+  {
+    "timestamp": "2025-06-21T12:18:06.228237Z",
+    "stock_score": 0.088,
+    "news_score": 0.577,
+    "raw_score": 18.57
   }
 ]

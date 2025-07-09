@@ -4432,5 +4432,11 @@
     "stock_score": 0.027,
     "news_score": 0.449,
     "raw_score": 11.15
+  },
+  {
+    "timestamp": "2025-07-09T03:48:39.885312Z",
+    "stock_score": 0.027,
+    "news_score": 0.454,
+    "raw_score": 11.25
   }
 ]

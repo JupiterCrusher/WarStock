@@ -16726,5 +16726,11 @@
     "stock_score": 0.286,
     "news_score": 0.425,
     "raw_score": 31.42
+  },
+  {
+    "timestamp": "2025-10-07T02:16:16.727226Z",
+    "stock_score": 0.286,
+    "news_score": 0.423,
+    "raw_score": 31.39
   }
 ]

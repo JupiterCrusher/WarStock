@@ -40594,5 +40594,11 @@
     "stock_score": NaN,
     "news_score": 0.441,
     "raw_score": NaN
+  },
+  {
+    "timestamp": "2026-04-08T08:05:45.751276Z",
+    "stock_score": 0.0,
+    "news_score": 0.441,
+    "raw_score": 8.83
   }
 ]

@@ -3,5 +3,10 @@
     "timestamp": "2026-04-15T14:29:46.547377Z",
     "error_type": "stock_fetch_failed",
     "details": "Failed to perform, curl: (28) Operation timed out after 30002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+  },
+  {
+    "timestamp": "2026-04-28T22:45:04.300121Z",
+    "error_type": "stock_fetch_failed",
+    "details": "Too Many Requests. Rate limited. Try after a while."
   }
 ]

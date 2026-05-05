@@ -43222,5 +43222,11 @@
     "stock_score": 0.064,
     "news_score": 0.414,
     "raw_score": 13.4
+  },
+  {
+    "timestamp": "2026-05-05T19:03:13.704302Z",
+    "stock_score": 0.048,
+    "news_score": 0.419,
+    "raw_score": 12.19
   }
 ]

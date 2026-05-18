@@ -13,5 +13,10 @@
     "timestamp": "2026-05-11T06:27:01.474265Z",
     "error_type": "stock_fetch_failed",
     "details": "Too Many Requests. Rate limited. Try after a while."
+  },
+  {
+    "timestamp": "2026-05-18T02:10:17.115691Z",
+    "error_type": "stock_fetch_failed",
+    "details": "'Response' object has no attribute 'get'"
   }
 ]

@@ -9,9 +9,44 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// Use the Vercel serverless function to fetch scores so private repo access
-// can be handled server-side.
 const fetchURL = "/api/scores";
+const rawScoresURL =
+  "https://raw.githubusercontent.com/JupiterCrusher/WarStock/main/backend/scores.json";
+
+function normalizeScores(data) {
+  if (!Array.isArray(data)) {
+    const message = data?.error ? `Scores endpoint error: ${data.error}` : "Scores payload was not an array.";
+    throw new Error(message);
+  }
+
+  return data
+    .filter((score) => score?.timestamp && Number.isFinite(Number(score.raw_score)))
+    .map((score) => ({
+      ...score,
+      stock_score: Number(score.stock_score),
+      news_score: Number(score.news_score),
+      raw_score: Number(score.raw_score),
+    }))
+    .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+}
+
+async function loadScores(url) {
+  const response = await fetch(url, { cache: "no-store" });
+  const text = await response.text();
+
+  if (!response.ok) {
+    throw new Error(`Scores request failed (${response.status})`);
+  }
+
+  try {
+    return normalizeScores(JSON.parse(text));
+  } catch (error) {
+    if (text.trim().startsWith("<")) {
+      throw new Error("Scores endpoint returned HTML instead of JSON.");
+    }
+    throw error;
+  }
+}
 
 function download(content, filename, type) {
   const blob = new Blob([content], { type });
@@ -31,14 +66,29 @@ function formatTimestamp(iso) {
 export default function App() {
   const [boot, setBoot] = useState(true);
   const [scores, setScores] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [fetchError, setFetchError] = useState("");
   const [range, setRange] = useState("week");
   const ranges = { day: 1, week: 7, month: 30, year: 365 };
 
-  const fetchScores = () => {
-    fetch(fetchURL)
-      .then((res) => res.json())
-      .then((data) => setScores(data))
-      .catch((err) => console.error("Fetch failed:", err));
+  const fetchScores = async () => {
+    setIsLoading(true);
+    setFetchError("");
+
+    try {
+      setScores(await loadScores(fetchURL));
+    } catch (primaryError) {
+      try {
+        setScores(await loadScores(rawScoresURL));
+        setFetchError(`Using direct GitHub fallback: ${primaryError.message}`);
+      } catch (fallbackError) {
+        const message = `Fetch failed: ${fallbackError.message}`;
+        setFetchError(message);
+        console.error(message, { primaryError, fallbackError });
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -163,6 +213,16 @@ export default function App() {
             </p>
           </section>
         )}
+      {!latest && (
+        <section className="mb-6 border border-green-800 p-3 text-center text-green-300">
+          {isLoading ? "Loading score feed..." : "No score data is available."}
+        </section>
+      )}
+      {fetchError && (
+        <section className="mb-4 border border-yellow-700 bg-yellow-950/40 p-2 text-sm text-yellow-300">
+          {fetchError}
+        </section>
+      )}
       <section className="mb-4 p-2 border-t border-b border-green-800">
         <div className="flex gap-2 mb-2">
         {[
@@ -185,14 +245,20 @@ export default function App() {
 
       <div className="bg-green-900/70 p-2">
         <h2 className="text-sm mb-1">RAW SCORE GRAPH</h2>
-        <ResponsiveContainer width="100%" height={200}>
-          <LineChart data={filteredScores.slice().reverse()}>
-            <XAxis dataKey="timestamp" tick={false} hide />
-            <YAxis domain={[0, 100]} tick={{ fill: "#0f0" }} />
-            <Tooltip contentStyle={{ backgroundColor: "#003300", borderColor: "#0f0" }} labelFormatter={formatTimestamp} />
-            <Line type="monotone" dataKey="raw_score" stroke="#0f0" strokeWidth={2} dot={false} />
-          </LineChart>
-        </ResponsiveContainer>
+        {filteredScores.length ? (
+          <ResponsiveContainer width="100%" height={200}>
+            <LineChart data={filteredScores.slice().reverse()}>
+              <XAxis dataKey="timestamp" tick={false} hide />
+              <YAxis domain={[0, 100]} tick={{ fill: "#0f0" }} />
+              <Tooltip contentStyle={{ backgroundColor: "#003300", borderColor: "#0f0" }} labelFormatter={formatTimestamp} />
+              <Line type="monotone" dataKey="raw_score" stroke="#0f0" strokeWidth={2} dot={false} />
+            </LineChart>
+          </ResponsiveContainer>
+        ) : (
+          <div className="flex h-[200px] items-center justify-center border border-green-800 text-green-500">
+            {isLoading ? "Loading graph data..." : `No scores in the selected ${range} range.`}
+          </div>
+        )}
       </div>
       </section>
 
@@ -207,14 +273,22 @@ export default function App() {
             </tr>
           </thead>
           <tbody>
-            {filteredScores.map((s, i) => (
-              <tr key={i} className="whitespace-nowrap">
-                <td className="px-2 py-0.5">{formatTimestamp(s.timestamp)}</td>
-                <td className="px-2 py-0.5">{s.stock_score}</td>
-                <td className="px-2 py-0.5">{s.news_score}</td>
-                <td className="px-2 py-0.5">{s.raw_score}</td>
+            {filteredScores.length ? (
+              filteredScores.map((s, i) => (
+                <tr key={i} className="whitespace-nowrap">
+                  <td className="px-2 py-0.5">{formatTimestamp(s.timestamp)}</td>
+                  <td className="px-2 py-0.5">{s.stock_score}</td>
+                  <td className="px-2 py-0.5">{s.news_score}</td>
+                  <td className="px-2 py-0.5">{s.raw_score}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td className="px-2 py-4 text-center text-green-600" colSpan="4">
+                  {isLoading ? "Loading rows..." : `No scores in the selected ${range} range.`}
+                </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </section>

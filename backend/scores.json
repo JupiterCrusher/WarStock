@@ -38329,9 +38329,9 @@
   },
   {
     "timestamp": "2026-03-19T16:45:03.243539Z",
-    "stock_score": NaN,
+    "stock_score": 0.0,
     "news_score": 0.409,
-    "raw_score": NaN
+    "raw_score": 8.11
   },
   {
     "timestamp": "2026-03-19T17:46:38.067093Z",
@@ -38473,9 +38473,9 @@
   },
   {
     "timestamp": "2026-03-20T19:30:41.204576Z",
-    "stock_score": NaN,
+    "stock_score": 0.0,
     "news_score": 0.415,
-    "raw_score": NaN
+    "raw_score": 8.2
   },
   {
     "timestamp": "2026-03-20T20:20:24.608948Z",
@@ -39073,9 +39073,9 @@
   },
   {
     "timestamp": "2026-03-25T19:38:35.176895Z",
-    "stock_score": NaN,
+    "stock_score": 0.338,
     "news_score": 0.397,
-    "raw_score": NaN
+    "raw_score": 34.86
   },
   {
     "timestamp": "2026-03-25T20:28:28.286029Z",
@@ -39163,9 +39163,9 @@
   },
   {
     "timestamp": "2026-03-26T16:01:43.593428Z",
-    "stock_score": NaN,
+    "stock_score": 0.019,
     "news_score": 0.393,
-    "raw_score": NaN
+    "raw_score": 9.4
   },
   {
     "timestamp": "2026-03-26T17:51:54.468714Z",
@@ -40585,15 +40585,15 @@
   },
   {
     "timestamp": "2026-04-08T04:27:33.880627Z",
-    "stock_score": NaN,
+    "stock_score": 0.0,
     "news_score": 0.445,
-    "raw_score": NaN
+    "raw_score": 9.05
   },
   {
     "timestamp": "2026-04-08T06:14:55.090256Z",
-    "stock_score": NaN,
+    "stock_score": 0.0,
     "news_score": 0.441,
-    "raw_score": NaN
+    "raw_score": 9.05
   },
   {
     "timestamp": "2026-04-08T08:05:45.751276Z",
@@ -40681,15 +40681,15 @@
   },
   {
     "timestamp": "2026-04-09T04:23:55.743274Z",
-    "stock_score": NaN,
+    "stock_score": 0.284,
     "news_score": 0.438,
-    "raw_score": NaN
+    "raw_score": 31.57
   },
   {
     "timestamp": "2026-04-09T06:14:30.418693Z",
-    "stock_score": NaN,
+    "stock_score": 0.284,
     "news_score": 0.437,
-    "raw_score": NaN
+    "raw_score": 31.57
   },
   {
     "timestamp": "2026-04-09T08:11:02.939577Z",

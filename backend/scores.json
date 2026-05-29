@@ -44722,5 +44722,131 @@
     "stock_score": 0.073,
     "news_score": 0.424,
     "raw_score": 14.36
+  },
+  {
+    "timestamp": "2026-05-26T22:59:43.832287Z",
+    "stock_score": 0.073,
+    "news_score": 0.429,
+    "raw_score": 14.45
+  },
+  {
+    "timestamp": "2026-05-27T00:05:30.199369Z",
+    "stock_score": 0.073,
+    "news_score": 0.43,
+    "raw_score": 14.48
+  },
+  {
+    "timestamp": "2026-05-27T05:08:13.944340Z",
+    "stock_score": 0.073,
+    "news_score": 0.445,
+    "raw_score": 14.79
+  },
+  {
+    "timestamp": "2026-05-27T08:59:38.845226Z",
+    "stock_score": 0.073,
+    "news_score": 0.427,
+    "raw_score": 14.42
+  },
+  {
+    "timestamp": "2026-05-27T16:31:27.565396Z",
+    "stock_score": 0.07,
+    "news_score": 0.437,
+    "raw_score": 14.34
+  },
+  {
+    "timestamp": "2026-05-27T19:12:45.767991Z",
+    "stock_score": 0.101,
+    "news_score": 0.423,
+    "raw_score": 16.56
+  },
+  {
+    "timestamp": "2026-05-27T21:44:15.601141Z",
+    "stock_score": 0.099,
+    "news_score": 0.438,
+    "raw_score": 16.65
+  },
+  {
+    "timestamp": "2026-05-27T23:08:02.763069Z",
+    "stock_score": 0.099,
+    "news_score": 0.441,
+    "raw_score": 16.72
+  },
+  {
+    "timestamp": "2026-05-28T01:58:09.753078Z",
+    "stock_score": 0.099,
+    "news_score": 0.48,
+    "raw_score": 17.5
+  },
+  {
+    "timestamp": "2026-05-28T06:08:16.321548Z",
+    "stock_score": 0.099,
+    "news_score": 0.438,
+    "raw_score": 16.65
+  },
+  {
+    "timestamp": "2026-05-28T10:43:32.701395Z",
+    "stock_score": 0.099,
+    "news_score": 0.451,
+    "raw_score": 16.91
+  },
+  {
+    "timestamp": "2026-05-28T14:26:46.687403Z",
+    "stock_score": 0.365,
+    "news_score": 0.489,
+    "raw_score": 38.99
+  },
+  {
+    "timestamp": "2026-05-28T17:55:05.402435Z",
+    "stock_score": 0.28,
+    "news_score": 0.425,
+    "raw_score": 30.87
+  },
+  {
+    "timestamp": "2026-05-28T20:03:35.137012Z",
+    "stock_score": 0.309,
+    "news_score": 0.421,
+    "raw_score": 33.13
+  },
+  {
+    "timestamp": "2026-05-28T22:25:16.535502Z",
+    "stock_score": 0.31,
+    "news_score": 0.43,
+    "raw_score": 33.41
+  },
+  {
+    "timestamp": "2026-05-29T00:00:55.879486Z",
+    "stock_score": 0.31,
+    "news_score": 0.416,
+    "raw_score": 33.13
+  },
+  {
+    "timestamp": "2026-05-29T05:04:02.775439Z",
+    "stock_score": 0.31,
+    "news_score": 0.436,
+    "raw_score": 33.54
+  },
+  {
+    "timestamp": "2026-05-29T09:32:54.169000Z",
+    "stock_score": 0.31,
+    "news_score": 0.445,
+    "raw_score": 33.71
+  },
+  {
+    "timestamp": "2026-05-29T12:39:26.758737Z",
+    "stock_score": 0.31,
+    "news_score": 0.433,
+    "raw_score": 33.47
+  },
+  {
+    "timestamp": "2026-05-29T16:33:55.776677Z",
+    "stock_score": 0.069,
+    "news_score": 0.425,
+    "raw_score": 14.0
+  },
+  {
+    "timestamp": "2026-05-29T19:25:39.044014Z",
+    "stock_score": 0.04,
+    "news_score": 0.434,
+    "raw_score": 11.86
   }
 ]

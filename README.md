@@ -20,21 +20,6 @@ history.
 - JSON and CSV exports from the browser
 - Direct GitHub fallback if the Vercel API route fails
 
-## Demo
-
-Add a screenshot or short GIF here once the app is deployed:
-
-```md
-![WarStock dashboard](docs/warstock-dashboard.png)
-```
-
-Recommended portfolio shots:
-
-- Full dashboard with the latest score visible
-- Score chart filtered to week or month
-- Data table with recent hourly runs
-- GitHub Actions run showing the automated model update
-
 ## Architecture
 
 ```mermaid
@@ -56,10 +41,10 @@ The backend creates one score entry per model run:
 
 ```json
 {
-  "timestamp": "2026-05-29T00:00:00Z",
-  "stock_score": 0.123,
-  "news_score": 0.456,
-  "raw_score": 18.96
+  "timestamp": "ISO-8601 UTC timestamp",
+  "stock_score": "0 to 1",
+  "news_score": "0 to 1",
+  "raw_score": "0 to 100"
 }
 ```
 

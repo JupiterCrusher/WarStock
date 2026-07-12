@@ -16,7 +16,7 @@ history.
 - News signal from 3 Google News RSS searches
 - Keyword-weighted conflict scoring with 44 tracked terms
 - React, Tailwind CSS, and Recharts frontend
-- Vercel serverless API for fetching private GitHub-hosted score history
+- Vercel serverless API for fetching GitHub-hosted score history
 - JSON and CSV exports from the browser
 - Direct GitHub fallback if the Vercel API route fails
 
@@ -107,7 +107,7 @@ previous valid score for that signal.
 |-- frontend/
 |   |-- api/
 |   |   |-- scores.js       # Vercel API route for score history
-|   |   `-- check-token.js  # deployment token diagnostic
+|   |   `-- scores.js       # score-history proxy
 |   `-- src/
 |       |-- App.jsx         # dashboard, chart, table, exports
 |       `-- BootScreen.jsx  # terminal boot animation
@@ -141,20 +141,8 @@ raw GitHub `backend/scores.json` file if the API route fails.
 
 ## Deployment Notes
 
-Set `GITHUB_TOKEN` in the Vercel project environment so `/api/scores` can fetch
-the private GitHub-hosted score history.
-
-To verify that Vercel can read the environment variable, visit:
-
-```text
-/api/check-token
-```
-
-Expected response:
-
-```json
-{ "tokenPresent": true }
-```
+No application secrets are required. The API route reads the public score
+history and keeps the data-fetching behavior consistent between deployments.
 
 The backend model is scheduled in `.github/workflows/run-hourly.yml`:
 
@@ -178,8 +166,23 @@ and can refresh on demand from the UI.
 
 ## Next Improvements
 
-- Add unit tests for scoring, fallback behavior, and payload normalization
+- Expand unit tests to cover feed failures and payload normalization
 - Add a `/api/status` route with latest run time, error count, and freshness
 - Show top matched headlines and keyword hits in the dashboard
-- Add PR CI for Python tests and `npm run build`
 - Move generated score history to a small database once history grows large
+
+## Testing
+
+Run the backend unit tests and production frontend build before opening a pull
+request:
+
+```bash
+cd backend && python -m unittest -v
+cd ../frontend && npm ci && npm run build
+```
+
+GitHub Actions runs the same checks for pushes and pull requests.
+
+## License
+
+Released under the [MIT License](LICENSE).

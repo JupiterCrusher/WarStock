@@ -2,11 +2,12 @@ from stock_data import get_stock_signal
 from news_data import get_news_signal
 import json
 from math import isfinite
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
-SCORES_PATH = Path("scores.json")   # ⬅️ fixed
-ERRORS_PATH = Path("errors.json")   # ⬅️ fixed
+BACKEND_DIR = Path(__file__).resolve().parent
+SCORES_PATH = BACKEND_DIR / "scores.json"
+ERRORS_PATH = BACKEND_DIR / "errors.json"
 
 # Ensure files exist
 SCORES_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -18,7 +19,7 @@ if not ERRORS_PATH.exists():
         json.dump([], f)
 
 def get_timestamp():
-    return datetime.utcnow().isoformat() + "Z"
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 def load_scores():
     with open(SCORES_PATH, "r") as f:
@@ -86,7 +87,7 @@ def main():
 
     final_score = calculate_moving_average(scores)
     print(f"[{timestamp}] Final Score: {final_score}")
-    print(f"Saved {len(scores)} score entries.")  # Debug print
+    print(f"Saved {len(scores)} score entries.")
 
     save_scores(scores)
 

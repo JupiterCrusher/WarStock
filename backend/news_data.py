@@ -64,9 +64,6 @@ def get_news_signal():
                     else getattr(entry, "description", "")
                 )
 
-            # Log raw headline for debugging
-            print(f"Title: {title} | Summary: {summary}")
-
             text = f"{title} {summary}".lower()
             hits = sum(1 for word in BASE_KEYWORDS if word.lower() in text)
             hits += sum(2 for word in HIGH_KEYWORDS if word.lower() in text)

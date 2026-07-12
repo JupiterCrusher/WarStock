@@ -28,9 +28,6 @@ jobs:
         working-directory: backend
         run: python main.py
 
-      - name: Git status debug
-        run: git status
-
       - name: Commit and push updated scores
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

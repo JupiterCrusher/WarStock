@@ -1,6 +1,6 @@
 # WarStock
 
-WarStock is an experimental risk-signal dashboard that combines defense equity
+WarStock is an experimental risk-signal dashboard that combines defense equity 
 movement with conflict-related news volume. A Python model runs on a scheduled
 GitHub Actions workflow, writes a timestamped score history, and a React
 terminal-style frontend visualizes the latest signal, trend line, and exportable

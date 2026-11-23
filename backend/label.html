@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WarStock · Label news</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101815; color: #e2ede6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 900px; margin: auto; padding: 32px 20px; }
+    header { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+    h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -.6px; }
+    h2 { font-size: 25px; line-height: 1.35; margin: 20px 0 16px; }
+    p { line-height: 1.6; }
+    .muted { color: #a7baad; font-size: 14px; }
+    .eyebrow { color: #89e0a8; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+    .card { background: #19241e; border: 1px solid #344d3d; border-radius: 14px; padding: 24px; margin: 20px 0; }
+    .progress { height: 5px; background: #344d3d; border-radius: 3px; margin-top: 14px; }
+    #bar { height: 100%; background: #89e0a8; border-radius: 3px; width: 0; }
+    .choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0 16px; }
+    button { font: inherit; cursor: pointer; border: 1px solid #476952; border-radius: 8px; background: #233b2c; color: #e2ede6; padding: 14px; text-align: left; }
+    button:hover { background: #345a42; border-color: #89e0a8; }
+    button:focus-visible, a:focus-visible, textarea:focus-visible { outline: 3px solid #89e0a8; outline-offset: 3px; }
+    button:disabled { opacity: .45; cursor: default; }
+    button strong { display: block; margin: 6px 0; }
+    button small { display: block; line-height: 1.5; color: #b3c9ba; }
+    kbd { font: 12px monospace; border: 1px solid #698373; border-radius: 4px; padding: 2px 6px; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .actions button { padding: 10px 14px; background: transparent; }
+    a { color: #89e0a8; }
+    textarea { display: block; width: 100%; margin-top: 8px; background: #101815; border: 1px solid #476952; border-radius: 7px; padding: 10px; color: #e2ede6; font: inherit; }
+    details { font-size: 14px; line-height: 1.6; }
+    summary { cursor: pointer; color: #89e0a8; }
+    #status { min-height: 24px; color: #89e0a8; }
+    #error { color: #ffc68e; }
+    [hidden] { display: none !important; }
+    @media (max-width: 600px) { .choices { grid-template-columns: 1fr; } .card { padding: 18px; } header { display: block; } h2 { font-size: 21px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header><div><div class="eyebrow">WarStock / Training data</div><h1>What does this report describe?</h1><div class="muted">Read the headline and snippet. Pick the main new claim.</div></div><div class="muted">Saved on this computer</div></header>
+  <div class="card"><div id="progress" aria-live="polite">Loading your progress…</div><div class="progress"><div id="bar"></div></div><div class="muted" id="counts"></div></div>
+  <p id="error" role="alert" hidden></p>
+  <article class="card" id="item">
+    <div class="eyebrow" id="source"></div>
+    <h2 id="title">Loading a headline…</h2>
+    <p id="current-label" class="muted" hidden></p>
+    <p id="snippet"></p>
+    <a id="link" target="_blank" rel="noopener noreferrer" hidden>Open source report ↗</a>
+    <div class="choices">
+      <button data-label="background"><kbd>1</kbd><strong>Background / other</strong><small>Arms business, history, talks, or no reported threat, buildup, or fighting.</small></button>
+      <button data-label="threats_buildup"><kbd>2</kbd><strong>Threats / buildup</strong><small>An explicit threat, troop buildup, or exercise. No reported fighting.</small></button>
+      <button data-label="reported_fighting"><kbd>3</kbd><strong>Reported fighting</strong><small>An actual attack, strike, clash, or shelling reported in the text.</small></button>
+    </div>
+    <label class="muted" for="notes">Notes (optional)</label><textarea id="notes" rows="2" maxlength="2000" placeholder="Why was this one hard to label?"></textarea>
+    <div class="actions" style="margin-top: 16px"><button id="skip">Skip for review <kbd>S</kbd></button><button id="undo" disabled>Undo last <kbd>U</kbd></button></div>
+  </article>
+  <div class="card" id="empty" hidden><h2 id="empty-title">You’re caught up.</h2><p id="empty-text">Collect more headlines to keep going. Your labels are saved.</p></div>
+  <div class="actions"><button id="mode">Review skipped headlines</button><button id="reload">Reload</button></div>
+  <p id="status" role="status" aria-live="polite"></p>
+  <details class="card"><summary>Label rules and examples</summary>
+    <p>These labels describe what the text says. They do not verify events or predict future war.</p>
+    <ul><li><b>Background:</b> “Defense firm wins radar contract.” Talks without a new threat also belong here.</li><li><b>Threats / buildup:</b> “Government threatens strikes after troop buildup.” A threat to attack is not a completed attack.</li><li><b>Reported fighting:</b> “Airstrike hits military base.” Include attributed reports (“officials say”), but skip an unclear denial or dispute.</li></ul>
+    <p>Use the main new claim. A ceasefire agreement that mentions old fighting is background. A new attack that mentions failed talks is reported fighting. Skip historical recaps, mixed claims, denials, and vague texts when you cannot choose from the supplied text. Don’t use facts found only in the linked article.</p>
+    <p>The first goal is 100 reviewed headlines. We’ll need more labels across several dates to train and test fairly.</p>
+  </details>
+</main>
+<script>
+  const token = '__LABEL_TOKEN__';
+  const names = {background: 'Background', threats_buildup: 'Threats / buildup', reported_fighting: 'Reported fighting'};
+  let current = null, currentSaved = null, mode = 'pending', busy = false, history = [], reviewSeen = [];
+  const el = id => document.getElementById(id);
+  function error(message) { el('error').textContent = message; el('error').hidden = !message; }
+  function controls(disabled) { document.querySelectorAll('[data-label], #skip, #mode, #reload').forEach(button => button.disabled = disabled); el('undo').disabled = disabled || !history.length; }
+  async function request(path, options) { const response = await fetch(path, options); const data = await response.json(); if (!response.ok) throw new Error(data.error || 'Request failed'); return data; }
+  async function load(id) {
+    busy = true; controls(true); error('');
+    try {
+      const data = await request('/api/next?mode=' + mode + '&exclude=' + encodeURIComponent(reviewSeen.join(',')) + (id ? '&id=' + encodeURIComponent(id) : ''));
+      current = data.article;
+      currentSaved = data.saved;
+      const p = data.progress;
+      el('progress').textContent = p.labeled + ' labeled · First goal: 100 · ' + p.review + ' skipped · ' + p.remaining + ' stories left in this queue';
+      el('bar').style.width = Math.min(p.labeled, 100) + '%';
+      el('counts').textContent = Object.entries(names).map(([key, name]) => name + ': ' + p.counts[key]).join(' · ');
+      el('item').hidden = !current; el('empty').hidden = !!current;
+      el('mode').textContent = mode === 'pending' ? 'Review skipped headlines' : 'Back to new headlines';
+      el('empty-title').textContent = mode === 'review' ? 'No skipped headlines left.' : 'You’re caught up.';
+      if (current) {
+        el('title').textContent = current.input_title || current.title;
+        el('current-label').hidden = !currentSaved;
+        el('current-label').textContent = currentSaved ? 'Saved label: ' + (names[currentSaved.label] || 'Skipped for review') + '. Pick again to change it.' : '';
+        el('snippet').textContent = current.input_snippet || 'No extra snippet supplied. Skip if the headline is not clear enough.';
+        el('source').textContent = (current.source || 'Source not supplied') + ' · ' + (current.published_at ? new Date(current.published_at).toLocaleDateString() : 'Publish date unknown');
+        el('notes').value = data.saved?.notes || '';
+        let safe = false; try { safe = ['http:', 'https:'].includes(new URL(current.url).protocol); } catch {}
+        el('link').hidden = !safe; if (safe) el('link').href = current.url;
+      }
+    } catch (err) { error(err.message); current = null; }
+    finally { busy = false; controls(!current); el('mode').disabled = false; el('reload').disabled = false; el('undo').disabled = !history.length; }
+  }
+  async function save(label) {
+    if (busy || !current) return;
+    busy = true; controls(true); error('');
+    const item = current;
+    try {
+      await request('/api/label', {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Label-Token': token}, body: JSON.stringify({id: item.id, label, notes: el('notes').value})});
+      history.push({id: item.id, notes: el('notes').value, previous: currentSaved});
+      if (mode === 'review' && label === 'review') reviewSeen.push(item.id);
+      el('status').textContent = label === 'review' ? 'Saved for review.' : 'Saved: ' + names[label] + '.';
+      await load();
+    } catch (err) { error(err.message); busy = false; controls(false); }
+  }
+  async function undo() {
+    if (busy || !history.length) return;
+    busy = true; controls(true); error('');
+    const previous = history[history.length - 1], id = previous.id;
+    try {
+      await request('/api/label', {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Label-Token': token}, body: JSON.stringify({id, label: previous.previous?.label ?? null, notes: previous.previous?.notes || ''})});
+      history.pop(); reviewSeen = reviewSeen.filter(item => item !== id);
+      el('status').textContent = 'Last choice undone. Label this headline again.'; await load(id); el('notes').value = previous.previous?.notes ?? previous.notes;
+    } catch (err) { error(err.message); busy = false; controls(!current); }
+  }
+  document.querySelectorAll('[data-label]').forEach(button => button.addEventListener('click', () => save(button.dataset.label)));
+  el('skip').addEventListener('click', () => save('review'));
+  el('undo').addEventListener('click', undo);
+  el('mode').addEventListener('click', () => { mode = mode === 'pending' ? 'review' : 'pending'; reviewSeen = []; load(); });
+  el('reload').addEventListener('click', () => { reviewSeen = []; load(); });
+  document.addEventListener('keydown', event => {
+    if (['TEXTAREA', 'INPUT', 'BUTTON', 'A', 'SUMMARY'].includes(event.target.tagName) || event.ctrlKey || event.metaKey || event.altKey) return;
+    const key = event.key.toLowerCase();
+    if (['1', '2', '3', 's', 'u'].includes(key)) event.preventDefault();
+    if (key === 'u') undo(); else if (key === 's') save('review'); else if (['1', '2', '3'].includes(key)) save(Object.keys(names)[Number(key) - 1]);
+  });
+  load(new URLSearchParams(location.search).get('id'));
+</script>
+</body>
+</html>

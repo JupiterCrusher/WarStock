@@ -1,6 +1,6 @@
 # WarStock
 
-WarStock is an experimental risk-signal dashboard that combines defense equity 
+WarStock is an experimental risk-signal dashboard that combines defense equity
 movement with conflict-related news volume. A Python model runs on a scheduled
 GitHub Actions workflow, writes a timestamped score history, and a React
 terminal-style frontend visualizes the latest signal, trend line, and exportable
@@ -163,6 +163,25 @@ and can refresh on demand from the UI.
   and news components rather than hidden behind an opaque prediction.
 - Used serverless deployment patterns to keep the frontend simple while avoiding
   exposing private GitHub credentials in the browser.
+
+## Train a news classifier
+
+The ML tools collect headlines, provide a local label page, and train a
+TF-IDF/logistic regression classifier. The model must pass a held-out test on
+later news. The dashboard shows its news labels separately from the fixed
+stock/keyword score.
+
+Start with [ML_WORKFLOW.md](ML_WORKFLOW.md) and [LABEL_GUIDE.md](LABEL_GUIDE.md).
+The full design is in [ML_PLAN.md](ML_PLAN.md).
+
+```sh
+.venv/bin/python backend/ml.py collect
+.venv/bin/python backend/ml.py label --port 8766
+```
+
+Open `http://127.0.0.1:8766` to label. Your choices save locally; private notes
+and experiment snapshots are ignored by Git. Missing feeds show as unavailable
+instead of counting as calm news.
 
 ## Next Improvements
 

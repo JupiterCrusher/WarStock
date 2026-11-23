@@ -1,5 +1,6 @@
 import feedparser
 import requests
+from news_store import make_article, merge_articles, read_articles, save_articles, utc_now
 
 FEED_URLS = [
     "https://news.google.com/rss/search?q=military+conflict&hl=en-US&gl=US&ceid=US:en",
@@ -32,6 +33,52 @@ def fetch_feed(url: str):
     resp = requests.get(url, headers=HEADERS, timeout=10)
     resp.raise_for_status()
     return feedparser.parse(resp.content)
+
+
+def collect_news(path=None):
+    """Fetch once, archive unique text, and report partial or total outages."""
+    now = utc_now()
+    articles = []
+    feeds = []
+    for url in FEED_URLS:
+        try:
+            feed = fetch_feed(url)
+            if not feed.entries:
+                raise ValueError("Feed returned no items")
+            items = [make_article(entry, url, now) for entry in feed.entries]
+            items = [item for item in items if item]
+            if not items:
+                raise ValueError("Feed returned no usable headlines")
+            articles.extend(items)
+            feeds.append({"query": url, "ok": True, "items": len(items)})
+        except Exception as exc:
+            feeds.append({"query": url, "ok": False, "error": str(exc)})
+    existing = read_articles() if path is None else read_articles(path)
+    merged, added = merge_articles(existing, articles)
+    if articles:
+        if path is None:
+            save_articles(merged)
+        else:
+            save_articles(merged, path)
+    current_ids = {item["id"] for item in articles}
+    return {
+        "timestamp": now,
+        "status": "ok" if all(feed["ok"] for feed in feeds) else "partial" if articles else "unavailable",
+        "feeds": feeds,
+        "added": added,
+        "total": len(merged),
+        "articles": [row for row in merged if row["id"] in current_ids],
+    }
+
+
+def score_articles(articles):
+    if not articles:
+        raise ValueError("No news available; a missing feed is not a zero news signal")
+    hits = []
+    for article in articles:
+        text = f"{article['title']} {article.get('snippet', '')}".lower()
+        hits.append(sum(word in text for word in BASE_KEYWORDS) + sum(2 for word in HIGH_KEYWORDS if word in text))
+    return min(sum(hits) / len(hits) / 5, 1.0)
 
 
 def get_news_signal():
@@ -71,7 +118,7 @@ def get_news_signal():
             entry_count += 1
 
     if not fetched_any or entry_count == 0:
-        final = 0
+        raise ValueError("All news feeds failed or returned no items")
     else:
         avg_hits = total_hits / entry_count
         final = min(avg_hits / 5, 1.0)

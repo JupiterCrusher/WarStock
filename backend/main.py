@@ -1,5 +1,6 @@
 from stock_data import get_stock_signal
-from news_data import get_news_signal
+from news_data import collect_news, score_articles
+from news_ml import write_news_snapshot
 import json
 from math import isfinite
 from datetime import datetime, timezone
@@ -69,8 +70,14 @@ def main():
         stock_score = previous_score(scores, "stock_score")
     stock_score = clean_score(stock_score, previous_score(scores, "stock_score"))
 
+    news_status = "unavailable"
     try:
-        news_score = get_news_signal()
+        collection = collect_news()
+        news_status = collection["status"]
+        write_news_snapshot(collection)
+        if news_status == "partial":
+            append_error("news_feed_partial", json.dumps(collection["feeds"]))
+        news_score = score_articles(collection["articles"])
     except Exception as e:
         append_error("news_fetch_failed", str(e))
         news_score = previous_score(scores, "news_score")
@@ -82,7 +89,9 @@ def main():
         "timestamp": timestamp,
         "stock_score": round(stock_score, 3),
         "news_score": round(news_score, 3),
-        "raw_score": raw_score
+        "raw_score": raw_score,
+        "news_feed_status": news_status,
+        "score_version": "keyword-v2-dedup",
     })
 
     final_score = calculate_moving_average(scores)

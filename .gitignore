@@ -19,3 +19,10 @@ frontend/dist/
 .idea/
 .vscode/
 .DS_Store
+
+# Local labels and experiments (never publish personal notes or test snapshots)
+.ml/
+backend/data/labels.json
+backend/data/labels.json.tmp
+backend/data/*.csv
+*.tmp

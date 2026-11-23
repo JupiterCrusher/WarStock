@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BootScreen from "./BootScreen";
+import NewsPanel from "./NewsPanel";
+import ScoreMethod from "./ScoreMethod";
 import {
   LineChart,
   Line,
@@ -69,9 +71,11 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState("");
   const [range, setRange] = useState("week");
+  const [newsRefresh, setNewsRefresh] = useState(0);
   const ranges = { day: 1, week: 7, month: 30, year: 365 };
 
   const fetchScores = async () => {
+    setNewsRefresh(value => value + 1);
     setIsLoading(true);
     setFetchError("");
 
@@ -185,11 +189,11 @@ export default function App() {
         ></span>
       </div>
       <h1 className="text-xl mb-4 text-center border-b border-green-700 pb-1">
-        WARSTOCK TERMINAL ▐ WW3 RISK MONITOR
+        WARSTOCK TERMINAL ▐ EXPERIMENTAL SIGNAL MONITOR
       </h1>
 
         {latest && (
-          <section className="mb-6 text-center">
+          <section className="mb-4 text-center">
             <div
               className={`risk-index text-6xl font-bold text-green-200 ${
                 change !== "0.00" ? "animate-scale" : ""
@@ -203,12 +207,9 @@ export default function App() {
                 defconChanged ? "animate-pulse" : ""
               }`}
             >
-              DEFCON {defcon}
+              SIGNAL BAND {defcon}
             </p>
-            <p className="text-sm text-green-400 mt-1">
-              STOCK SIGNAL: {latest.stock_score} | NEWS SIGNAL: {latest.news_score}
-            </p>
-            <p className="text-xs text-green-600">
+            <p className="mt-1 text-xs text-green-600">
               Last updated: {formatTimestamp(latest.timestamp)}
             </p>
           </section>
@@ -218,11 +219,13 @@ export default function App() {
           {isLoading ? "Loading score feed..." : "No score data is available."}
         </section>
       )}
+      <ScoreMethod score={latest} bandAverage={movingAvg} />
       {fetchError && (
         <section className="mb-4 border border-yellow-700 bg-yellow-950/40 p-2 text-sm text-yellow-300">
           {fetchError}
         </section>
       )}
+      <NewsPanel refreshKey={newsRefresh} />
       <section className="mb-4 p-2 border-t border-b border-green-800">
         <div className="flex gap-2 mb-2">
         {[
@@ -321,9 +324,9 @@ export default function App() {
       <div className="mt-6">
         <h2 className="text-lg mb-1">About WarStock</h2>
         <p className="text-sm text-green-500">
-          WarStock is an experimental terminal that monitors global escalation
-          signals by combining defense stock movement with keyword-based news
-          parsing. Data updates hourly via GitHub Actions. Built using React,
+          WarStock tracks defense stock movement and conflict news. The score
+          uses fixed keyword rules; the news classifier runs as a separate experiment.
+          Data updates hourly via GitHub Actions. Built using React,
           Tailwind CSS, and Recharts.
         </p>
       </div>

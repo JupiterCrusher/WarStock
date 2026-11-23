@@ -1,0 +1,212 @@
+{
+  "version": "2026-11-23T191421-784397Z",
+  "created_at": "2026-11-23T19:14:21.804996Z",
+  "guide_version": "1",
+  "sklearn_version": "1.7.2",
+  "model_sha256": "fc7e474490493923c6c03c0e98615ec1c3bc4a6ed3c3d3dc86d53b0e4c34abf5",
+  "settings": {
+    "C": 1.0,
+    "class_weight": "balanced"
+  },
+  "split_counts": {
+    "train": {
+      "threats_buildup": 24,
+      "background": 51,
+      "reported_fighting": 29
+    },
+    "test": {
+      "reported_fighting": 61,
+      "threats_buildup": 7,
+      "background": 40
+    }
+  },
+  "split_dates": {
+    "train": [
+      "2026-10-01T20:24:50.895838Z",
+      "2026-10-01T20:24:50.895838Z"
+    ],
+    "test": [
+      "2026-11-23T19:03:39.696447Z",
+      "2026-11-23T19:03:39.696447Z"
+    ]
+  },
+  "test": {
+    "model": {
+      "macro_f1": 0.6219205630970337,
+      "classes": {
+        "background": {
+          "precision": 0.7931034482758621,
+          "recall": 0.575,
+          "f1-score": 0.6666666666666666,
+          "support": 40.0
+        },
+        "threats_buildup": {
+          "precision": 0.3,
+          "recall": 0.42857142857142855,
+          "f1-score": 0.35294117647058826,
+          "support": 7.0
+        },
+        "reported_fighting": {
+          "precision": 0.7971014492753623,
+          "recall": 0.9016393442622951,
+          "f1-score": 0.8461538461538461,
+          "support": 61.0
+        },
+        "accuracy": 0.75,
+        "macro avg": {
+          "precision": 0.6300682991837415,
+          "recall": 0.6350702576112411,
+          "f1-score": 0.6219205630970337,
+          "support": 108.0
+        },
+        "weighted avg": {
+          "precision": 0.7634011697854777,
+          "recall": 0.75,
+          "f1-score": 0.7477096251606055,
+          "support": 108.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          23,
+          4,
+          13
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          55
+        ]
+      ],
+      "label_order": [
+        "background",
+        "threats_buildup",
+        "reported_fighting"
+      ]
+    },
+    "majority": {
+      "macro_f1": 0.1801801801801802,
+      "classes": {
+        "background": {
+          "precision": 0.37037037037037035,
+          "recall": 1.0,
+          "f1-score": 0.5405405405405406,
+          "support": 40.0
+        },
+        "threats_buildup": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 7.0
+        },
+        "reported_fighting": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 61.0
+        },
+        "accuracy": 0.37037037037037035,
+        "macro avg": {
+          "precision": 0.12345679012345678,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.1801801801801802,
+          "support": 108.0
+        },
+        "weighted avg": {
+          "precision": 0.1371742112482853,
+          "recall": 0.37037037037037035,
+          "f1-score": 0.20020020020020018,
+          "support": 108.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          40,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          61,
+          0,
+          0
+        ]
+      ],
+      "label_order": [
+        "background",
+        "threats_buildup",
+        "reported_fighting"
+      ]
+    },
+    "keywords": {
+      "macro_f1": 0.2979512195121951,
+      "classes": {
+        "background": {
+          "precision": 0.38823529411764707,
+          "recall": 0.825,
+          "f1-score": 0.528,
+          "support": 40.0
+        },
+        "threats_buildup": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 7.0
+        },
+        "reported_fighting": {
+          "precision": 0.7142857142857143,
+          "recall": 0.2459016393442623,
+          "f1-score": 0.36585365853658536,
+          "support": 61.0
+        },
+        "accuracy": 0.4444444444444444,
+        "macro avg": {
+          "precision": 0.3675070028011205,
+          "recall": 0.3569672131147541,
+          "f1-score": 0.2979512195121951,
+          "support": 108.0
+        },
+        "weighted avg": {
+          "precision": 0.547230003112356,
+          "recall": 0.4444444444444444,
+          "f1-score": 0.40219512195121954,
+          "support": 108.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          33,
+          1,
+          6
+        ],
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          45,
+          1,
+          15
+        ]
+      ],
+      "label_order": [
+        "background",
+        "threats_buildup",
+        "reported_fighting"
+      ]
+    }
+  },
+  "training_mode": "fixed",
+  "experimental": true,
+  "activation_check_passed": true
+}

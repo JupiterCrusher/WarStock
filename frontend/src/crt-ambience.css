@@ -1,0 +1,100 @@
+@property --lab-lamp-dip {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.terminal-camera {
+  /* The 3:2 room plate is centered and extends 1.5% past each side. */
+  --lab-image-width: max(103vw, 154.5vh);
+  --lab-image-height: max(68.6667vw, 103vh);
+  --lab-lamp-x: calc(50% + var(--lab-image-width) * 0.446);
+  --lab-lamp-y: calc(50% - var(--lab-image-height) * 0.34);
+  --lab-lamp-level: calc(1 - var(--lab-lamp-dip));
+  --lab-bezel-spill: calc(0.15 * var(--lab-lamp-level));
+}
+
+.terminal-room {
+  filter: saturate(0.72) brightness(0.61) blur(1.1px);
+}
+
+.terminal-camera::before,
+.terminal-room::after,
+.terminal-recess::before,
+.terminal-reflection::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.terminal-camera::before {
+  z-index: 5;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 10% 19% at var(--lab-lamp-x) var(--lab-lamp-y),
+    #ffb4674a, #e7a05d1a 43%, transparent 93%
+  );
+  mix-blend-mode: screen;
+  opacity: calc(0.72 * var(--lab-lamp-level));
+}
+
+.terminal-room::after {
+  inset: 0;
+  background: radial-gradient(
+    ellipse 9% 14% at var(--lab-lamp-x) var(--lab-lamp-y),
+    #000 34%, #0009 62%, transparent
+  );
+  opacity: var(--lab-lamp-dip);
+}
+
+.terminal-recess::before {
+  inset: 0;
+  background: radial-gradient(ellipse 20% 34% at 100% 13%, #ffc28565, transparent 89%);
+  opacity: calc(0.68 * var(--lab-lamp-level));
+}
+
+.terminal-reflection {
+  /* Mute highlights already painted into the reflection plate. */
+  background-image:
+    radial-gradient(ellipse 8% 24% at 100% 15%, #000 54%, transparent 95%),
+    radial-gradient(ellipse 18% 15% at 7% 13%, #0009, transparent 92%),
+    url("/crt-reflection.jpg");
+}
+
+.terminal-reflection::after {
+  z-index: 1;
+  top: 27%;
+  left: -29%;
+  width: clamp(132px, 23%, 310px);
+  aspect-ratio: 2 / 3;
+  background: url("/crt-reflection-shadow.png") center / contain no-repeat;
+  mask-image: linear-gradient(#000 68%, transparent 99%);
+  filter: blur(2px);
+  opacity: 0;
+}
+
+@media (max-width: 690px) {
+  .terminal-camera {
+    --lab-image-width: 103vw;
+    --lab-image-height: 103vh;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .terminal-reflection::after {
+    animation: crt-reflection-pass 24s linear infinite;
+  }
+}
+
+@keyframes crt-lamp-flicker {
+  0%, 21%, 23%, 24.8%, 65%, 68%, 100% { --lab-lamp-dip: 0; }
+  22.1% { --lab-lamp-dip: 0.64; }
+  24% { --lab-lamp-dip: 0.43; }
+  66.6% { --lab-lamp-dip: 0.55; }
+}
+
+@keyframes crt-reflection-pass {
+  0%, 17% { transform: translate3d(0, 0, 0) rotate(-2deg); opacity: 0; }
+  21%, 33% { opacity: 0.95; }
+  39%, 100% { transform: translate3d(256%, 1.3%, 0) rotate(2deg); opacity: 0; }
+}

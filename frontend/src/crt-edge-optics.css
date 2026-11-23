@@ -1,0 +1,37 @@
+.terminal-projection::before,
+.terminal-projection::after {
+  content: "";
+  position: absolute;
+  z-index: 9;
+  inset-block: 0;
+  width: min(25%, 370px);
+  pointer-events: none;
+  /* The filtered image fades out well before it reaches the center. */
+  -webkit-mask-image:
+    radial-gradient(ellipse 100% 40% at var(--lens-side) top, #000 8%, #000c 43%, transparent 98%),
+    radial-gradient(ellipse 100% 40% at var(--lens-side) bottom, #000 8%, #000c 43%, transparent 98%);
+  mask-image:
+    radial-gradient(ellipse 100% 40% at var(--lens-side) top, #000 8%, #000c 43%, transparent 98%),
+    radial-gradient(ellipse 100% 40% at var(--lens-side) bottom, #000 8%, #000c 43%, transparent 98%);
+  -webkit-backdrop-filter: blur(0.85px);
+  backdrop-filter: blur(0.85px);
+}
+
+.terminal-projection::before {
+  --lens-side: left;
+  --lens-fringe: url(#crt-lens-west);
+  left: 0;
+}
+
+.terminal-projection::after {
+  --lens-side: right;
+  --lens-fringe: url(#crt-lens-east);
+  right: 0;
+}
+
+@supports (backdrop-filter: blur(0.85px) url(#crt-lens-west)) {
+  .terminal-projection::before,
+  .terminal-projection::after {
+    backdrop-filter: blur(0.85px) var(--lens-fringe);
+  }
+}

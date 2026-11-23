@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
+import { Icon, formatTimestamp } from "./dashboard";
+import "./crt-news-filter.css";
 
 const labels = {
   background: "Background / other",
   threats_buildup: "Threats / buildup",
   reported_fighting: "Reported fighting",
 };
+const filterOptions = Object.entries({ all: "All labels", ...labels });
 const fallback = "https://raw.githubusercontent.com/JupiterCrusher/WarStock/main/backend/news.json";
 
 function safeLink(value) {
@@ -26,11 +29,115 @@ async function fetchNews(url, signal) {
   return data;
 }
 
+function NewsFilter({ value, onChange }) {
+  const id = useId();
+  const [open, setOpen] = useState(false);
+  const pickerRef = useRef(null);
+  const triggerRef = useRef(null);
+  const listRef = useRef(null);
+  const optionRefs = useRef([]);
+  const selectedIndex = filterOptions.findIndex(([key]) => key === value);
+
+  useEffect(() => {
+    if (!open) return;
+
+    optionRefs.current[selectedIndex]?.focus({ preventScroll: true });
+    listRef.current?.scrollIntoView({ block: "nearest", inline: "nearest" });
+
+    function dismissOutside(event) {
+      if (!pickerRef.current?.contains(event.target)) setOpen(false);
+    }
+
+    document.addEventListener("pointerdown", dismissOutside);
+    return () => document.removeEventListener("pointerdown", dismissOutside);
+  }, [open, selectedIndex]);
+
+  function dismiss() {
+    setOpen(false);
+    triggerRef.current?.focus({ preventScroll: true });
+  }
+
+  function choose(key) {
+    dismiss();
+    if (key !== value) onChange(key);
+  }
+
+  function handleTriggerKey(event) {
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+    event.preventDefault();
+    if (open) optionRefs.current[selectedIndex]?.focus();
+    else setOpen(true);
+  }
+
+  function handleListKey(event) {
+    if (event.key === "Escape" || (event.key === "Tab" && event.shiftKey)) {
+      event.preventDefault();
+      dismiss();
+      return;
+    }
+
+    const index = optionRefs.current.indexOf(event.target);
+    if (index < 0) return;
+
+    switch (event.key) {
+      case "ArrowDown":
+        optionRefs.current[(index + 1) % filterOptions.length]?.focus();
+        break;
+      case "ArrowUp":
+        optionRefs.current[(index + filterOptions.length - 1) % filterOptions.length]?.focus();
+        break;
+      case "Home":
+        optionRefs.current[0]?.focus();
+        break;
+      case "End":
+        optionRefs.current.at(-1)?.focus();
+        break;
+      case "Enter":
+      case " ":
+        choose(filterOptions[index][0]);
+        break;
+      default:
+        return;
+    }
+
+    event.preventDefault();
+  }
+
+  return (
+    <div className="news-filter" ref={pickerRef} onBlur={(event) => {
+      if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+    }}>
+      <span id={`${id}-label`}>Filter stories</span>
+      <div className="news-filter-picker">
+        <button type="button" className="news-filter-trigger" ref={triggerRef}
+          aria-labelledby={`${id}-label ${id}-value`} aria-haspopup="listbox" aria-expanded={open}
+          aria-controls={open ? `${id}-list` : undefined} onClick={() => setOpen(!open)} onKeyDown={handleTriggerKey}>
+          <span id={`${id}-value`}>{filterOptions[selectedIndex][1]}</span>
+          <Icon name="down" />
+        </button>
+        {open && (
+          <ul id={`${id}-list`} className="news-filter-options" role="listbox"
+            aria-labelledby={`${id}-label`} ref={listRef} onKeyDown={handleListKey}
+            onMouseDown={(event) => event.preventDefault()}>
+            {filterOptions.map(([key, name], index) => (
+              <li key={key} role="option" aria-selected={value === key} tabIndex={-1}
+                ref={(option) => { optionRefs.current[index] = option; }} onClick={() => choose(key)}>
+                {name}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function NewsPanel({ refreshKey }) {
   const [news, setNews] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("all");
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -41,12 +148,12 @@ export default function NewsPanel({ refreshKey }) {
         let data;
         try {
           data = await fetchNews("/api/news", controller.signal);
-        } catch (firstError) {
+        } catch {
           if (controller.signal.aborted) return;
           data = await fetchNews(fallback, controller.signal);
         }
         if (!controller.signal.aborted) setNews(data);
-      } catch (err) {
+      } catch {
         if (!controller.signal.aborted) setError("News is unavailable. Try Refresh to check again.");
       } finally {
         if (!controller.signal.aborted) setLoading(false);
@@ -59,67 +166,91 @@ export default function NewsPanel({ refreshKey }) {
   const active = news?.model_state === "active";
   const stale = news && Date.now() - Date.parse(news.timestamp) > 2 * 60 * 60 * 1000;
   const articles = (news?.articles || []).filter(article => !active || filter === "all" || article.label === filter);
+  const visibleArticles = showAll ? articles : articles.slice(0, 3);
   const healthyFeeds = news?.feeds.filter(feed => feed.ok).length || 0;
+  const feedNotice = {
+    unavailable: "News feeds are unavailable. Coverage may have gaps.",
+    partial: "Some feeds are unavailable. Coverage is incomplete.",
+  }[news?.feed_status];
 
   return (
-    <section className="mb-6 border border-green-800 p-4" aria-labelledby="news-heading">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 id="news-heading" className="text-lg text-green-200">CONFLICT NEWS</h2>
-        <span className="text-xs text-green-500">{active ? "EXPERIMENTAL CLASSIFIER" : "COLLECTING TRAINING DATA"}</span>
+    <section id="news" className="panel news-panel" aria-labelledby="news-heading">
+      <div className="panel-heading">
+        <h2 id="news-heading">Conflict news</h2>
+        {news && <span className={`news-status ${active ? "classifier-active" : ""}`}>
+          {active ? "Experimental classifier" : news.model_state === "error" ? "Classifier unavailable" : "Collecting training data"}
+        </span>}
       </div>
-      <p className="mt-2 text-xs text-green-500">Labels describe news reports. They do not verify events or predict war.</p>
-      {loading && <p className="mt-3 text-sm" role="status">Loading news…</p>}
-      {error && <p className="mt-3 text-sm text-yellow-300" role="alert">{error} {news ? "Showing the last loaded news." : ""}</p>}
+      {loading && !news && <p className="empty-state" role="status">Loading news…</p>}
+      {error && <p className="notice" role="alert">{error} {news ? "Showing the last loaded news." : ""}</p>}
       {news && (
         <>
-          <p className="mt-3 text-xs text-green-500">
-            Last checked: {new Date(news.timestamp).toLocaleString()} · {healthyFeeds}/{news.feeds.length} feeds available · {news.archive_count} articles saved
+          <p className="panel-note news-meta">
+            <span>{healthyFeeds}/{news.feeds.length} feeds available</span>
+            <time dateTime={news.timestamp}>{formatTimestamp(news.timestamp)}</time>
           </p>
-          {(stale || news.feed_status !== "ok") && (
-            <p className="mt-2 border border-yellow-800 p-2 text-sm text-yellow-300" role="status">
-              {news.feed_status === "unavailable" ? "News feeds are unavailable. Missing news does not mean no conflict." : news.feed_status === "partial" ? "Some feeds are unavailable. Coverage is incomplete." : "This news snapshot is out of date."}
-              {stale && news.feed_status !== "ok" ? " This snapshot is also out of date." : ""}
-            </p>
-          )}
-          {!active && (
-            <p className="my-4 text-sm text-green-300">
-              {news.model_state === "error" ? "The news classifier is unavailable. Headlines remain unclassified." : "Headlines are ready to label. The classifier will appear after training and testing."}
-            </p>
+          {(stale || feedNotice) && (
+            <p className="notice" role="status">{feedNotice} {stale ? "This news snapshot is out of date." : ""}</p>
           )}
           {active && (
-            <>
-              <p className="mt-3 text-xs text-green-500">{news.story_count} unique stories in the last {news.window_hours} hours · Model {news.model_version}</p>
-              <div className="my-3 grid gap-2 sm:grid-cols-3">
-                {Object.entries(labels).map(([key, name]) => (
-                  <div key={key} className="border border-green-900 bg-green-950/40 p-3">
-                    <p className="text-xs text-green-400">{name}</p>
-                    <p className="mt-1 text-xl text-green-200">{Number.isFinite(news.class_shares?.[key]) ? `${Math.round(news.class_shares[key] * 100)}%` : "—"}</p>
-                    <p className="text-xs text-green-600">Share of collected stories</p>
-                  </div>
-                ))}
-              </div>
-              <div className="my-3 flex flex-wrap gap-2" aria-label="Filter news">
-                {Object.entries({ all: "All", ...labels }).map(([key, name]) => (
-                  <button key={key} type="button" aria-pressed={filter === key} onClick={() => setFilter(key)} className={`border px-3 py-2 text-xs ${filter === key ? "border-green-400 bg-green-800 text-green-100" : "border-green-800 text-green-400 hover:bg-green-950"}`}>
-                    {name}
-                  </button>
-                ))}
-              </div>
-            </>
+            <NewsFilter value={filter} onChange={(key) => {
+              setFilter(key);
+              setShowAll(false);
+            }} />
           )}
-          <ul className="max-h-80 overflow-y-auto divide-y divide-green-900">
-            {articles.map(article => {
+          <ul id="headlines" className={`articles ${showAll ? "is-expanded" : ""}`} key={filter} aria-label="Headlines"
+            tabIndex={showAll && articles.length > 3 ? 0 : undefined}>
+            {visibleArticles.map((article) => {
               const link = safeLink(article.url);
+              const sourceSuffix = ` - ${article.source}`;
+              const title = article.source && article.title.endsWith(sourceSuffix)
+                ? article.title.slice(0, -sourceSuffix.length)
+                : article.title;
               return (
-                <li key={article.id} className="py-3">
-                  {link ? <a href={link} target="_blank" rel="noopener noreferrer" className="text-sm text-green-200 underline decoration-green-800 underline-offset-4 hover:text-white">{article.title}</a> : <p className="text-sm text-green-200">{article.title}</p>}
-                  <p className="mt-1 text-xs text-green-500">{article.source || "Source not supplied"} · {active ? labels[article.label] || "Unclassified" : "Awaiting training"}</p>
+                <li key={article.id} className="article">
+                  {link ? (
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                      <span>{title}</span><Icon name="external" />
+                    </a>
+                  ) : <p className="article-title">{title}</p>}
+                  <p className="article-meta">
+                    <span>{article.source || "Source not supplied"}</span>
+                    {active && <span className="article-label">{labels[article.label] || "Unclassified"}</span>}
+                  </p>
                 </li>
               );
             })}
           </ul>
-          {!articles.length && <p className="my-4 text-sm text-green-500">{news.feed_status === "unavailable" ? "No fresh news could be retrieved." : "No stories in this view from the last 24 hours."}</p>}
-          {articles.length > 0 && <p className="mt-3 text-xs text-green-600">Showing up to 30 recent stories. Class shares use all collected stories in the window.</p>}
+          {!articles.length && <p className="empty-state">{news.feed_status === "unavailable" ? "No fresh news could be retrieved." : "No recent headlines match this view."}</p>}
+          <div className="news-actions">
+            {articles.length > 3 && (
+              <button type="button" aria-expanded={showAll} aria-controls="headlines" onClick={() => setShowAll(!showAll)}>
+                {showAll ? "Show fewer headlines" : `Show all ${articles.length} headlines`}
+              </button>
+            )}
+            <details className="news-details">
+              <summary>Feed details <Icon name="down" /></summary>
+              <div className="news-details-body">
+                {active ? (
+                  <>
+                    <p>Labels describe news coverage only. Shares use all {news.story_count} collected stories from the last {news.window_hours} hours.</p>
+                    <dl className="class-shares">
+                      {Object.entries(labels).map(([key, name]) => (
+                        <div key={key}>
+                          <dt>{name}</dt>
+                          <dd>{Number.isFinite(news.class_shares?.[key]) ? `${Math.round(news.class_shares[key] * 100)}%` : "—"}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <p>Model {news.model_version}</p>
+                  </>
+                ) : (
+                  <p>{news.model_state === "error" ? "Headlines are unclassified while the model is unavailable." : "Headlines will show labels once the classifier completes training and testing."}</p>
+                )}
+                <p>{news.archive_count?.toLocaleString() ?? "—"} articles saved. The feed shows up to 30 recent headlines.</p>
+              </div>
+            </details>
+          </div>
         </>
       )}
     </section>

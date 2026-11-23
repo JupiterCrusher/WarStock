@@ -1,0 +1,22 @@
+.terminal-reticle {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  color: #cbffce;
+  filter: drop-shadow(0 0 1px #a3ffae) drop-shadow(0 0 5px #63ff91);
+  pointer-events: none;
+}
+
+.terminal-glass[data-crt-reticle],
+.terminal-glass[data-crt-reticle] * {
+  cursor: none !important;
+}
+
+.terminal-glass[data-crt-reticle] .terminal-reticle {
+  display: block;
+}

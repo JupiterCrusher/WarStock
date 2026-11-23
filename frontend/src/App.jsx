@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from "react";
-import BootScreen from "./BootScreen";
+import React, { useEffect, useMemo, useState } from "react";
+import CrtOptics from "./CrtOptics";
+import CrtReticle from "./CrtReticle";
 import NewsPanel from "./NewsPanel";
-import ScoreMethod from "./ScoreMethod";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import ScoreMethod, { ScoreSummary } from "./ScoreMethod";
+import { ScoreHistory, ScoreTrend, ranges } from "./ScoreHistory";
+import { Icon, formatDate, formatTimestamp } from "./dashboard";
 
 const fetchURL = "/api/scores";
 const rawScoresURL =
   "https://raw.githubusercontent.com/JupiterCrusher/WarStock/main/backend/scores.json";
+const day = 24 * 60 * 60 * 1000;
 
 function normalizeScores(data) {
   if (!Array.isArray(data)) {
@@ -22,321 +18,179 @@ function normalizeScores(data) {
   }
 
   return data
-    .filter((score) => score?.timestamp && Number.isFinite(Number(score.raw_score)))
+    .filter((score) => Number.isFinite(Date.parse(score?.timestamp)) && Number.isFinite(Number(score.raw_score)))
     .map((score) => ({
       ...score,
       stock_score: Number(score.stock_score),
       news_score: Number(score.news_score),
       raw_score: Number(score.raw_score),
     }))
-    .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    .sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp));
 }
 
-async function loadScores(url) {
-  const response = await fetch(url, { cache: "no-store" });
+async function loadScores(url, signal) {
+  const response = await fetch(url, { cache: "no-store", signal });
+  if (!response.ok) throw new Error(`Scores request failed (${response.status})`);
+
   const text = await response.text();
+  if (text.trim().startsWith("<")) throw new Error("Scores endpoint returned HTML instead of JSON.");
+  return normalizeScores(JSON.parse(text));
+}
 
-  if (!response.ok) {
-    throw new Error(`Scores request failed (${response.status})`);
-  }
+function useScoreFeed(refreshKey) {
+  const [scores, setScores] = useState([]);
+  const [completedKey, setCompletedKey] = useState(-1);
+  const [notice, setNotice] = useState("");
+  const isLoading = completedKey !== refreshKey;
 
-  try {
-    return normalizeScores(JSON.parse(text));
-  } catch (error) {
-    if (text.trim().startsWith("<")) {
-      throw new Error("Scores endpoint returned HTML instead of JSON.");
+  useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
+    async function refresh() {
+      try {
+        const data = await loadScores(fetchURL, signal);
+        if (signal.aborted) return;
+        setScores(data);
+        setNotice("");
+      } catch (primaryError) {
+        if (signal.aborted) return;
+        try {
+          const data = await loadScores(rawScoresURL, signal);
+          if (signal.aborted) return;
+          setScores(data);
+          setNotice("Using the GitHub backup for score data.");
+        } catch (fallbackError) {
+          if (signal.aborted) return;
+          setNotice("Couldn’t refresh score data. Use Refresh to try again.");
+          console.error("Couldn’t load scores", { primaryError, fallbackError });
+        }
+      } finally {
+        if (!signal.aborted) setCompletedKey(refreshKey);
+      }
     }
-    throw error;
-  }
+
+    refresh();
+    return () => controller.abort();
+  }, [refreshKey]);
+
+  return { scores, isLoading, notice: isLoading ? "" : notice };
 }
 
-function download(content, filename, type) {
-  const blob = new Blob([content], { type });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
+function downloadScores(scores, format) {
+  if (!scores.length) return;
+  const csv = format === "csv";
+  const content = csv
+    ? [
+        "timestamp,stock_score,news_score,raw_score",
+        ...scores.map((s) => [s.timestamp, s.stock_score, s.news_score, s.raw_score].join(",")),
+      ].join("\n")
+    : JSON.stringify(scores, null, 2);
+  const url = URL.createObjectURL(new Blob([content], { type: csv ? "text/csv" : "application/json" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `warstock_scores_${new Date().toISOString().slice(0, 10)}.${format}`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function formatTimestamp(iso) {
-  const date = new Date(iso);
-  return date.toLocaleString();
+function DashboardHeader() {
+  return (
+    <header className="topbar">
+      <div className="topbar-inner frame">
+        <div className="brand">
+          <span className="brand-mark"><Icon name="pulse" /></span>
+          <span>WarStock <span className="brand-type">Terminal</span></span>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function TerminalScreen({ children }) {
+  return (
+    <>
+      <CrtOptics />
+      <div className="terminal-camera">
+        <div className="terminal-room" aria-hidden="true" />
+        <div className="terminal-screen">
+          <div className="terminal-recess" aria-hidden="true" />
+          <div className="terminal-hardware" aria-hidden="true" />
+          <div className="terminal-glass">
+            <div className="terminal-projection">
+              <a className="skip-link" href="#overview">Skip to dashboard</a>
+              <div className="terminal-scroll">
+                {children}
+              </div>
+              <CrtReticle />
+            </div>
+            <div className="terminal-reflection" aria-hidden="true" />
+            <div className="terminal-power-light" aria-hidden="true" />
+          </div>
+        </div>
+        <div className="terminal-grain" aria-hidden="true" />
+      </div>
+    </>
+  );
 }
 
 export default function App() {
-  const [boot, setBoot] = useState(true);
-  const [scores, setScores] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [fetchError, setFetchError] = useState("");
   const [range, setRange] = useState("week");
-  const [newsRefresh, setNewsRefresh] = useState(0);
-  const ranges = { day: 1, week: 7, month: 30, year: 365 };
+  const [refreshKey, setRefreshKey] = useState(0);
+  const { scores, isLoading, notice } = useScoreFeed(refreshKey);
 
-  const fetchScores = async () => {
-    setNewsRefresh(value => value + 1);
-    setIsLoading(true);
-    setFetchError("");
+  const latest = scores.at(-1);
+  const latestTime = latest ? Date.parse(latest.timestamp) : null;
+  const now = Date.now();
+  const isLive = latestTime !== null && now - latestTime <= 2 * 60 * 60 * 1000;
+  const archived = latestTime !== null && now - latestTime > day;
+  const rangeEnd = archived ? latestTime : now;
+  const threshold = rangeEnd - ranges[range].days * day;
+  const readings = useMemo(
+    () => scores.filter((score) => Date.parse(score.timestamp) >= threshold),
+    [scores, threshold]
+  );
 
-    try {
-      setScores(await loadScores(fetchURL));
-    } catch (primaryError) {
-      try {
-        setScores(await loadScores(rawScoresURL));
-        setFetchError(`Using direct GitHub fallback: ${primaryError.message}`);
-      } catch (fallbackError) {
-        const message = `Fetch failed: ${fallbackError.message}`;
-        setFetchError(message);
-        console.error(message, { primaryError, fallbackError });
-      }
-    } finally {
-      setIsLoading(false);
-    }
+  const recent = scores.slice(-5);
+  const bandAverage = recent.length ? recent.reduce((sum, score) => sum + score.raw_score, 0) / recent.length : null;
+  const status = latest ? (isLive ? "Current" : "Delayed") : (isLoading ? "Loading score feed…" : "No score data");
+  const refresh = () => {
+    if (!isLoading) setRefreshKey((value) => value + 1);
   };
-
-  useEffect(() => {
-    const handleMouse = (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 10;
-      const y = (e.clientY / window.innerHeight - 0.5) * 10;
-      document.documentElement.style.setProperty("--parallax-x", `${x}px`);
-      document.documentElement.style.setProperty("--parallax-y", `${y}px`);
-    };
-    window.addEventListener("mousemove", handleMouse);
-    return () => window.removeEventListener("mousemove", handleMouse);
-  }, []);
-
-  useEffect(() => {
-    fetchScores();
-
-    const bootTimer = setTimeout(() => setBoot(false), 5600);
-
-    const handleKey = (e) => {
-      if (e.key === "z" || e.key === "Z") fetchScores();
-      if (e.key === "x" || e.key === "X") exportJSON();
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => {
-      window.removeEventListener("keydown", handleKey);
-      clearTimeout(bootTimer);
-    };
-  }, []);
-
-  const exportJSON = () => {
-    const filename = `warstock_scores_${new Date()
-      .toISOString()
-      .slice(0, 10)}.json`;
-    download(
-      JSON.stringify(filteredScores, null, 2),
-      filename,
-      "application/json"
-    );
-  };
-
-  const exportCSV = () => {
-    if (!filteredScores.length) return;
-    const header = "timestamp,stock_score,news_score,raw_score";
-    const rows = filteredScores
-      .map((s) => [s.timestamp, s.stock_score, s.news_score, s.raw_score].join(","))
-      .join("\n");
-    const csv = [header, rows].join("\n");
-    const filename = `warstock_scores_${new Date()
-      .toISOString()
-      .slice(0, 10)}.csv`;
-    download(csv, filename, "text/csv");
-  };
-
-  const latest = scores[scores.length - 1];
-  const previous = scores[scores.length - 2];
-  const change =
-    latest && previous ? (latest.raw_score - previous.raw_score).toFixed(2) : "0.00";
-
-  const movingAvg =
-    scores.slice(-5).reduce((sum, s) => sum + s.raw_score, 0) /
-    (scores.slice(-5).length || 1);
-  const prevMovingAvg =
-    scores.slice(-6, -1).reduce((sum, s) => sum + s.raw_score, 0) /
-    (scores.slice(-6, -1).length || 1);
-  const calcDefcon = (score) =>
-    score >= 80
-      ? 1
-      : score >= 60
-      ? 2
-      : score >= 40
-      ? 3
-      : score >= 20
-      ? 4
-      : 5;
-
-  const defcon = latest ? calcDefcon(movingAvg) : 5;
-  const prevDefcon = previous ? calcDefcon(prevMovingAvg) : defcon;
-  const defconChanged = defcon !== prevDefcon;
-  const isLive = latest
-    ? Date.now() - new Date(latest.timestamp).getTime() <= 2 * 60 * 60 * 1000
-    : false;
-
-  const threshold = Date.now() - ranges[range] * 24 * 60 * 60 * 1000;
-  const filteredScores = scores
-    .filter((s) => new Date(s.timestamp).getTime() >= threshold)
-    .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  const exportScores = (format) => downloadScores(readings.slice().reverse(), format);
 
   return (
-    <div className="relative scanlines parallax bg-black text-green-400 font-mono min-h-screen p-4">
-      {boot && <BootScreen onComplete={() => setBoot(false)} />}
-      <div className="absolute top-2 right-2">
-        <span
-          className={`inline-block h-3 w-3 rounded-full animate-pulse ${isLive ? "bg-green-500" : "bg-red-500"}`}
-        ></span>
-      </div>
-      <h1 className="text-xl mb-4 text-center border-b border-green-700 pb-1">
-        WARSTOCK TERMINAL ▐ EXPERIMENTAL SIGNAL MONITOR
-      </h1>
-
-        {latest && (
-          <section className="mb-4 text-center">
-            <div
-              className={`risk-index text-6xl font-bold text-green-200 ${
-                change !== "0.00" ? "animate-scale" : ""
-              }`}
-            >
-              {latest.raw_score}
-              <span className="text-green-200/50 text-3xl ml-1">/100</span>
-            </div>
-            <p
-              className={`mt-1 text-lg text-green-300 ${
-                defconChanged ? "animate-pulse" : ""
-              }`}
-            >
-              SIGNAL BAND {defcon}
-            </p>
-            <p className="mt-1 text-xs text-green-600">
-              Last updated: {formatTimestamp(latest.timestamp)}
-            </p>
-          </section>
-        )}
-      {!latest && (
-        <section className="mb-6 border border-green-800 p-3 text-center text-green-300">
-          {isLoading ? "Loading score feed..." : "No score data is available."}
-        </section>
-      )}
-      <ScoreMethod score={latest} bandAverage={movingAvg} />
-      {fetchError && (
-        <section className="mb-4 border border-yellow-700 bg-yellow-950/40 p-2 text-sm text-yellow-300">
-          {fetchError}
-        </section>
-      )}
-      <NewsPanel refreshKey={newsRefresh} />
-      <section className="mb-4 p-2 border-t border-b border-green-800">
-        <div className="flex gap-2 mb-2">
-        {[
-          ["day", "Day"],
-          ["week", "Week"],
-          ["month", "Month"],
-          ["year", "Year"],
-        ].map(([key, label]) => (
-          <button
-            key={key}
-            onClick={() => setRange(key)}
-            className={`px-2 py-1 border border-green-700 ${
-              range === key ? "bg-green-600" : "bg-green-800 hover:bg-green-700"
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-
-      <div className="bg-green-900/70 p-2">
-        <h2 className="text-sm mb-1">RAW SCORE GRAPH</h2>
-        {filteredScores.length ? (
-          <ResponsiveContainer width="100%" height={200}>
-            <LineChart data={filteredScores.slice().reverse()}>
-              <XAxis dataKey="timestamp" tick={false} hide />
-              <YAxis domain={[0, 100]} tick={{ fill: "#0f0" }} />
-              <Tooltip contentStyle={{ backgroundColor: "#003300", borderColor: "#0f0" }} labelFormatter={formatTimestamp} />
-              <Line type="monotone" dataKey="raw_score" stroke="#0f0" strokeWidth={2} dot={false} />
-            </LineChart>
-          </ResponsiveContainer>
-        ) : (
-          <div className="flex h-[200px] items-center justify-center border border-green-800 text-green-500">
-            {isLoading ? "Loading graph data..." : `No scores in the selected ${range} range.`}
+    <TerminalScreen>
+      <DashboardHeader />
+      <main id="overview" className="frame dashboard" tabIndex={-1}>
+        <div className="page-heading">
+          <div>
+            <h1>Signal monitor</h1>
+            <p>Experimental index tracking defense stocks and conflict-related news.</p>
           </div>
-        )}
-      </div>
-      </section>
-
-      <section className="h-48 overflow-y-auto overflow-x-auto mb-4 border border-green-800 p-2">
-        <table className="w-full text-green-500 text-sm font-mono">
-          <thead className="sticky top-0 bg-black">
-            <tr>
-              <th className="px-2 text-left border-b border-green-700">Timestamp</th>
-              <th className="px-2 text-left border-b border-green-700">Stock</th>
-              <th className="px-2 text-left border-b border-green-700">News</th>
-              <th className="px-2 text-left border-b border-green-700">Raw</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredScores.length ? (
-              filteredScores.map((s, i) => (
-                <tr key={i} className="whitespace-nowrap">
-                  <td className="px-2 py-0.5">{formatTimestamp(s.timestamp)}</td>
-                  <td className="px-2 py-0.5">{s.stock_score}</td>
-                  <td className="px-2 py-0.5">{s.news_score}</td>
-                  <td className="px-2 py-0.5">{s.raw_score}</td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td className="px-2 py-4 text-center text-green-600" colSpan="4">
-                  {isLoading ? "Loading rows..." : `No scores in the selected ${range} range.`}
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </section>
-
-      <section className="flex gap-2 my-4 p-2 border border-green-800">
-        <button
-          onClick={fetchScores}
-          className="px-2 py-1 bg-green-800 text-green-200 hover:bg-green-700"
-        >
-          ↻ Refresh
+          <div className="feed-status" role="status">
+            <span className={`feed-label ${isLive ? "is-current" : latest ? "is-delayed" : ""}`}>
+              <span className="status-dot" aria-hidden="true" />{status}
+            </span>
+            {latest && <span>Updated <time dateTime={latest.timestamp}>{formatTimestamp(latest.timestamp)}</time></span>}
+          </div>
+        </div>
+        {notice && <p className="notice score-notice" role="status">{notice}</p>}
+        <ScoreSummary score={latest} previous={scores.at(-2)} bandAverage={bandAverage} readingCount={recent.length} />
+        <div className="primary-grid">
+          <ScoreTrend readings={readings} range={range} onRangeChange={setRange} loading={isLoading}
+            rangeStart={threshold} rangeEnd={rangeEnd} archiveDate={archived ? formatDate(latestTime) : null} />
+          <NewsPanel refreshKey={refreshKey} />
+        </div>
+        <ScoreHistory key={range} readings={readings} range={range} loading={isLoading} onExport={exportScores} />
+        <ScoreMethod bandAverage={bandAverage} />
+      </main>
+      <footer className="frame footer">
+        <p>WarStock Terminal <span aria-hidden="true">·</span> Project by <a href="https://colekreiling.com" target="_blank" rel="noopener noreferrer">Cole Kreiling</a></p>
+        <p>Score and news feeds run hourly via GitHub Actions.</p>
+        <button className="footer-refresh" type="button" onClick={refresh} disabled={isLoading}>
+          <Icon name="refresh" /> {isLoading ? "Refreshing…" : "Refresh feeds"}
         </button>
-        <button
-          onClick={exportJSON}
-          className="px-2 py-1 bg-green-800 text-green-200 hover:bg-green-700"
-        >
-          Export JSON
-        </button>
-        <button
-          onClick={exportCSV}
-          className="px-2 py-1 bg-green-800 text-green-200 hover:bg-green-700"
-        >
-          Export CSV
-        </button>
-      </section>
-
-      <div className="mt-4 border-t border-green-800 pt-2 text-xs text-green-600">
-        ↳ press [X] to export history | [Z] to refresh feed
-      </div>
-
-      <div className="mt-6">
-        <h2 className="text-lg mb-1">About WarStock</h2>
-        <p className="text-sm text-green-500">
-          WarStock tracks defense stock movement and conflict news. The score
-          uses fixed keyword rules; the news classifier runs as a separate experiment.
-          Data updates hourly via GitHub Actions. Built using React,
-          Tailwind CSS, and Recharts.
-        </p>
-      </div>
-
-      <footer className="mt-6 border-t border-green-800 pt-2 text-center text-green-600 text-sm">
-        Project by{' '}
-        <a href="https://colekreiling.com" target="_blank" rel="noopener noreferrer" className="underline">
-          Cole Kreiling
-        </a>
       </footer>
-    </div>
+    </TerminalScreen>
   );
 }

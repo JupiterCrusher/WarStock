@@ -109,8 +109,8 @@ previous valid score for that signal.
 |   |   |-- scores.js       # Vercel API route for score history
 |   |   `-- scores.js       # score-history proxy
 |   `-- src/
-|       |-- App.jsx         # dashboard, chart, table, exports
-|       `-- BootScreen.jsx  # terminal boot animation
+|       |-- App.jsx         # dashboard and score feed
+|       `-- ScoreHistory.jsx # score chart and history
 `-- .github/workflows/
     `-- run-hourly.yml      # scheduled model run
 ```

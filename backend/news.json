@@ -1,38 +1,279 @@
 {
-  "timestamp": "2026-11-24T01:20:58.325404Z",
-  "feed_status": "unavailable",
+  "timestamp": "2026-11-24T11:45:58.620860Z",
+  "feed_status": "partial",
   "feeds": [
     {
       "query": "https://news.google.com/rss/search?q=military+conflict&hl=en-US&gl=US&ceid=US:en",
-      "ok": false,
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=military+conflict&hl=en-US&gl=US&ceid=US:en"
+      "ok": true,
+      "items": 100
     },
     {
       "query": "https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en",
       "ok": false,
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en"
+      "error": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "query": "https://news.google.com/rss/search?q=drone+strike&hl=en-US&gl=US&ceid=US:en",
-      "ok": false,
-      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=drone+strike&hl=en-US&gl=US&ceid=US:en"
+      "ok": true,
+      "items": 102
     }
   ],
-  "archive_count": 551,
+  "archive_count": 637,
   "window_hours": 24,
-  "story_count": 0,
+  "story_count": 57,
   "model_state": "active",
   "model_version": "2026-11-23T191421-784397Z",
   "class_counts": {
-    "background": 0,
-    "threats_buildup": 0,
-    "reported_fighting": 0
+    "background": 11,
+    "threats_buildup": 2,
+    "reported_fighting": 44
   },
   "class_shares": {
-    "background": null,
-    "threats_buildup": null,
-    "reported_fighting": null
+    "background": 0.193,
+    "threats_buildup": 0.0351,
+    "reported_fighting": 0.7719
   },
-  "articles": [],
+  "articles": [
+    {
+      "id": "f6316b0a0899fa458119da88",
+      "title": "Community Health Workers Sustain Essential Primary Care During Conflict in Ukraine - Bioengineer.org",
+      "source": "Bioengineer.org",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPb3otb01ydVE4aHMwckw1UW51dUlGbzBfS2VtLTNtSDkwbFBxZE9nUmg3U0RBbndNbkJLOTBZS3ZOX1dMUUZsZURTZ0tPUVlvNWpuUjh2azhqVWE2Vzd2MVA4aHg1Zm5oQURpNjJZWWQ0U2pHa1piWGdVQjJjeEtlck9WRk5XbkcweDRabkFpdm1HcHlQZ3ZmYk1XNzlEUmg3TjBkWjBaZlBLVWs?oc=5",
+      "published_at": "2026-11-24T11:26:15Z",
+      "label": "background"
+    },
+    {
+      "id": "f6630f44d6e65ed195592296",
+      "title": "Drone strikes hit homes, UN building in Sudan’s capital - Times of Suriname",
+      "source": "Times of Suriname",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLVg3MEcxeURBc3BCTjNSbmFhV2FwTHRia2p5endITGF1TmdrMkpoLWtBRHFodE10S3ZiOUpFdmdBa2xLNHlPbnFiYTRoRlRSUlZ0b3lpelNvRk9hZWhZTVZTQ2w0TFN0dklNVklLbG1CU1ZaNDdWMUZuRkZDNldCcVMyTF95VEpJcndlUEtXbUhTVEt2YXc?oc=5",
+      "published_at": "2026-11-24T11:01:06Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "2358c7ff4eb096c145cdb9c3",
+      "title": "A Russian strike on Ukraine kills 2 and wounds children as Kyiv explains its attack in Libya - WKMG",
+      "source": "WKMG",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYTQ2eFdwVDZHUUMyVmpaOXRCRnc3T3M3dU1nWjczN0JwTFRtQUFBT0RDQ2dWaFVDV1V5SHJ5MktKSnMtNUtubVk1SDc2VlkwQUV6MTNxZlNVMlMzTjB5b2pfQ3BmTEdhQVBBa21Tc2hsSTVvZFpwN0JZbTczdk03dVRTTHYtZ3U2d191ajdoeTQ5c3pFeTl5bFlsQ3hORVd4NGFQbHRGRXRFLWJyY29INHV6NHJSS0hsTnhEeTQxRUN5M0FvY2o3cW1tMF9NZ1duRVFCNmdiZ0lUdw?oc=5",
+      "published_at": "2026-11-24T11:00:56Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "22f4a120c72c8f1385c0bbc3",
+      "title": "Ukraine says the Russian drone unit that hunts Ukrainian logistics became the target in occupied Berdiansk - Euromaidan Press",
+      "source": "Euromaidan Press",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWHkzNXc4eTA1bFY1VXYtTkk3Nm14bGxyWkY2SENTWjdudGhxcmQ3MlZ2WXkwWHlrdUxLck4xZVNfb2Vmc21ONVRZSDRvMFJnS0ZYaFVrc0NqMWd6SWh1OENSQS1wQXZPSTM0ZDBmZVgzQ3VLZDh5MHcxLWtLNHdabkU5MTNTNUhqU0g0TVVBRk5NS3JIQ0xUbU9adEJGXzZXMm1pTjVLQU50aGRONEtrZTV4UGZzV1V6SkhYT2I3b2drLVM5MXRWeWhvOTVoVkNoVnJFRzNBTnhiSy16SDZN?oc=5",
+      "published_at": "2026-11-24T10:17:33Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "1a14c4deaaaab41e790e3b21",
+      "title": "Russian ship arrives in St Petersburg following suspected Ukrainian drone hit - Baird Maritime",
+      "source": "Baird Maritime",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNc0xnbjRhY1pTbkVMYkV3WDUyM2JmZ3JQMTQwc2dzaGV3ODhvWG81NXBxcC1LSS0tOEJjdWNKTXlyc3BRbHpUMkxIZVlVYUJhd0FaR0I0c2dKLW1xUkdHbXhLcWt5MEh5WFJwTVMyNUowaEYxRXRZaHdXOUhtdnpVUzI2MkxyZU9UVFhOWUFzSURxeUJ1cC1LemN5b0VWSXlnRnVkUTdLR2ItYWxwUFNPeGppcVR2OVR1dzhxRzRtbTBmN1pqd25NRmYyTlkxc3FpYkUxedIB4gFBVV95cUxNbXZsVU5sN1doemR4UnBGa3N5UTFseXpjTkt3SWpITEFfYThNZUhRSkw2T2RSR0VXelJkdGl1VERCSG4yTVM0NkI4MnVJTTlrMjVqYlpNY0dQUGZhblNxaXhna2FGb1Z0V2NpeGNCbmtpWkxiYkpzazF1WWhoblVEdUh4V0Z2bTNwWHVqNTVjMXBQNHpGWGYtNVo4NE1UakNoMnZZM25RdGxNRkgtR2ZmS0JaQ00zSl9KSm9vWVVaeWwtU09iMkNYTGdsNGdlN1YtLWEwaFh4Qmg2TWFhb0lZVUFB?oc=5",
+      "published_at": "2026-11-24T10:08:03Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "08d0307590729d8cacaba5c5",
+      "title": "Death toll rises to 11 after Russian drone strike - anews - A News",
+      "source": "A News",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRFBKMlljZ1hGZ0pXaDJPWlVNbWRjOGxyVExpZ1dUTmd2UFc1SG9LOV9qbm95LXBtWEVHdU5rZ3ctVUVfNlNydFFCTnFzRTFCS1I0Tl9hV2dqRmRudWJmUmg3NmRmN0R2RzdydlZvNy1nMXpYS0JPRVI1Q0lkbGZOSENjUzhuZmhBaHlBTW5sUdIBlAFBVV95cUxNR1l1LVhyZ0RGcFlMRmMyblJHcDhLNzVMNnQ2OEhSYjk5QUtpZHZSajJDQ1NIY2kwY1N1UmZmUzFwT0JEZWx0Z0dNVUhKdmpDeFFhcXgxZHNXVXBJMWY5MHRFSk0tZ25rUkY3U0p4TTlyRElaakhRM3gzczBWcF80b3B6OGt2ZjM5eVFHT3V2b2NqOS1w?oc=5",
+      "published_at": "2026-11-24T10:03:28Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "86f21a5a0203da53af9de2a4",
+      "title": "Zelenskyy says intelligence shows Russia planning new strikes on Ukraine - Jefferson City News Tribune",
+      "source": "Jefferson City News Tribune",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPM3Y2a0hJMUxLSXVsMWNjZEVpV1RVelJmYkY5dFNBdERQR2w3WXpOZ3JoWk55Yk1nYVBWMXdJWVB6TWxERjJQQkU0LV9DVVo0U2h0R2NUOUJJVm16bl9iMlYxRk1LelEzMGxkaFBnOWpqc1lGanNaZzQxTmVxdkNLcXd2M1FrcFAzNS1ucXZQSXlwc1JwTloyQUY1VQ?oc=5",
+      "published_at": "2026-11-24T10:00:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "d36f328a6f7dd63066cf4053",
+      "title": "Russian attack kills two people in Ukraine’s Zaporizhzhia - Al Jazeera",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVXhQTzZUNTFmWlZvRU9kMmJPRXUyYjVlM3V1Y0Q5SU1DbGRMdWJWdS1ZazhfQnNlanI2T3dDbDJhNkltZmNSUF9nSkFHX3JBOXdIYnFhMjdvM2NjTDhZQTVMUktTTVh6ODE1SDJ1b0xGTG1EU0huWnhSYWwwWEhLWnJwMER3ZGhsalE5ajk3WVBCTHhvcERySGFPazhnd0nSAaQBQVVfeXFMTjAyLVJYTzNEWkVPLTctVnk2Znl5TEJQaF9WSUhmNjVvSXg4UUdKS1JZc05RZE1JVlVIVkl4aVJxT0NuY1pFOUIyQ05YVG9zMHNISzd6NWRqeGZmLVg3VkxFNGlBWThZM2hlYmxuTmxTaW1MZGZsNFVZQl9tOTRjLXMwcERzTDBDd2JIdlViRlM5TWpZU1pmUGVJa1RpN25KYVhVQ3k?oc=5",
+      "published_at": "2026-11-24T09:56:15Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "d497528f9ef3d65f0805f305",
+      "title": "Ukraine says 2 killed, more than 40 injured in overnight Russian strike in city of Zaporizhzhia - Anadolu Ajansı",
+      "source": "Anadolu Ajansı",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOcWdKNUxtSUlKOEFsS2NMazlWUG1GWmRMc0RuM2xMMFowZjlFelZwZVoxak5aaVhiRUhCRmJfcnhobU9HZlFoNHlOVDVuUF9nR3RtOVp2OUF3U05aczI2Q2lSOXhvTGFVVl9YU1ZkbkRkbEEyd2dPZjdTVnRubTBDTEtuQVZQZEM3UzZ3LUFuMEJfRUtKbzhRQ0VBN3dSM3gtYUdhcnNsU2ltcHF4Z09NNWRkOFNISkY2cXQ3bUtXeXY0bzZPNlNEa1FJTHpwMUtIVTVRU2hra2dFQQ?oc=5",
+      "published_at": "2026-11-24T09:34:26Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "659521ba2dae9c49fe9e04cd",
+      "title": "Ukrainian Drones Strike Russian Uragan MLRS in Rare Frontline Deployment - UNITED24 Media",
+      "source": "UNITED24 Media",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV2NzWWx3QkNfdVhobzhVUmhvSnNEU2ZjQ1g2YVhIUWpkNDZsbndkNXM1bEgyVDRaUlZPMVFVb01KV0ZkTzl2U0FNRGNXa1NYNHN0Yy1FYjhhQzFJdURIRzRfSmFGQnB1dXpzOWgtYUdaYnZiSzFGSS1tTk41WF9vZ3ZIT3gtLWczSHUwM0xtVC1HZ0s4NU5lTHdWQkh0TGtJX0xVLUdRelk4MWlWNVVlbnBUSWZQLTNsTVBn?oc=5",
+      "published_at": "2026-11-24T09:27:28Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "239ad542a9c4c8c0137f9116",
+      "title": "Drone attacks and Black Sea storms delay Russian tanker loadings - TradeWinds News",
+      "source": "TradeWinds News",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbnVza1QyRXNsXzdxUzNmMnVVeURFUnp0VnhKMG1EQW1TbTFReVpXN082WDlxaWtKcUI0Z1VqS29reDVFUTRFYXZzOTRyc3JtNUFIQlFZbzJRVzNUVWRlT25jNDVwYVZiTmhxX1V5T2J0eTVLaXlwNWxoWFFwbElXcDhaZ0MyUTVXNzc5bUJoM2JjRFdTNWFKVkx2ZWNBV3NNb3czVTFaWF9NSjVlQXFJUzAyT2V4QQ?oc=5",
+      "published_at": "2026-11-24T09:17:55Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "2ff58d23ad1ca8e2af7b4f3a",
+      "title": "DR Congo says military aircraft missing as rebels claim to shoot down plane - BBC",
+      "source": "BBC",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAzNFFDc3pSbTNrVmFYdWcyUGxROWpkeEVkbUh6SVJvN3NFMmFHRjlpbW1rTnZHNzBySUFZRUllX2pXSWU5U0xLb0tueXBuUzgtV01KOHpBWU9OMlh1MWc?oc=5",
+      "published_at": "2026-11-24T08:35:41Z",
+      "label": "background"
+    },
+    {
+      "id": "db96c23a57645d84a56ad306",
+      "title": "Black Sea drone strikes put Egypt's vital wheat lifeline at risk - The New Arab",
+      "source": "The New Arab",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSTBPOWlIc2VYNDNaUDREd1R2cW1XdG5YbUYtY1IyXzhoZ0lxZ3ZlU2djNUNMOGp5RGtOQlIwZktvcWJGZy1VXzJDWmcwTHZuV3ZweU5COVl1dTJTSjNCajFBemhtYlp3VXV5X0FoclNDdnNBYmNEMlZISC1mSU9WcUlWdVYwZnRvZ3VIejMxREw0eFnSAZgBQVVfeXFMTjdQSWduUGRSSm95M1V5OG1WNVU3Y0QtdmJaeUZsckMzNGJLY2c5b2I0Y0w3Yk1XbDZ0WHlPdTlyengzZzJMZXVydVhsakU1djYyNWozSm96OTVTbXJ1QjV2dldXOFRQd3l2ck1WREc4NmwzNUZpNlVrcEtsSVZpM1ExM05NcGJzVHBNaG5oUHFtb0tTcjNfamw?oc=5",
+      "published_at": "2026-11-24T08:29:10Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "fd303e7d85729dced1059ba9",
+      "title": "UN warns Black Sea drone attacks threaten food exports as Russia-Ukraine war widens - The National",
+      "source": "The National",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQS1ByVk1XblNib25DSVNJYjEyTDF6M0JZdVJpdDNhTXl0TFFranhOWVdxM1cxR3Z0SDllN2ltQW5YdEhTVUpUYUowNXNaUVNTZThXWGp2TjRaaEFOaVB3QnZnaXRtZW1nWU9fWmlfTTQ4d1ItdnBOR0p3UTZsZ2pycWY0WHpjX00xdEtPOWJ6VTdHR05idUJOb3VJUC10YVczc25Tbl9MTjc5czdNUU96NTNmX0c5bFpjZll3RG1BVEpMV2djUlBPalo0VWs?oc=5",
+      "published_at": "2026-11-24T07:24:57Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "be36950c702f1bb1c3cfb97a",
+      "title": "Libya Calls Ukrainian Drone Strike on Russian Ships in Benghazi Tantamount to a Declaration of War - SFG Media",
+      "source": "SFG Media",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQR0ZjN2REd2NIMHFCZGRiQTJTVDktR3Zub3hoSlVNMzNFUjRaRTU4VlNvOU96SWsxWDAtYjVKZkxkQUQyLVpod0UyazViYWZ5UVJrb09RMkZSV21DdTJVR2VROVQ2N0FEcElrNTEyRDltZjFLdFh5WnVERlZvQlpIYw?oc=5",
+      "published_at": "2026-11-24T07:13:48Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "4c5578a579caff4cd3cf4855",
+      "title": "Ukraine claims drone strike sank Russian naval corvette at Libya port - ThePrint",
+      "source": "ThePrint",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNeDFjM1ZnNmEwVjM3ck5LVDM1QVcyaWU2THYtSW5Xak5mWFk2NWNndUdRbmFBczJyTGVadXBNRWpnMGVsTkZYSnBqY2t0V2kyOE9vcGQ5b1RmUWFmWmpLcWV5S2ZZU1NCZ3lJUTRfTE5fdFJYMEQ2US1fLTFJZEI2T3RJT0hfbzR2d1ZseC1rRWZ1QkcxTTNTbXBLYzdRYTJJUm1kWVNYY9IBrAFBVV95cUxQMkp6Wk5FN2pTdi12OTlfLUlBOUhJVFVhclRGdURmTTdHS0QyVlhCeVNVRThIVlczaWlwaDJHSDljM2p6WXZaM21EclM3d3M4ZXpDa0Vlemo1WXgxNGNUaGdBR2RNZmpIOEtxdjNEZFhuTW5aOExGQjQzTWtSZVY4dWxvX2FILU9YYXRERE1TY0ozVTFHSzRGWnMxdDFqZFF6d3RIY1gwQWpZOFFT?oc=5",
+      "published_at": "2026-11-24T06:27:13Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "f611e4f5b916fffcb81e972d",
+      "title": "Private Military Companies Under International Law: Legal or Mercenaries? - Diplomacy and Law",
+      "source": "Diplomacy and Law",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE84d3Jwbk4xWFV0alFCNE5FdXlRanJ6OFBub0lnN0pvN2c1TWlWQ1NjZVo4RldPUmxpZ05rT08zM0huUmxSV3JzVE8tTURDR21OUjU0bUhJd0ZVbV9wRS1UOXo2YmdMQmNiRHU1aHVVdzM?oc=5",
+      "published_at": "2026-11-24T05:05:52Z",
+      "label": "background"
+    },
+    {
+      "id": "a5ba4aa6fb82074badaa0c60",
+      "title": "Ethiopian shelling of Tigray town should be investigated as possible war crimes, Amnesty says - Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPaVBhcThUYl9UZXJzYTB5RFdDREtzVGs2VUJ5OG9DRjNOTGJMbUFXdzdYT0tBT1JncFVwQ25sNzlvZTR3ck93UW5rMWswRHNBbUNsczN0aS14SUtXQi1uT1ctZE1BTVYwY2xWLWZSTGN4NFBHRXJTS3hWUEhvUWR3cDg2V1FnQXFmX1I1Nkc3TW5uWHN1WGtQTDBTbzhEbjRDZFAwNjMxWDdTaG93ZjIxUmFEUDdoMFZlVHc?oc=5",
+      "published_at": "2026-11-24T04:42:00Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "1eea49e0c459dd94f41d45e4",
+      "title": "Ukraine war briefing: Kyiv’s strike on Russian ships in Benghazi condemned by Libya’s UN-backed government - The Guardian",
+      "source": "The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWHdha3RzX1VGNFF5Y0pKOHBlaTM1eGJ5ZHpGQUdDMGJXSmgzcjAzcGlzMEJQOEZ3MXo2RjBWRmJrWG01MUY0NGVOaFNsVWdpdVF1OFpkMHNvNmY3QVRwZ3pQMGFtdHFkLTRBM3FLOEhTaE8xdXpEdENkM21DSDNmU1BJdFZCY1hxbDZKMVNnbi1Vblo2QnM0RGJKbnhpQmNfSkxXYWJVdEg3a3AzWW9sNWdYVzd3LW1FdnZYQjdRNXJPMW1LRkRFOEZ2dS1UX0U1NEc0aEhINGtXZ1ZNdDI4cg?oc=5",
+      "published_at": "2026-11-24T04:20:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "938fa0bfdd94b42eb874433b",
+      "title": "Israeli drone strike kills 3 Palestinians at Gaza police post - A News",
+      "source": "A News",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaGZSQ0J5U25wT2U1V3RHZXgxZlBWU3pBb1IySHJCSHFqUExSM1BQbEotVlVKMHM4aG1nTUdrTkRMdERqaGtsaVpoaXBBQUY2bHNPeUJoVDN3VWsyRVlsLS1VaWdkaFFtX1E4NS12bWlRZW1EQWcxODY0TTY4WlRxQU1iUzB6eEZxVFVEN1ZXNTZRM2phbjk1M3k2YzRsLWVPRGh6U21iVW0yWU9SR0HSAbMBQVVfeXFMT2hyaGp5TmtTdW8wRXlndmphMUJsSF9GMHNOeWRoT2Jva1R0cnowMThnbE9lRzNLMWFfN21ya2pLTk5LeDFhSEZTWlI4NUNXTkpJUlF4TndZeWRLbHVIWUdNbXFPZDFhWF82cHgxbENNeEk0LVd6bFBHSnU3S0d0em5wb1pleWV4Q3NIamJjZnE0WkxKU080M0xJdnVOMmFydmVRd0IyTUdHTWxtLWpxbHNpQmM?oc=5",
+      "published_at": "2026-11-24T04:02:49Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "de8e2b6c325711c3de716fe8",
+      "title": "Ukraine Claims Drone Strikes Hit Russian Warship, Cargo Vessel in Libya - The SOFX Report",
+      "source": "The SOFX Report",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSFpmanVuWUtmXy1FZnNOYng3eGdXc19ucUFsSy00c2hjLXV6RnkyYXJCMU53eGRfWEFoT3RWaTFWbDhMRkdmaGM5dDVweHFZXzItUUJhOEdFZWQtU2lnTV9WelRMY3MxaGZJMGV0VnRucklIN2lHNmtYTzlVTU83aVlUWWNXQy1UNHlQUXpiREpuQzNkSkFZ?oc=5",
+      "published_at": "2026-11-24T03:45:21Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "554eb94a6a62b1d524115ac7",
+      "title": "Russia’s war dead: the hidden toll of the Ukraine conflict - The Guardian",
+      "source": "The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcHEzaFFZSHUwdzN0LS1RbTVLRlF1MFpWblFUV2l1eUtybk9fOHJzNmQzeW8zSi13TEdMWGtYTE9UTFNHbGx4UUZ6Z2UyRlJQUU1kY3hKNmtsV3V1ZkVsWWR3UmxvdDlud0NQa2VRRldnWFQwdV85R0RNZTVKaTJKbko0UV9Qa3FLR0J1S1FNSkZxM01k?oc=5",
+      "published_at": "2026-11-24T02:30:00Z",
+      "label": "background"
+    },
+    {
+      "id": "75d423ec9f7dc3639bc10d25",
+      "title": "Israeli drone strikes kill 5 Palestinians in Gaza - Anadolu Ajansı",
+      "source": "Anadolu Ajansı",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxON2VPV0dCN3pzUWhOdkEwZWVnUmFNZ25SdzRmWFk0M0tDaEZ1ZHRsNXVrZzNaZTlWM1hXbVpyRFFBRzN2R0hJdGtMNF9KNnpmcnRHNnJDSFhmM1BTWXlmUUVPYTdRUkVOa1Zza1FDb05zZGxUdndlSHBadFNaY2Fja1ZIQ2pwQzM3SDhEWGdYWDhoemtaWWc?oc=5",
+      "published_at": "2026-11-24T01:59:46Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "516ddec6120057386f53416c",
+      "title": "Ukraine strike on Russian warship off Libya highlights Kyiv’s broadened reach - The Japan Times",
+      "source": "The Japan Times",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVzd6dmhjT0lhNWRNMzNYdmZSSm5qeWxiV09jZ3BwTldXeVpLcVhHall3MzQ1b0hvUGtYbU5QRVdyUkgtUmlDN3NVLVhKOXZvSWxGbGRsLTBWUWhRcmE5aUJjanIwZUYtU3J1ekFFTkFHZVBLSTBlNndLMGszMGlKUlBuWUphU1dSd3gyc1ZBc242dw?oc=5",
+      "published_at": "2026-11-24T00:52:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "8fa189a784f093d31de8a5df",
+      "title": "Ukraine’s drone strike on Russian warship in Libya risks ‘serious escalation,’ former official warns - Fox News",
+      "source": "Fox News",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdkVHTjQtellEMlNqb3k0MXhkSFpLOFUyblJkelR5Q1o5UjkwQU5lQUYxMzhIM01ScmZGWXVZUEhKUWV3TXJrR2xKV0YxOWZkZ0dpckdZczdsM0MxcWJsTW4tYW8wQkpHbHZPQWtCQngtZU0xY2QzQlRvUWlJSHg5UEJBcGFtZmJmaTdmYjZiS2ppSTdQcXIxbmZUTWItNVFUaks5WFFfQWdyYS0tdXZFanFaOTBqTkpZbjZUUtIBwgFBVV95cUxNSDNvZ3hUa2hGLUZUZ3ZSZGh3X1NrZGh3d2VlcHVwTzdzWHZ3N2gzN0lJTDhwckVQMVNDYU4xUlNKallsZ1YtbE82NThTVEFrdnJuOUU1djd0U0lVaEQ4cVh3UUVXWGh6aHA5QkFoVTRYUEJwS1hBSkkxeFdMS3pKbEFjZ1JjVVVLUHhPajNvUm4tWDVMa1R1UXVqV2QwV0pQc3BrQkhZaXl6ajhxZEtHU0lXNmJHT05PYWFEU01mcEl6dw?oc=5",
+      "published_at": "2026-11-24T00:42:28Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "0292ae3658603e2d707375ce",
+      "title": "Drone attack on police base in Colombia injures three, including infant - Al Jazeera",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUFJBT2p5WEt2OXdzaHZHck0tYUxPMXZwNklRYjZMV2ZYcTNzUG5EQjUySGp4X1o2bElObWVtNmdyb3FYak9CUlZ1bEFIbWRfWG9iLTlRYko3cWZpQUJkM3hZMFRqWFljRmljeXkwVDd2Yzh4NURCRlg1VGJ3YWxaS2ctQnVROTNnQ1NvOUpCUVM3dU5XWDY4Qjh4ZmswOXVkcG0xS2NUd3R6VEwxZ21KTTZVRdIBuAFBVV95cUxORTczNXU3SHBrQ1ZvZkk1TUxqNWJiTThkVWpUbjdBUnpCdWJtV193X25sMTNCZVVRdEF6Q2Y5OWVzaVltX0NSMFpSLUprMzhqakl4eUN3NUNOMUZPeE9mY2V2dXp4TmlPcC1yWDBNWmNQNDlod2wxd3hXM1NwNGlkU3NrNU9rMllLaXFCRUtBRmdsdU9PemQ5Sy1MS0hxUGhmWWdUZFUwckNqVzY2emUzRW1Ud0xvV2xp?oc=5",
+      "published_at": "2026-11-23T23:54:36Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "d79e6c9aa944cd150a1cd24a",
+      "title": "What strike on Russian ship in Libya says about spread of Ukraine war - BBC",
+      "source": "BBC",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4Nkh0dF9ndTRBVjktYnQtQWh4clVUZVlwcmtIdjFLa0dfeW5Wb3NFVlhuYXJ4d0Y0c2ZLZG5zaTd0TEdnNHFFVzhUV3VYS1lXWnYyZHFzSjUzdTg?oc=5",
+      "published_at": "2026-11-23T20:48:35Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "89217d8f7ba8cb261110b6ce",
+      "title": "‘Peace often takes longer than conflict’: Justice experts converge in Belfast for international human rights conference - Belfast Telegraph",
+      "source": "Belfast Telegraph",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOVEtkeEhzYmEwRzR0V1h5b2hpclA1eUlQNHlIUkc0Qm52VXdaTlBoRW13Mm5PVXRxLWdDR0NKUW9KTGVDQkctbnE4VUZGZ3kta1NTOU53S0ZiTmU5dmRZcml6R3lybmJNZTRodzhKdnZNYmVndGZOZzVkNjlsczZzYjlIZG5jMkJiYnpnWlZQeWttUnNxQWZFdnhqY2gtT2dGOTRBc0J0eC1iaHB1VmhEOFpMb2x3eVQ3M211bFY1MmhHMUhubFBMR0JfaENCdXNqWjVWNXpUZ2lwdTI5eW5zX3VPQzZnSjVxZEJNeXhTSUc1U0xoR2VBeHpzTjVuRkFvWUR3?oc=5",
+      "published_at": "2026-11-23T20:00:00Z",
+      "label": "background"
+    },
+    {
+      "id": "83d13977c98465d6b398cdd2",
+      "title": "Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jazeera",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOT2tuUzB4em5zWEgwZUpEZ0szQ0R2ajRaWmgtN0JoX0RhOVFtcFUtWm13b2k5a083bjdjRTJnUVlLTEtadUFYRm5HQlh3aXFFWkNhT2JCaUJPWTJIWm1jcmJiUW4wakYyd3EzZHhOenBUX1lud0JvWVN4YmIyQURaVTBQUnRkeG1hd09OT3YzRzlmd9IBlwFBVV95cUxQZ3JmTVA1Q3FTaTBjMUZldjgwTHJpcXRYSHhoTXlUbnNNVTg3UUltZzd1eTNhc3hDYlZCOHdjdFluaUpRTlVuc1E2XzBKMmFwQVBFT2pqNDhPc1BDUG4xLUhhX2VIOHpWTnB0cm9heEthblZmemhjQ2U3WHExWS02WlRCc2JTQVlDVXpiMDBKcE1HTkk0YWVF?oc=5",
+      "published_at": "2026-11-23T19:22:59Z",
+      "label": "background"
+    },
+    {
+      "id": "9712cd26a8e3d1876204a398",
+      "title": "Ukraine updates: Kyiv claims strike that sank Russian ship off Libya - DW.com",
+      "source": "DW.com",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWDhrMTltOFVXcFo3ZXhzNjZLeThPT3ZreFlXYjN1cmN3S3VNa01iOE5DMlNVM2IwQk00dEdaaDk2V01SRmJJZTA5RHlYUVBva3R3NkRfMXpid2JveDg1SFRjVlpTaklIVXA3OFVxd2ktZVJSMHQ0cUpGV2FwRmlwWGp6SXNwS0hQNjY2S2xFaHVGR0FlNTlPbFY2RDMxVVNBeHVPZ0t3?oc=5",
+      "published_at": "2026-11-23T19:09:20Z",
+      "label": "reported_fighting"
+    }
+  ],
   "test_macro_f1": 0.6219205630970337
 }

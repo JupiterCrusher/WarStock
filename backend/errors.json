@@ -38,5 +38,10 @@
     "timestamp": "2026-11-24T01:21:20.853492Z",
     "error_type": "news_fetch_failed",
     "details": "No news available; a missing feed is not a zero news signal"
+  },
+  {
+    "timestamp": "2026-11-24T11:46:02.326218Z",
+    "error_type": "news_feed_partial",
+    "details": "[{\"query\": \"https://news.google.com/rss/search?q=military+conflict&hl=en-US&gl=US&ceid=US:en\", \"ok\": true, \"items\": 100}, {\"query\": \"https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en\", \"ok\": false, \"error\": \"429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en\"}, {\"query\": \"https://news.google.com/rss/search?q=drone+strike&hl=en-US&gl=US&ceid=US:en\", \"ok\": true, \"items\": 102}]"
   }
 ]

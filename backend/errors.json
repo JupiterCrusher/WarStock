@@ -33,5 +33,10 @@
     "timestamp": "2026-08-20T16:20:51.320926Z",
     "error_type": "stock_fetch_failed",
     "details": "Too Many Requests. Rate limited. Try after a while."
+  },
+  {
+    "timestamp": "2026-11-24T01:21:20.853492Z",
+    "error_type": "news_fetch_failed",
+    "details": "No news available; a missing feed is not a zero news signal"
   }
 ]

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-24T21:40:54.810650Z",
+  "timestamp": "2026-11-25T04:40:18.202135Z",
   "feed_status": "ok",
   "feeds": [
     {
       "query": "https://news.google.com/rss/search?q=military+conflict&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "items": 100
+      "items": 69
     },
     {
       "query": "https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en",
@@ -18,22 +18,118 @@
       "items": 102
     }
   ],
-  "archive_count": 759,
+  "archive_count": 800,
   "window_hours": 24,
-  "story_count": 90,
+  "story_count": 92,
   "model_state": "active",
   "model_version": "2026-11-23T191421-784397Z",
   "class_counts": {
-    "background": 30,
-    "threats_buildup": 31,
-    "reported_fighting": 29
+    "background": 39,
+    "threats_buildup": 27,
+    "reported_fighting": 26
   },
   "class_shares": {
-    "background": 0.3333,
-    "threats_buildup": 0.3444,
-    "reported_fighting": 0.3222
+    "background": 0.4239,
+    "threats_buildup": 0.2935,
+    "reported_fighting": 0.2826
   },
   "articles": [
+    {
+      "id": "3228f6dcf95c405948711c2c",
+      "title": "Leaked Russian Records Reveal 349 Deaths in Mali, Mostly Linked to Military Operations - The SOFX Report",
+      "source": "The SOFX Report",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdHFZRktLck5BVnhhYjNRNlQ0QXZyUTBEVGg2eTU5VDNlRk9OdjhHS0ZLalVtWnBENDB3VTU1ejdabGhrQ0hOdEVING1hc0FCOHBwbmFGVzBkOHZoMWI4aC0wdTBES2NUN3l3X191NmpaUWdQTkpxMDdXX0pwMHl2MTFHVjNTbk1TSF9ySkczanIxei10VHlkOUdEaFFVVThEaDNCVGFySmpRam8?oc=5",
+      "published_at": "2026-11-25T03:58:39Z",
+      "label": "background"
+    },
+    {
+      "id": "f9ad3bdbf87362a1de0330c9",
+      "title": "Putin vows response to Ukrainian oil refinery drone attacks - Ticker News",
+      "source": "Ticker News",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUkZ6dkh0YXdjQUtlRWNDRV9oUEJJckhwbHhjenEwSFd6ZF9WY1NkOVJQTkl0a1FaT0I2SEN5Wm02TFRBS0NtN2VtOGZlOXdDZGZIN3MxMW1ydXo2ZjNKcDR5X1BIdkMyUmE3d1Jia1NYbnF6Yy1ZaTUySmRISWZ6Slp6QQ?oc=5",
+      "published_at": "2026-11-25T03:30:26Z",
+      "label": "background"
+    },
+    {
+      "id": "f57b5528cd169ba1012bb251",
+      "title": "The Pentagon's Interceptor Missile Crisis: Depleted US Stockpiles Force Unprecedented Industrial Mobilization Until 2030 - جريدة القدس",
+      "source": "جريدة القدس",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeHRNQ01xQktVLUlQWmhjdnZzOVNzVnhUeVB6U1JlWEFHYnU4MXl0VktudVk4VlhYRTAtOFJjLUlUd0tkaWZJOFN4Y2lCdjdpQ0lPcVVLZUlDWU9adDFQYUdIUzJpcTZGemxFNXBGRnVWa0plRzdqeXUwMEN4Nl9Xal91aG5aa1A3QjNEU09PYnhMOVMxUFFGWU1SWXBDXzVaMGtwMi1zY3Q?oc=5",
+      "published_at": "2026-11-25T02:01:33Z",
+      "label": "background"
+    },
+    {
+      "id": "7efc49fcd34d8435b9417dac",
+      "title": "Lee Eok-won: \"Establishing AI Defense Systems in Finance... Improving Network Separation Regulations\" - 재경일보",
+      "source": "재경일보",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1zb1EtU080eG94LU9qNm5YNmFwSWxPLXMyQlRNQjR4T2JXUXpHWlBKY3EyZUdkSHE4c1NzNmxxVHNwbENlb2JYNnpHR0toZVJTOVV2OFkzbV81cXRHUHd4dURB?oc=5",
+      "published_at": "2026-11-25T01:45:04Z",
+      "label": "background"
+    },
+    {
+      "id": "97456aff8a321f10a1b26527",
+      "title": "Why did Iran decide to destroy the US Patriot system in Bahrain? - Vietnam.vn",
+      "source": "Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcnA5RTU3T3I0a2N3MnhrT05laUFvV1hqM2tFcmZuVmdUQUktVkNVdDlpMW1PNVpuczhoR2F5TGNoVlhFaFY0eXpjMkJsOG80NXlTUHcwRHZBcFZhSm5vV0NYVjRjUVFqQlN1TkhZZGRmUUlhV1BjVm5mRmJvdHYwbW9PMjZPU2lQSjhNQ3dn?oc=5",
+      "published_at": "2026-11-25T01:08:07Z",
+      "label": "background"
+    },
+    {
+      "id": "29bf057bf7f58649336af4ba",
+      "title": "Iran Targets Kurdish Opposition Camp In Northern Iraq With Drone Strikes | Watch - The Times of India",
+      "source": "The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVQ2dE0yY3podThkWkhBYmNqOGQ4THFuTTNVRFc0SUJwdjNYd3pPY0pVRWduMVFUOWNnSmVpdUgyOWxlYlVYSmVNemlDREptOTRfUjdvUE1sVDZTYXN3NkFhMnpkNDlVNEZCNWZ1QnFtaWZWUHBDRFFxajFNMWg1V1FBV1NHTmt4VWpkVElsM0xHVi0wbVYzNHZjU1NTNGtqcmtSNFg4MUc2WFFLbThiQVNCOW40SEhrN1dkejJlc1o0YWIxeWt2S1lLa2pNOS14QzAtTUFhb1F1NEZTM0RyeUNaSmxTVzZJc0JYRDNJQUjSAfYBQVVfeXFMTXBEN0JPRnA4VTFpWV90Q19ETUFhbGZrcEhVZzZUeUtMQ19MNWwtY044M2Jfblk1d1VHdG9acVBMejE5TWFXRk13aXcyMFR5aXEtM3dSNHNmbUFvY2lFeXM5d3U3MTliZUFOUHlKV2VkbU1xd0hHb0hpN1FpTFplVFVSYlFIdVBYNVhyeEY3NVRqUUgyejNfLWhXVG5Nc1hhNldsdkt2SGVYLTh6NnU1SkxpOFA0WTJaWTg3YmJjOE1WbmotWklUSnJRLWRrLU5oRkJHSVZOUnMwUG5PTlFNbGJaWjIwcDNhcFljTEVtVTFxMlNDOGNn?oc=5",
+      "published_at": "2026-11-25T00:16:03Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "500b988527d958cc1a44d663",
+      "title": "Saudi-led coalition orders civilians to leave Yemen's Hodeidah port ahead of strikes - TRT World",
+      "source": "TRT World",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE05d3ZuMjYtVmN0T2FObHQ3SlRKdlRIZWJzaGlDaDF3cGsxMTMzZDd5Q29PSmFzRFNxU2ZRcTNoWlNHZjBvUjE5MDllVkl6Z3NwdUVIZV8yNVo?oc=5",
+      "published_at": "2026-11-24T23:40:16Z",
+      "label": "background"
+    },
+    {
+      "id": "beaa43b02554d2be0eaf34ec",
+      "title": "Ukraine says attack on Russian ships in Libya was self-defence - Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTzIzWjZLTEdiVXRtR0I1cEJ3MFVCUzF5ZktKdWRUQlNtMEVDTnQ4Mk5xU2tvODVlRUJFeE5KOGlieGxsYkp5c1dhZklONzRZNW1VWTR4OVM1MGFQM0cxRXBaQm93b1lhWG1qR3F0ZGV2VTRRRGxtbTRkU1VYQ2c2dEtHckpXQmJCbmpYZlNKeFVrNW8zVjBldDFEWGc1TmIzRTJTM0ozNy1yanVq?oc=5",
+      "published_at": "2026-11-24T22:37:11Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "253e7c89405e742f349885ee",
+      "title": "Despite Internal Conflict, Abiy Ahmed Calls on Sudanese Parties to Join Dialogue Table News - Borkena",
+      "source": "Borkena",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTGNVLXF1UDdNZVUyZk1NNFJYdmNwMXgydEhVWUluYml4SlJuMjBRQVJ5N3RnRzZleTdITDNXNjRpQ2pTX2Z4X2J3ZmZPWGd4WTFUdkJCS19VS1VXR2NCS1NONXJETmFJYU55MXprSjVRNk5EUDFsTTJDdVY3ZWRUSlNOeEhtTURVWDAzMGNDdVJBRGNYd3JjR0FlcE1vQ0ZFcmdDSUxfbG95Zw?oc=5",
+      "published_at": "2026-11-24T22:10:10Z",
+      "label": "background"
+    },
+    {
+      "id": "cf036a8488833bdbfda1cdd2",
+      "title": "Norwegian firm behind NASAMS air defense builds new system around cheap Ukrainian missiles. Called Desna, it already fires at Russian drones, Oslo says - Euromaidan Press",
+      "source": "Euromaidan Press",
+      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPVE5LdlN0ZDdNUzVsay1EMWZmWm0ydFRJa3habFplNU56RTNMczBoNWlMLThhQzVfSVBvdGM4VFFpX0dIX2hUWHBUODNmLXZJQ0xzUjFhZ2dIdXc2bTJUdGxBVUZDY1NkREtkV0V5aWU0VElrMmx5N09wTkhxcl9UamNOQWQxMjRHOXdaY0N5dTdKcXJUTF9hZ1NxOXVGOHlhV2cxeXNpWTNmc3dIWWtFUHR2ZUJLUGtndmFqN09GSHFMaUxHZDMtU0RSSTFJdHdKcTdqVXo2WFRZb3VZNDl2MWZWRExHVFFGNkpXN195UW9wUmdMQTVPVVJpbTRwcUZrT1pKdkxDVVdtSm5wUDZkcUpGM3ExUjQ?oc=5",
+      "published_at": "2026-11-24T22:02:37Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "6f9719741b98704db496d0ac",
+      "title": "Israeli defense firm Tomer raises NIS 600 million, challenges Elbit's artillery monopoly - The Jerusalem Post",
+      "source": "The Jerusalem Post",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PdEF6M3lGN0IyV0RpaDUtSXIyZXExdDU0WTJJOHh6bWg2R0JvUFJEdWJRRElyM0FyMmdXRXVpWGl6WlJuRWVBY0NNM3VoUEF4TDlXT2hSTVR6dzV5aW8wbXBMaXJUU3BSaVZPNA?oc=5",
+      "published_at": "2026-11-24T21:55:22Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "5ab55c7185b069ce90663237",
+      "title": "11 injured in Houthi drone attack on Riyadh tower, Saudi civil defence says - Al Jazeera",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQT3JsaU96a05ySk9rVHZIazNjQmt6Z2ZCZF9nRWFSVHVqa0s1LVhhRXhVc1VSMjNfWHhQTVZyZU9GZEtsZHRRVU5yVGVUYmVwZkRDNC1iSmYyWDc0UTdhV2pOenhuWDFkQ0ZWWkhwcTFoN2tsU3JjcllUWWJkcDBvUHU4MTAzSi0zX05oM0NLQVpua1VFNmJfcWE3cmh1al82V29SdDhCSkc4d9IBrwFBVV95cUxPQ1M5eHo1Rk9NaE5DM2hNbGF1akUxczVaekNKRWRUN3JxZ0ZJd05TYno2b2o2bVU0ZWJxWE5GWE5kT19lRHR6Z3k0TVpkaXFuY2dBMXNmaFE2YWpubno0VGZFUFlEbEJqY2NKODVWX09BVUpEUGZTXzRrY3RZWi1YUFdtaUN2amFOSm1sNXJRRzA3TW84Sk0wcUJYN1NCSEpKbV9ZZk8zNUtZSzJVdjFV?oc=5",
+      "published_at": "2026-11-24T21:33:15Z",
+      "label": "reported_fighting"
+    },
     {
       "id": "c80f2bc205809119ee8308ae",
       "title": "Elbit Systems wins deal to equip German Navy's new F128 frigates - The Jerusalem Post",
@@ -75,6 +171,14 @@
       "label": "reported_fighting"
     },
     {
+      "id": "2da93202051e58f97ceb7b59",
+      "title": "Kongsberg's DESNA Fires Cheap Ukrainian Missiles at Russian Jet Drones - DroneXL",
+      "source": "DroneXL",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQX3NvSi12NlEyZ3FKUDFXSVEzbjB2dnB2YWtzZEVncG1ZVk8wN3NDUlh0QlNlMl9Edkk5VWxnWFJfYnFHQVowQ1R4QWU5WEdmUFpqdUtUQWRVdm4tUWl4WU9tTEt3cEFWQ3MwaW04Q0F1QW9QSVJYcnBWMWdGeFh4SkpmS2ZzcXBhRkctaGNqbk9uN3NiYVE?oc=5",
+      "published_at": "2026-11-24T20:22:00Z",
+      "label": "reported_fighting"
+    },
+    {
       "id": "249eb77a036dfcd3e9a365a9",
       "title": "KONGSBERG’s DESNA Air Defense System Enters Service in Ukraine - Defensehere",
       "source": "Defensehere",
@@ -96,6 +200,14 @@
       "source": "Hudson Institute",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOR2dWSC1Za0t4bWFJck9nWGVWUlpNZnpEc0hUaTRCdVB0VGtKUlNHcklMdXpCZXVwa2FpQ2pzSHU2V25feVpKZENFWVhvQlUzZzRiU29yaU9NRTladml2dTlVNzV3V2x5VjB3alVmcEQzU2c0VEkwWEtQVjY5MzExczNKYkx0aERXUS1xZjFCUVZnakxDTFNRVFQ1eEFRVTdTT3QtQmtrOVU2R3V5OW1rWGlRUmU3c1VVUGw4TUhMazZlbXF0SzdBMHFn?oc=5",
       "published_at": "2026-11-24T19:44:30Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "cf95567c3874ccb58a87d5a4",
+      "title": "Putin says retaliation ‘inevitable’ after Ukraine hit Russian oil plants - Al Jazeera",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbVlLVzNGdDA4X0FlQVJiZDFvR2RncEpnbThvT3ZhSTVrUzlwaXh6aWtreGRaaV82T1B3WjA5dmpkNldEUHUzRFZaUndnMXQyeF9jTnI3LVZ3NTRSWTBaNkpBT05IVEJDMlFyWVN5eTlHTjRPYmZlWm1JS2VNMGNjb09Da1BieC1WdldIQW5IZzFFUkE1MzRRdFFqWjB5STNFdC1zT1k2ZVRvMFlmRDJYZDhjNC0tZlHSAbwBQVVfeXFMTzlnSnlkOTlWUC1oeEdrU3MybWZuN2g2bmlVcFcwY29mZzRtb3IwamlBMEdjSlp3aEpJaTBiUzB0NXA1NElrWmtwMnZSZWdJWWE4dW9Wb3IyNnFqRU5KODh0eVpyLUZxQXBZSUQzTTQ5RWd5Tlp3UXowMnNBQmxRRW9UVkVad3RFZjRiTDVKYWJ1cGwyM1lubHlBNXI3OG9WaWM2SjhEZHlsNWxEdTF2LURHejZlWE52d3F6dlY?oc=5",
+      "published_at": "2026-11-24T19:31:29Z",
       "label": "reported_fighting"
     },
     {
@@ -123,12 +235,28 @@
       "label": "reported_fighting"
     },
     {
+      "id": "7cd9c73fe6b232394fe5e65e",
+      "title": "Russian Drone Targets Power Crew as Dnipropetrovsk Hit 30 Times - Kyiv Post",
+      "source": "Kyiv Post",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9hbHo3RVdkZ0tCRkc5RDY2c0Y1RS1ZazBfcWgyNHcxYW5fc21jVUNEMXNPajNQRkh3V2lrbFFVV3JRMC12RnRzY2pBNA?oc=5",
+      "published_at": "2026-11-24T18:33:33Z",
+      "label": "reported_fighting"
+    },
+    {
       "id": "0a8b46d80db96be2f4ee61c8",
       "title": "Israel Aerospace Industries Posts Record $663M in 9 months of 2026 Profit as Order Backlog Hits $35.6B - Defense Mirror",
       "source": "Defense Mirror",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONmNZQ05rMFhtZ2RVbkhSeWlYQXlBemZjUjZEc0V6Q0otZFJXVVFsaFg2bkJFMl9fb0I3WHVVUFdkb2NZaFdMVWgtenV0bEtVcElmMTN5ODZJa2NxdHBTM2lvUmp0VzA0UEdFRUxIZEdWaWRxVnZiZ3RieXp2Tm55Y3ZEMjVWLTJuRVdaYldFTkMxZGIxY0hndkUwMU04ZDhvUEdHbWYwYVg1QkFiLW9HLUt2b1FSTWVBanZSZlhXYzJIRl9uai1MNkpNbHdobGZIV1l3M1RR?oc=5",
       "published_at": "2026-11-24T18:31:42Z",
       "label": "background"
+    },
+    {
+      "id": "087c3f875092119860256a00",
+      "title": "UN chief warns AI could fuel conflict, calls for urgent action on autonomous weapons - The Express Tribune",
+      "source": "The Express Tribune",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVVhVb2hXYjZrTEFLZk0zU0pBUEE3M2xWNjdFeEp5eGRpSkRmMXhJVm95azJhZlRyTzdHZ3QyMENCQjE2VG4xcXJBd1U1WklhdjBOajVMSVRqRFZOZGNNT2hEVHNHNm15dHpLUzZOTk9PMHBlWkgxVzZ1QXpZLW1oakNwTzVyb3JPU2IwNG9Pem1xLUhLZk8zQjVMQ3JUOUUyMGIxTE1iamZoc3JydHBXRWRFYlpjNC1GX1AzRNIBxAFBVV95cUxQeGR5UldNR1c0b2lUeVJYcDhNU2pFZ19DY2JiQnFXUGNqRUU5Q3k1WG9PRjdZTVlXY19lYkl2VmlvdTV0Qnp5Qlc5bXJPenpNc3ZqVW1Wam54SUVRWERLeGpEQnh6aFZ2SW5kQjVhR3pOZFItZEtJY1YwQXliUWViSHpUU1dlVHlNcGdqTTl6c2hrT05BODBVbFAtT3FjZ0hUWTEyRnJzTkt3bW1TMGdMeTJMeUozRFZyZy0zVEczQlNmWXNr?oc=5",
+      "published_at": "2026-11-24T18:26:22Z",
+      "label": "threats_buildup"
     },
     {
       "id": "5119d279c8cf44d3af05a072",
@@ -145,134 +273,6 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR3lHaHp6WUpPN2V6ZHpCOHVZXzFCM291WjJSSmgtZnhObUo5d01KNzlZcWlKRkthcjZIcC1fNjJ3cXgtMFV4Rzg1TGJwZ1A0MnhvWFVpOGNTM3h0b2hPaUtHblA2Y0FwRWliT29rdVZiTWtiZjJidU5ndTF5WjUtZ0I3NDFPWEMyTFIzb2kzVXFVTllINXRlYUJMS3BIbi0xcEdnMFk1cFJkelZKTkVLbXpjZEbSAboBQVVfeXFMTTZOY3d3T2dHWVg1MXlYN2U5T2VndmI3SHVBa2phV0ZxbTlsQ2dEQ0ZVRURtcGlZeWVua1VPbzA5MDB2cWw3NzBYdGZCOEsyU1kzcW8zYkpLQWQ5Z0REWFp5NkpfRUZlZDNuUFdYc2Qwakc3dnBvZXhsdTh3UjZJcndTYlNFLVFFU254OGRRSVBZcVRIR1ZiTVNIMkdmZHFNY1NwZkdRWUpWcmJyc3FNUUNkMEt6bXlKNVFn?oc=5",
       "published_at": "2026-11-24T18:20:22Z",
       "label": "reported_fighting"
-    },
-    {
-      "id": "0666194a9b63b269a84b6045",
-      "title": "Khmara: Ukraine, Norway launch, scaling up new Air Defense System – DESNA launch system - Interfax-Ukraine",
-      "source": "Interfax-Ukraine",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBuQ3FjZWdiaXhuUDZwRmhSZmw5bE55QWZHQ2tmdUlkNy1kaWhPb1dkLTd6ZEc3OGs2cHJjeXdETVFZS0hkR1hNYUlSYnJRMGR5dGh3b0lkNGZUZ0h5NTZnSXVB0gFnQVVfeXFMTVE2ekFLaUlSdlB2b19TRHVFYkduYkxycTlCcEdVNldmcGZmNFhRR3gtNDFSbjZkN2xldlIwMWZ3LVJYWDcwSGZJQXh1MzlLb0pIVlBnSkZFaWx0SFlGM2xzX0o3dWZqcw?oc=5",
-      "published_at": "2026-11-24T18:17:16Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "216fc9ecfbca64824f7ae686",
-      "title": "Kongsberg says Ukraine has put DESNA air defence systems into service to counter drones and protect infrastructure - Defence Industry Europe",
-      "source": "Defence Industry Europe",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPUlUyQUw0LURHeWFvRHo4UUFmY1FJQ29XZE84MnprOXRnVXdtT3JuSGFheDVTdTRzcVFqSjJkYzV5SlZ2Y2lTcDd3VGgtZWdXdlZVdUR5VlNOV1RVN0tEdzUzWDZMazloZ0VHLWlMbVh2aXptUE11MGZRLXJvYTdSbkRYZjhaTkpIQ3pZZU45MnJhc2pkYnYwNjJFYmFsZ3F1WjNhNDd2MzZsNnUxazNpU0duZGx0STVCazdGTEx0N0tNQ0hiQnh6ckFEZGYwSmo0UWdDdVU1T2xKYlU?oc=5",
-      "published_at": "2026-11-24T17:14:20Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "cf483de4d23c565340105c6c",
-      "title": "Explainer: Libya's messy frozen conflict - Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVnRfZ2l1LXM1U0cwVl9lUElaOFBJcElYZHhrVE1CR2lnZUNvWE5ERzk3Y1BUalZfNjZnTUg4b19BY0tMYUx0Y2FFaTRmeU44QjZsVnd5TGhXU3E2SWVId1FMaWtHT2RqRXpWeGZPVXVnUzllRFdMT19fZWxlSDRKX0FWWQ?oc=5",
-      "published_at": "2026-11-24T17:01:17Z",
-      "label": "background"
-    },
-    {
-      "id": "7244802b173e942d68af269c",
-      "title": "Ukraine and Norway develop new Desna air defense system, with several units already delivered - The New Voice of Ukraine",
-      "source": "The New Voice of Ukraine",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMzhhcV9SRkVtRklpZkFWSXBQRkF3cEdUVzVEeWppbi1pVUlQRWMwaGxkUlJ0d3ZMYkdWZjJFQ3dENnYydFNfc0I2T09TZ3lZYWRuUEpCb0hYZGZQRE1JcDJMaUhjZW50dGpRWHhZTXZjdTdSMTBXVkZybVBmbnlNZGZrTjIwUjA5TEgxeHFaZzlpZnI3aHJzQ21MbGNNcVNxVXQ2SlZFVlVseGVQSlHSAaoBQVVfeXFMTVQxMjNSN1M0UnpLeGFRblJMRVk2SGRfUjRsNV84LUVPSEc0TG1aRnJUbE5ZRWFzZzR3Q2UwT0JQMEV5MUZNejIxM1V1M1JFaktEamhWaW93X3YxalhiUTdUcVNDM0ZpX2FLcDVZeklJcWQtUkt3T2l4eXNnNEFKem1iRy1yeGpGNWhNWDRXZXJHVVJJbGxVX0psd0FIejdHZzUwLWhoaHNHOGc?oc=5",
-      "published_at": "2026-11-24T16:58:00Z",
-      "label": "background"
-    },
-    {
-      "id": "2ac50e48a54cc3d8f06680c5",
-      "title": "Patriot Missile Defense Faces Congressional Questions on Supply - Legis1",
-      "source": "Legis1",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ZVEdLekhzS1FDdVlLci00M3FablBVa3hkMUZVN21zV2RKanFmVGtodExlNVluM3JKeFVRd1ozSXZJS0ltYzR6eFV6cUd2dktuTFF3ZnF6ZjhtemxzOHJlSk04V0tuLXcxdmRXU3JrdkNRd2NtTEE?oc=5",
-      "published_at": "2026-11-24T16:46:55Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "8bbf92edb3280527d4f8cd8c",
-      "title": "GE Aerospace Taps Darin DiTommaso as Interim Defense CEO - ExecutiveBiz",
-      "source": "ExecutiveBiz",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMXY1MDJKU3dQemlxUFA4SG1hV2V1eF8teTd0RHVIdVBhaWhiWHY5YWROWkdvaVV5QzNFdVd1WlAtQnJQSmhuemppM19hdS11WEhiVlZ3NzZORHF6Z0t0WGJ5RF9TMFlRa3MtSjNPWVd0LTlWQ1pVZkR0SHVYeTRTYXlMdzV4ZnRFY3VXU1FNTmk1cXhCdHpmb3lqbTczSjl5emc?oc=5",
-      "published_at": "2026-11-24T16:46:52Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "8dcf035fc1aa51355a15567a",
-      "title": "Ukraine and Norway have developed an air defense system with cheaper Ukrainian-made missiles. The Desna is already being used against Russian drones - dev.ua",
-      "source": "dev.ua",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fckNRc0RKX3Q1bDYwR1Z0NHVUM2hnMm9wLXZDLUxwVEcyWHdXajBsUERGNUNpdkJkU1Y0bUJ0bFplMEQ4WEExbXNpeU9LZ3VfN0JjOF9n?oc=5",
-      "published_at": "2026-11-24T16:40:00Z",
-      "label": "background"
-    },
-    {
-      "id": "e1aecbb043748c7685a362c3",
-      "title": "Ukraine and Norway create new Desna air defense system: Details - RBC-Ukraine",
-      "source": "RBC-Ukraine",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbV83Y0FFQzlKeWo3S2l1bU91NEllQ0RaVzJiVHJaRDRBV1FkMEJUc1lEZE93NTdjUnhpd1dLRC1JWmVRVnNQdGprWUhzNzlvTHMyWjE4bFIyLW1aclZ5V21ka1JOa1VCV05CX0NIMG5hUjdkMkxZWnNtRXV3cGZKcVJXMERMem5zWVFDbi16ZHM4SFRpSTJ4UHRGTQ?oc=5",
-      "published_at": "2026-11-24T16:25:15Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "7819da5c04569659dbebe18d",
-      "title": "Ukraine, Norway to expand joint DESNA air defense system as Oslo plans $7 billion in 2027 aid - The Kyiv Independent",
-      "source": "The Kyiv Independent",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQMFdUVS1ZLVhTVzZhRzAtdjRNZ0pvY1BHSHRxdkUtZVIxd3R6NEViZThWZTlPSy05Q3VBZEEtVG16UUtzV0VBT1FPWFpoaGtTc0ZIS3NfUGtIY18zU0RQcDBDSFRHZ092VWxwZVpTeDFENXM1U1BFX29QZW5jTER4U2cwOVMtSGRJenJrOWFwWHRQSTZkRzcycW5zbGp3andhVi13RTVTaG5TbzFTRjJfdE5vUUxadFRDS2tvTmlDVU5hZw?oc=5",
-      "published_at": "2026-11-24T16:22:55Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "f9150befd1f7ea683e0208bf",
-      "title": "Khartoum drone attacks draw chorus of int’l condemnation - Dabanga Radio TV Online - Radio Dabanga",
-      "source": "Radio Dabanga",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOS0NIazRwWS1seG1JMzdxZl9iQnU4OXRRU1pKM19HYXVXQ05kQlpnMWVXOEZWdjRfREVxb3VCVGo0ZzE3S1Q4YnpwMkFSelJ3RTA0U1hZb2dUcDdqVnRwSmRPdG9QMWpxSGxBdmZuaFdPNnhoeTF0bXJxcUUyZzBkTW5KbmR5Z09XSHo3UE9mSWhDai15R0U5Ync1aldaSzJNVXRzemR0UQ?oc=5",
-      "published_at": "2026-11-24T16:14:44Z",
-      "label": "background"
-    },
-    {
-      "id": "c424da0bd169901b2256e76b",
-      "title": "Ukraine and Norway to expand jointly developed Desna air defense system already in combat use - Hromadske",
-      "source": "Hromadske",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQTWtHanVrU0dWVklYb2REbTl6Y2tESlNxSmNYXzFyd0JZTVhFOGQ2UXZBYmhhS1ZwaUpESHoxSURnNjZzUEk0Mi1seXVTTE0xOVEtT2FQYU16RzR5N291V2JLSjFxbDl6NkZYb3pEeEVfcEhSZHNQN2hiZGl3VnBxUmlZVFlVVWxqc2JDbVZ6Q0t0dC1qdWNvS2d4ZkEydnhqekxSWk1FazJneDZOdVJFUy1rM0xzVlpKR01LUV9ySk16YlZjY3ZZ0gHMAUFVX3lxTE5UczRBM2hwQUFIYl82V1dYM21mY3pRMGxFdUxnWEdNSGZxMXZraEdsTWdWb1ZmbHd4OS1UV2NSeFJQTjJma1NTajB1MXhzS3oyVWh4VDhheGl4TlUwbGt5bS1pZUNHaHg1Z21SMTBWaEEzLWRERkh0eFZFSXlIZFNsZGtncXlxcGVvd25jNGx0NXBHd3ozd2owcV85VnZ6NjhpMDZaRGJMaDZONmp0T1RaNl9LLTY1NHdGOHpWeEVDa2l0UExUNm5zd29tVQ?oc=5",
-      "published_at": "2026-11-24T16:13:00Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "413422c57802b7b855744699",
-      "title": "US reminds citizens not to travel to Ukraine amid Russian missile, drone attacks - A News",
-      "source": "A News",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNLTdsbWcyQlc4ZVhQaXZ4dllkTVVxaVNGdG9Dc3gtdmJEMGFDMnBNQjBqZmRLN2JmUFpEUjBIeXJhcTgtSUY1QkdFdzlNT1poVE1LWkdfYlpUOEdCX3IxMU1ZZm9YUjdrSC1JY2k1aXNiWHJkWUQxX0pIYW1sT2lvaDA3M3NKa0ZVNm5ac2dWajI1ejlfREtBeDdCV2daMFFOWS1sSVdCYTU3TGdOb1ozWWRUQXZ4VExucUxBZWtn0gHDAUFVX3lxTE5YQjNSRk81Y0FxbE0tWXFTRFYtWnhlOTR1Z3hreGhTSkZGMGlwQWN0dXp2enFKQ0x4dlZaSFd4RWlJQjNYTVA5OTlLa1NKVU9MSFE4ZWJWX0FoaXB5bmdYRGpjNUlHaURycUl3UGxqMU9UWW0tNHZHOF9GVnd2QUFYVUg5VlUyTHVzdFJIWXNXTXFWT3RCRjYxZ1J0TlRYRHpfT1NvN0RYemRpUm9zeWZVVndVeTd1Q2JSdFVzOHRIX1JqQQ?oc=5",
-      "published_at": "2026-11-24T16:09:19Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "ce21ab6f0d89632abd96799a",
-      "title": "Ukraine and Norway have developed a new air defense system called Desna - UA.NEWS",
-      "source": "UA.NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMEM3ZjNhMHg4QjliNmcyUUNyUk9IazZjTjJHUWIydjUyTmFjbnZWSDIxcEZoVHlHNEhvS09GUEI0X3Z1ZVU2YkxjWkEzbTBlNldjOURCQzhkaFNwZk5yQ0IzdFdrSkk0anJ0dTRBc2QwZEFfYWo0b2twNTZ5cUVFRDc1aWhTbld5Sm5z?oc=5",
-      "published_at": "2026-11-24T16:07:25Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "2df9e361090457525741b1fb",
-      "title": "Italy watches worryingly as Ukraine strikes Russian boats in Libya - Euronews.com",
-      "source": "Euronews.com",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNLUN6ZzdBS0FCSkhlMk5BZzZQYnVnNlNSaXRtYkEyVUpuMV9JR3JKME5NLTIxeS12Rnk4NHVSN3ZpaTE2T2ZpSVlDNzJ3Y0N5MmIxSU1uel9DdW4tX2daWWFpZVQ0OGl5NkhCZENzTXVPaUhTMWZ6WlVXWGgyMUJweUlNZU1YR19jME9qTmhCZU1BMGZVNXB5TVhlLVZJemtNU3NtMw?oc=5",
-      "published_at": "2026-11-24T16:05:07Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "a7ff68facd9175fe444109df",
-      "title": "Two women injured as Russian drone hits homes and shop in Chernihiv Region - Ukrinform",
-      "source": "Ukrinform",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRWVneHM4S3BCQzg1c2RlWktFYjNJUnFFREFNdnhrVGtXNm5pcllobUdMVy1SU3BNZ0w1a25hY1l5aHY1SXEzUUdvVEFwVFprX1F1aDNDcDFfM18wb0V6REg0dnpHbERvTko2aGdWdnNZMnk1ZkJubjhya09FRWJhTHBEVnJBMnZGeHNsX0NCdjNpQmlpbnRucUJ2Yk90OUtzNzBuUW1JVm1SRVFCODhIQXBNdzl2TFFZSTVCWC1YOEZnZw?oc=5",
-      "published_at": "2026-11-24T16:03:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "3bfb09457b455074114256e5",
-      "title": "Norwegian Armed Forces Will Test the Ukrainian DELTA System - Мілітарний",
-      "source": "Мілітарний",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQWHVDUTNVVkp2d0JRUmI4aEZJaVpjNTNIQUpIOGNFWFFrTFVHNm14X1pxNFdBM3pQN255SkJUbWlTZERGZ3I2b2VOaGo4OG83cmpDY19BWGlCRHp0RjNWRkhCekNYVzh4RXZQZzhPNG1zTmhNakowd1UwM1Fkalh4eA?oc=5",
-      "published_at": "2026-11-24T15:53:04Z",
-      "label": "background"
     }
   ],
   "test_macro_f1": 0.6219205630970337

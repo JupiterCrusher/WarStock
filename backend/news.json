@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-25T04:40:18.202135Z",
+  "timestamp": "2026-11-25T15:06:37.796264Z",
   "feed_status": "ok",
   "feeds": [
     {
       "query": "https://news.google.com/rss/search?q=military+conflict&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "items": 69
+      "items": 100
     },
     {
       "query": "https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en",
@@ -15,263 +15,263 @@
     {
       "query": "https://news.google.com/rss/search?q=drone+strike&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "items": 102
+      "items": 101
     }
   ],
-  "archive_count": 800,
+  "archive_count": 876,
   "window_hours": 24,
-  "story_count": 92,
+  "story_count": 74,
   "model_state": "active",
   "model_version": "2026-11-23T191421-784397Z",
   "class_counts": {
-    "background": 39,
-    "threats_buildup": 27,
-    "reported_fighting": 26
+    "background": 23,
+    "threats_buildup": 19,
+    "reported_fighting": 32
   },
   "class_shares": {
-    "background": 0.4239,
-    "threats_buildup": 0.2935,
-    "reported_fighting": 0.2826
+    "background": 0.3108,
+    "threats_buildup": 0.2568,
+    "reported_fighting": 0.4324
   },
   "articles": [
     {
-      "id": "3228f6dcf95c405948711c2c",
-      "title": "Leaked Russian Records Reveal 349 Deaths in Mali, Mostly Linked to Military Operations - The SOFX Report",
-      "source": "The SOFX Report",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdHFZRktLck5BVnhhYjNRNlQ0QXZyUTBEVGg2eTU5VDNlRk9OdjhHS0ZLalVtWnBENDB3VTU1ejdabGhrQ0hOdEVING1hc0FCOHBwbmFGVzBkOHZoMWI4aC0wdTBES2NUN3l3X191NmpaUWdQTkpxMDdXX0pwMHl2MTFHVjNTbk1TSF9ySkczanIxei10VHlkOUdEaFFVVThEaDNCVGFySmpRam8?oc=5",
-      "published_at": "2026-11-25T03:58:39Z",
-      "label": "background"
-    },
-    {
-      "id": "f9ad3bdbf87362a1de0330c9",
-      "title": "Putin vows response to Ukrainian oil refinery drone attacks - Ticker News",
-      "source": "Ticker News",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUkZ6dkh0YXdjQUtlRWNDRV9oUEJJckhwbHhjenEwSFd6ZF9WY1NkOVJQTkl0a1FaT0I2SEN5Wm02TFRBS0NtN2VtOGZlOXdDZGZIN3MxMW1ydXo2ZjNKcDR5X1BIdkMyUmE3d1Jia1NYbnF6Yy1ZaTUySmRISWZ6Slp6QQ?oc=5",
-      "published_at": "2026-11-25T03:30:26Z",
-      "label": "background"
-    },
-    {
-      "id": "f57b5528cd169ba1012bb251",
-      "title": "The Pentagon's Interceptor Missile Crisis: Depleted US Stockpiles Force Unprecedented Industrial Mobilization Until 2030 - جريدة القدس",
-      "source": "جريدة القدس",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeHRNQ01xQktVLUlQWmhjdnZzOVNzVnhUeVB6U1JlWEFHYnU4MXl0VktudVk4VlhYRTAtOFJjLUlUd0tkaWZJOFN4Y2lCdjdpQ0lPcVVLZUlDWU9adDFQYUdIUzJpcTZGemxFNXBGRnVWa0plRzdqeXUwMEN4Nl9Xal91aG5aa1A3QjNEU09PYnhMOVMxUFFGWU1SWXBDXzVaMGtwMi1zY3Q?oc=5",
-      "published_at": "2026-11-25T02:01:33Z",
-      "label": "background"
-    },
-    {
-      "id": "7efc49fcd34d8435b9417dac",
-      "title": "Lee Eok-won: \"Establishing AI Defense Systems in Finance... Improving Network Separation Regulations\" - 재경일보",
-      "source": "재경일보",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1zb1EtU080eG94LU9qNm5YNmFwSWxPLXMyQlRNQjR4T2JXUXpHWlBKY3EyZUdkSHE4c1NzNmxxVHNwbENlb2JYNnpHR0toZVJTOVV2OFkzbV81cXRHUHd4dURB?oc=5",
-      "published_at": "2026-11-25T01:45:04Z",
-      "label": "background"
-    },
-    {
-      "id": "97456aff8a321f10a1b26527",
-      "title": "Why did Iran decide to destroy the US Patriot system in Bahrain? - Vietnam.vn",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcnA5RTU3T3I0a2N3MnhrT05laUFvV1hqM2tFcmZuVmdUQUktVkNVdDlpMW1PNVpuczhoR2F5TGNoVlhFaFY0eXpjMkJsOG80NXlTUHcwRHZBcFZhSm5vV0NYVjRjUVFqQlN1TkhZZGRmUUlhV1BjVm5mRmJvdHYwbW9PMjZPU2lQSjhNQ3dn?oc=5",
-      "published_at": "2026-11-25T01:08:07Z",
-      "label": "background"
-    },
-    {
-      "id": "29bf057bf7f58649336af4ba",
-      "title": "Iran Targets Kurdish Opposition Camp In Northern Iraq With Drone Strikes | Watch - The Times of India",
-      "source": "The Times of India",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNYVQ2dE0yY3podThkWkhBYmNqOGQ4THFuTTNVRFc0SUJwdjNYd3pPY0pVRWduMVFUOWNnSmVpdUgyOWxlYlVYSmVNemlDREptOTRfUjdvUE1sVDZTYXN3NkFhMnpkNDlVNEZCNWZ1QnFtaWZWUHBDRFFxajFNMWg1V1FBV1NHTmt4VWpkVElsM0xHVi0wbVYzNHZjU1NTNGtqcmtSNFg4MUc2WFFLbThiQVNCOW40SEhrN1dkejJlc1o0YWIxeWt2S1lLa2pNOS14QzAtTUFhb1F1NEZTM0RyeUNaSmxTVzZJc0JYRDNJQUjSAfYBQVVfeXFMTXBEN0JPRnA4VTFpWV90Q19ETUFhbGZrcEhVZzZUeUtMQ19MNWwtY044M2Jfblk1d1VHdG9acVBMejE5TWFXRk13aXcyMFR5aXEtM3dSNHNmbUFvY2lFeXM5d3U3MTliZUFOUHlKV2VkbU1xd0hHb0hpN1FpTFplVFVSYlFIdVBYNVhyeEY3NVRqUUgyejNfLWhXVG5Nc1hhNldsdkt2SGVYLTh6NnU1SkxpOFA0WTJaWTg3YmJjOE1WbmotWklUSnJRLWRrLU5oRkJHSVZOUnMwUG5PTlFNbGJaWjIwcDNhcFljTEVtVTFxMlNDOGNn?oc=5",
-      "published_at": "2026-11-25T00:16:03Z",
+      "id": "caeefe30376dd676e0752cab",
+      "title": "Ukrainian Drones Strike Rare Russian P-18 Terek Radar, Weakening Moscow’s Air Defense Network - UNITED24 Media",
+      "source": "UNITED24 Media",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPb19DcDB0LW5SazZsQi1FRkhKZzNLOWlEYzR4Z0tDa3RfZjQ5VjVDNDlPRy1Va05sdGlJUHRMbnhEbU1RdWFlMnlaNy1wUlhCQkNvZWN4WDlHREJobGdZZ1ZhZ3lYcVhCMkppQWpzb2dBc3lZSjdLUVJoY0VhZEtIMUE5eVN6X1ZUQTlGUDZCVkNzM2JONEE5UWcwLS1GZTllQ0l6bmo4WnFfNk1UT3RQV0JtUlA4UHlyMUEwbkowaGVrTVBQUlpIYnhlVFRlSnBkbVZ4cQ?oc=5",
+      "published_at": "2026-11-25T14:53:24Z",
       "label": "reported_fighting"
     },
     {
-      "id": "500b988527d958cc1a44d663",
-      "title": "Saudi-led coalition orders civilians to leave Yemen's Hodeidah port ahead of strikes - TRT World",
+      "id": "2a30b9530aeb12a2f509ed51",
+      "title": "Ghost strikes: the new drone superpowers raining death from above - The Guardian",
+      "source": "The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOa2U5cGpLRVZWZXZHZ0szWjZiOEwxeWpBOVlSQkQ0bVJiaVNzZ2c5dHB6MlcwQXBBUXR0Y0NudGt6a005eUpNcWVxZVhsczBCZ2ZkZWRleXI5bHNiNk9qZXg2TFFhTF9zdzZaZ2U2a3dGUmNTcENjOXV6NV9UbUFjTFhQMFZBbU81bXlELXNhdnctdGVQVEFSSGxWcUNVclhQdDVhanVpaTE0V080Qk55NU9vTjV3RzFoUFhOeGxIUDdkTFBVUkJWYVRVeEJmM1Q4Z0lBNzAya09keURobTJrbzJBclpIdlZmbk5BbEotWldsbXprSXotZzJSUEM3Q240U0w4cGYwTzB0Z3NWcFE?oc=5",
+      "published_at": "2026-11-25T14:50:00Z",
+      "label": "background"
+    },
+    {
+      "id": "1a6e071db414d5c492d4d58e",
+      "title": "'Terror-Free Türkiye' process offers historic chance to end 40-year conflict: Erdogan - TRT World",
       "source": "TRT World",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE05d3ZuMjYtVmN0T2FObHQ3SlRKdlRIZWJzaGlDaDF3cGsxMTMzZDd5Q29PSmFzRFNxU2ZRcTNoWlNHZjBvUjE5MDllVkl6Z3NwdUVIZV8yNVo?oc=5",
-      "published_at": "2026-11-24T23:40:16Z",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55WUI3X29xaFg5VmhoYWVDcmdQeDVFTkFXbThQYkV2VUUyM3dibzdtazQ2WmQ1NWJsV3UxMUl3ZTJVYlVSVXVVMlFFSGdHWlVNOVVHWFc1M1A?oc=5",
+      "published_at": "2026-11-25T14:40:22Z",
       "label": "background"
     },
     {
-      "id": "beaa43b02554d2be0eaf34ec",
-      "title": "Ukraine says attack on Russian ships in Libya was self-defence - Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTzIzWjZLTEdiVXRtR0I1cEJ3MFVCUzF5ZktKdWRUQlNtMEVDTnQ4Mk5xU2tvODVlRUJFeE5KOGlieGxsYkp5c1dhZklONzRZNW1VWTR4OVM1MGFQM0cxRXBaQm93b1lhWG1qR3F0ZGV2VTRRRGxtbTRkU1VYQ2c2dEtHckpXQmJCbmpYZlNKeFVrNW8zVjBldDFEWGc1TmIzRTJTM0ozNy1yanVq?oc=5",
-      "published_at": "2026-11-24T22:37:11Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "253e7c89405e742f349885ee",
-      "title": "Despite Internal Conflict, Abiy Ahmed Calls on Sudanese Parties to Join Dialogue Table News - Borkena",
-      "source": "Borkena",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTGNVLXF1UDdNZVUyZk1NNFJYdmNwMXgydEhVWUluYml4SlJuMjBRQVJ5N3RnRzZleTdITDNXNjRpQ2pTX2Z4X2J3ZmZPWGd4WTFUdkJCS19VS1VXR2NCS1NONXJETmFJYU55MXprSjVRNk5EUDFsTTJDdVY3ZWRUSlNOeEhtTURVWDAzMGNDdVJBRGNYd3JjR0FlcE1vQ0ZFcmdDSUxfbG95Zw?oc=5",
-      "published_at": "2026-11-24T22:10:10Z",
+      "id": "9abba760cb1a586f52d309f2",
+      "title": "HUR destroys Russian aerospace reconnaissance system that could detect missiles within 2,500 kilometers - The New Voice of Ukraine",
+      "source": "The New Voice of Ukraine",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNmRjbzZuLXpqNGV5akpBTXVPcURPay1Yc2gyMWJZOHdCVlktV2JLeDVpNmdaWmlSME9Gb19Va0I3WkxfeUxpemJ5cEx0V1pBa0g2X2k0Tm1fdUVfdDA3NTVhTUJkZms0dUloVlhfcVhuNHNzZUNSRjR1SXNZamtadkwzRnE3bVB4UDdYM21BRjZ2MTVpQTA0R29XX25xMVQ4ZTJJSlVYREdSS19zelNJMUZ1ejZENmF2TFU2ZkpfVktEQdIBvgFBVV95cUxNdG5zV2VYb3Z0WE4xRHhLZEhjT3lzN0QyczJCY1c0ZC1KQ3FtSUFFZ094SkhZaVJOM2JtRFlXZjcxUGVGWWtIbVY3OUdTR1ZYbkU0eHpVSWd3T2pWTHNDSjl5dTByWHlCME5NMFZOWUdUYWZrNGlDVVF6YnMtb1AtWEx4SF83cE5EclFYV0MxOWpFZXB4U3otZFhOSk1YWTVSS2FxS1NXSUhTSUF6SmptTkM4VjdNVTVwSjh5OEV3?oc=5",
+      "published_at": "2026-11-25T14:36:00Z",
       "label": "background"
     },
     {
-      "id": "cf036a8488833bdbfda1cdd2",
-      "title": "Norwegian firm behind NASAMS air defense builds new system around cheap Ukrainian missiles. Called Desna, it already fires at Russian drones, Oslo says - Euromaidan Press",
-      "source": "Euromaidan Press",
-      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPVE5LdlN0ZDdNUzVsay1EMWZmWm0ydFRJa3habFplNU56RTNMczBoNWlMLThhQzVfSVBvdGM4VFFpX0dIX2hUWHBUODNmLXZJQ0xzUjFhZ2dIdXc2bTJUdGxBVUZDY1NkREtkV0V5aWU0VElrMmx5N09wTkhxcl9UamNOQWQxMjRHOXdaY0N5dTdKcXJUTF9hZ1NxOXVGOHlhV2cxeXNpWTNmc3dIWWtFUHR2ZUJLUGtndmFqN09GSHFMaUxHZDMtU0RSSTFJdHdKcTdqVXo2WFRZb3VZNDl2MWZWRExHVFFGNkpXN195UW9wUmdMQTVPVVJpbTRwcUZrT1pKdkxDVVdtSm5wUDZkcUpGM3ExUjQ?oc=5",
-      "published_at": "2026-11-24T22:02:37Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "6f9719741b98704db496d0ac",
-      "title": "Israeli defense firm Tomer raises NIS 600 million, challenges Elbit's artillery monopoly - The Jerusalem Post",
-      "source": "The Jerusalem Post",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PdEF6M3lGN0IyV0RpaDUtSXIyZXExdDU0WTJJOHh6bWg2R0JvUFJEdWJRRElyM0FyMmdXRXVpWGl6WlJuRWVBY0NNM3VoUEF4TDlXT2hSTVR6dzV5aW8wbXBMaXJUU3BSaVZPNA?oc=5",
-      "published_at": "2026-11-24T21:55:22Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "5ab55c7185b069ce90663237",
-      "title": "11 injured in Houthi drone attack on Riyadh tower, Saudi civil defence says - Al Jazeera",
-      "source": "Al Jazeera",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQT3JsaU96a05ySk9rVHZIazNjQmt6Z2ZCZF9nRWFSVHVqa0s1LVhhRXhVc1VSMjNfWHhQTVZyZU9GZEtsZHRRVU5yVGVUYmVwZkRDNC1iSmYyWDc0UTdhV2pOenhuWDFkQ0ZWWkhwcTFoN2tsU3JjcllUWWJkcDBvUHU4MTAzSi0zX05oM0NLQVpua1VFNmJfcWE3cmh1al82V29SdDhCSkc4d9IBrwFBVV95cUxPQ1M5eHo1Rk9NaE5DM2hNbGF1akUxczVaekNKRWRUN3JxZ0ZJd05TYno2b2o2bVU0ZWJxWE5GWE5kT19lRHR6Z3k0TVpkaXFuY2dBMXNmaFE2YWpubno0VGZFUFlEbEJqY2NKODVWX09BVUpEUGZTXzRrY3RZWi1YUFdtaUN2amFOSm1sNXJRRzA3TW84Sk0wcUJYN1NCSEpKbV9ZZk8zNUtZSzJVdjFV?oc=5",
-      "published_at": "2026-11-24T21:33:15Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "c80f2bc205809119ee8308ae",
-      "title": "Elbit Systems wins deal to equip German Navy's new F128 frigates - The Jerusalem Post",
-      "source": "The Jerusalem Post",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81S3FLZ3hGX3lTR0hiZmM5RzBjdngxajJRQXVBeS1XRzMzNjIwdExQUzM2a3pJUWxxcHhTTExiekREQVc1a1k5SWt5MnlZZmFMd0dIZXM0ckl1RVBYWERJWEpCVWhtSHR5WEYtbg?oc=5",
-      "published_at": "2026-11-24T21:25:19Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "40271f2076ecab428e99b30a",
-      "title": "US Army sergeant pleads guilty to providing defense data to buyers linked to China — Anadolu Agency - UA.NEWS",
-      "source": "UA.NEWS",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOLWJUYk5zVU1UZ2RDUXFvejF3Zmp2Q0tkWVpYbm5wMUllelZCMHdvRnFqczQxLWUyRHBZZ2RJb2FYWDZldHlLYmdlSWQ5RjgyRndpUzNmUGtzWWVmNEd0WjRKd3RrdWZkSG5VSTZPeXhNdjVISW1kQ0FMMmpmaXZfcEdidmFmTW4wd09lSnY5dmp5MXRENVFjSWx2U1YzY3l5X3l4ZHBTRDF6RmppdU1QbUExSk9LUkhURkNuT1JSc1lEWlhFX2xyVGdXUGF0Uk0tdTBaclhNVVQxeFE?oc=5",
-      "published_at": "2026-11-24T21:22:48Z",
-      "label": "background"
-    },
-    {
-      "id": "9da49aab46cd603e55385d86",
-      "title": "South Africa convicts Zimbabwean who tried to travel to Russia to fight against Ukraine - The Washington Post",
-      "source": "The Washington Post",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZ1pQTkkwbFpnM3VYNXR4Y0FYakstTEVVZ3pJWTZ4SVFMN2N6Y29yQXFFYmJRR09GNzcyODdKNG9vWFFyMlRFUTMyeWx1QWtxNFFzSG4wZDZJdDZJbVdyUFZtcHNnRk1FQ0RpWkk5QTViQ3FXVEFKNmpWbEFIZjFnbXNGRmhwaUxOWGl2cENPVzg2M1RUTkgzckVEQTFfZGN4RGdLSkFDenhWQ1I3MWJZMVZCSXZPaXV0Z0FPUm53ODM4V3ZlZW5Ici1QZzJHZkZNajJv?oc=5",
-      "published_at": "2026-11-24T20:33:45Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "c17e610eef24f35c9557b23b",
-      "title": "Drone Strikes Hit Khartoum Homes and UN Facility as Civilian Toll Rises in Sudan - Latin Times",
-      "source": "Latin Times",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13WUhqUkxqajBWVjdzZEs3M3RTZGlhTDBCR1BTRm9LWlQ0M2pVRkpEbVFkTWl5T1BmMlJnd09UMFNWMGlGNnlScnRoTHMwQjBycDV5b0hBTE9BUDM1X2M5YUlPcEtxVkZqNDZSNHNBRWZBMjZyR3NZU3d5T0hVV1E?oc=5",
-      "published_at": "2026-11-24T20:26:30Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "8866177281e2bf6b78c75950",
-      "title": "Shafaq News..Drone hits Azadi camp minutes after missile strike - شفق نيوز",
-      "source": "شفق نيوز",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUHMyNlE2YWJRRm02ZGRzaUJsT1otTnAyQUdhYlgwRUtoQW1ibERzMVdpR052LWVnanRwSDQ1WUU2NEdUVlpDNEVWZ3M4TlhDaW41R09relFpZWRBb3BpOF85VmJqZGR1NEpQREZiTVIxSmdkZmdsSWJtcnlycVNvYzkwMWpLcGZuS0E?oc=5",
-      "published_at": "2026-11-24T20:23:58Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "2da93202051e58f97ceb7b59",
-      "title": "Kongsberg's DESNA Fires Cheap Ukrainian Missiles at Russian Jet Drones - DroneXL",
-      "source": "DroneXL",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQX3NvSi12NlEyZ3FKUDFXSVEzbjB2dnB2YWtzZEVncG1ZVk8wN3NDUlh0QlNlMl9Edkk5VWxnWFJfYnFHQVowQ1R4QWU5WEdmUFpqdUtUQWRVdm4tUWl4WU9tTEt3cEFWQ3MwaW04Q0F1QW9QSVJYcnBWMWdGeFh4SkpmS2ZzcXBhRkctaGNqbk9uN3NiYVE?oc=5",
-      "published_at": "2026-11-24T20:22:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "249eb77a036dfcd3e9a365a9",
-      "title": "KONGSBERG’s DESNA Air Defense System Enters Service in Ukraine - Defensehere",
-      "source": "Defensehere",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBkOWZMNjBvZFQxcWNjemU2SWNzMkkwellYTlppZElnTW9tNk9CYU13R3dSU181T0NXbmpQV1RXdlUyTXdSREJtSzRxbzVmT1JLcUlBSzlRX2lzekM2RnJud1p0NDFkYmVYaHROV0o4Um9WMF94d3NwLUdR?oc=5",
-      "published_at": "2026-11-24T20:21:30Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "a84c10393c2b96560e4f817c",
-      "title": "Austria Is Urgently Setting Up a National Drone Defense System - UA.NEWS",
-      "source": "UA.NEWS",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQTNtY2k2OWhHUmIybm54cnpFNTNwS1pKQUlzWmxZZV9mRWtDT1VzMkVtcFYwZkpKcVU3UTI5NjlMemFXa3ZacktLcnVpVlljY1UtNDl3UUY1X2FQTUo4S3BmbXhaNkdLQ2VFZWZrRmxMNGEzaVhpU0c3c3kyOGdGRG1NaDR6MC0wbzdOQ25DN2FnX3QwV0E?oc=5",
-      "published_at": "2026-11-24T20:00:35Z",
-      "label": "background"
-    },
-    {
-      "id": "ec0b0056f508025dc984e159",
-      "title": "How Ukraine Pulled off Epic Drone Strike on Putin’s £150M Warship 1,300 Miles from Frontline - Hudson Institute",
-      "source": "Hudson Institute",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOR2dWSC1Za0t4bWFJck9nWGVWUlpNZnpEc0hUaTRCdVB0VGtKUlNHcklMdXpCZXVwa2FpQ2pzSHU2V25feVpKZENFWVhvQlUzZzRiU29yaU9NRTladml2dTlVNzV3V2x5VjB3alVmcEQzU2c0VEkwWEtQVjY5MzExczNKYkx0aERXUS1xZjFCUVZnakxDTFNRVFQ1eEFRVTdTT3QtQmtrOVU2R3V5OW1rWGlRUmU3c1VVUGw4TUhMazZlbXF0SzdBMHFn?oc=5",
-      "published_at": "2026-11-24T19:44:30Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "cf95567c3874ccb58a87d5a4",
-      "title": "Putin says retaliation ‘inevitable’ after Ukraine hit Russian oil plants - Al Jazeera",
-      "source": "Al Jazeera",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbVlLVzNGdDA4X0FlQVJiZDFvR2RncEpnbThvT3ZhSTVrUzlwaXh6aWtreGRaaV82T1B3WjA5dmpkNldEUHUzRFZaUndnMXQyeF9jTnI3LVZ3NTRSWTBaNkpBT05IVEJDMlFyWVN5eTlHTjRPYmZlWm1JS2VNMGNjb09Da1BieC1WdldIQW5IZzFFUkE1MzRRdFFqWjB5STNFdC1zT1k2ZVRvMFlmRDJYZDhjNC0tZlHSAbwBQVVfeXFMTzlnSnlkOTlWUC1oeEdrU3MybWZuN2g2bmlVcFcwY29mZzRtb3IwamlBMEdjSlp3aEpJaTBiUzB0NXA1NElrWmtwMnZSZWdJWWE4dW9Wb3IyNnFqRU5KODh0eVpyLUZxQXBZSUQzTTQ5RWd5Tlp3UXowMnNBQmxRRW9UVkVad3RFZjRiTDVKYWJ1cGwyM1lubHlBNXI3OG9WaWM2SjhEZHlsNWxEdTF2LURHejZlWE52d3F6dlY?oc=5",
-      "published_at": "2026-11-24T19:31:29Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "58eefa73128e2153ac3bb75f",
-      "title": "Civilian Death and Injuries Spike as Pentagon Secretary Stalls Critical Missile Transfers to Ukraine - Kyiv Post",
+      "id": "cb1b84b2a270f69d826eeb61",
+      "title": "Ukraine’s HUR Says Deep Strike Destroyed Russia’s Main Air and Space Surveillance - Kyiv Post",
       "source": "Kyiv Post",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5IY2VIX0JZZmc1RGZtaUh6aWN0czdxSl9CdlZfZGdoUFktbGw4Uzl4VlNaYkFQQnF0MHQ3cnV1eUM2dTFFME91c2tFRQ?oc=5",
-      "published_at": "2026-11-24T18:55:19Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "aa84aad3f6d09c05148dfa9d",
-      "title": "Ecuadorian Fishermen Sue Trump Administration Over Drone Strike That Sank Their Vessel - Seafoodnews",
-      "source": "Seafoodnews",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNQTgyOF9mX0ZHejhMQmZ5Tk85bDIyaVVLbjAxNVJGTlB4S2h2R1hqRmFiRzUxN2Q3ZTFVWFYwNFJSd3RQTHZtRGx4UDcwMEduclVZbVJPVlF2UjFHc2RSa3BrSGFWVlhvZXpNbU5zdEhIdlp4TllxaEN1UWVtSWNvQWc2cnlGZFVWcmo4WWdmT0JuOXhVdXQ1ZGpNTGFxNm00WncyYm8yaHk4S3ZudUtYd2hZcTVXanNWRHFLcnAxSG9KbndFQW1j?oc=5",
-      "published_at": "2026-11-24T18:48:34Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBtM2RyTjVvN19hQjNXQ3Zfb1ZDaU85YU9LeDdHRk1mc2ZlZENJQ3VOdTFTM3g0Vkt0YXdsQ3hIZDNvSkdhQ3UtM1NWUQ?oc=5",
+      "published_at": "2026-11-25T14:13:28Z",
       "label": "reported_fighting"
     },
     {
-      "id": "285720c1c65e765470fe015b",
-      "title": "Russian drone strikes civilian car in Sumy: 76-year-old man killed - Українська правда",
-      "source": "Українська правда",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB1M3U2N0U2bjV2VG9pcFE0aUVvU1ZWQnhmZ0hsanRFZVVPZEZ4TW9PSm9WTWhreDNEMGpKUVN4V0tpVkREa3BXN0RiZU9LdHFqSDI4N2kxRjBycHpPX2NJNGJfT2zSAXBBVV95cUxNOUc0MmluQlItUFdHU2JBZUNkWVFCRTRlcGpYMkJUdE84Z293Umhpc1ZjRkR4VmtoRF9UNk55dmhwRTBNNEZ3a1dxT0NmdllWd2w5S0VmZ21kTkhwV21ibG5qOFliY2FGb2psZDV3X0NS?oc=5",
-      "published_at": "2026-11-24T18:42:00Z",
+      "id": "76761017e715e809ebf0543d",
+      "title": "Two Libyan Naval Officers Die After Ukrainian Drone Attack on Russian Warship in Benghazi - DNE Africa",
+      "source": "DNE Africa",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOalN0RGh5d0c2V3VieE5ORHRTbDJQdUdhcWhrc3o1UFhZVzU3ZHRnY2tJeHExTFpqNEpzY01CV1p4NDE3Nl94bWl6RzdFR2dxQnVHX3B6TXFDajdld05JS2M0VllZaU8tM2RiSEEwRGJIUFlJMFBoOHNvbkdiVlhWMWtmamp2Ym1aU25zUTJvOXp6YkJBY1dOWGZuQndHVmNjbGM2dWJYS084LUJOOE04bXhQaklIMzdPMjV4RkxBblFOZw?oc=5",
+      "published_at": "2026-11-25T14:03:00Z",
       "label": "reported_fighting"
     },
     {
-      "id": "7cd9c73fe6b232394fe5e65e",
-      "title": "Russian Drone Targets Power Crew as Dnipropetrovsk Hit 30 Times - Kyiv Post",
-      "source": "Kyiv Post",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9hbHo3RVdkZ0tCRkc5RDY2c0Y1RS1ZazBfcWgyNHcxYW5fc21jVUNEMXNPajNQRkh3V2lrbFFVV3JRMC12RnRzY2pBNA?oc=5",
-      "published_at": "2026-11-24T18:33:33Z",
+      "id": "d377f611cdd54b0d873167ee",
+      "title": "Libyan forces vow to retaliate against Ukraine for drone strike - The Telegraph",
+      "source": "The Telegraph",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOX195ZVpPXzJyMUpMTnRSSWhQYUphNWJCVU5BZ3BxcWlIQU5Ea2FEYUxkdHFNU1Z5XzJKQVRvNFV3UzBEcTJDRnZUaTlvQ3VtWkF4VGVQb3ZXTG1zVXFHV05BVmR0Rlp1RV9hbkVQTWl1NE1ETG9ibTB1N3FhX3ZMU1B1VDlsQk42OGJsZkkzcWF1cXJZRTE4SVRfeUh0TWhPVGFVcHViMG02dw?oc=5",
+      "published_at": "2026-11-25T13:40:00Z",
       "label": "reported_fighting"
     },
     {
-      "id": "0a8b46d80db96be2f4ee61c8",
-      "title": "Israel Aerospace Industries Posts Record $663M in 9 months of 2026 Profit as Order Backlog Hits $35.6B - Defense Mirror",
-      "source": "Defense Mirror",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONmNZQ05rMFhtZ2RVbkhSeWlYQXlBemZjUjZEc0V6Q0otZFJXVVFsaFg2bkJFMl9fb0I3WHVVUFdkb2NZaFdMVWgtenV0bEtVcElmMTN5ODZJa2NxdHBTM2lvUmp0VzA0UEdFRUxIZEdWaWRxVnZiZ3RieXp2Tm55Y3ZEMjVWLTJuRVdaYldFTkMxZGIxY0hndkUwMU04ZDhvUEdHbWYwYVg1QkFiLW9HLUt2b1FSTWVBanZSZlhXYzJIRl9uai1MNkpNbHdobGZIV1l3M1RR?oc=5",
-      "published_at": "2026-11-24T18:31:42Z",
+      "id": "05d870cb8bd60783b6ea7602",
+      "title": "This morning, the Russians launched two drone attacks on the city hospital in Semenivka, Chernihiv Oblast - UA.NEWS",
+      "source": "UA.NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNaVdMRGx1Mk8zaDBveDU5MFVVOHhoYTFia3liSGlVaGgtVktsWGRnbGpTalhYT3Nza1FBbUlzQWtxRzJUODNRanpQaUdEN19VTlE4RkdCTFJiM3RFa2lQVUR5SUw4VzFtZVR0M0hUOEFaU1N2ZmxuMTgyV3BwXzRSVDRPZEpfdHY3Q0ZROW5HUExXUVAxT3dNZnFYYmhsQnFRVDdxcmtjdXZ1SHk5b0V3YVFKVERvbS0yRlE?oc=5",
+      "published_at": "2026-11-25T13:32:19Z",
       "label": "background"
     },
     {
-      "id": "087c3f875092119860256a00",
-      "title": "UN chief warns AI could fuel conflict, calls for urgent action on autonomous weapons - The Express Tribune",
-      "source": "The Express Tribune",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVVhVb2hXYjZrTEFLZk0zU0pBUEE3M2xWNjdFeEp5eGRpSkRmMXhJVm95azJhZlRyTzdHZ3QyMENCQjE2VG4xcXJBd1U1WklhdjBOajVMSVRqRFZOZGNNT2hEVHNHNm15dHpLUzZOTk9PMHBlWkgxVzZ1QXpZLW1oakNwTzVyb3JPU2IwNG9Pem1xLUhLZk8zQjVMQ3JUOUUyMGIxTE1iamZoc3JydHBXRWRFYlpjNC1GX1AzRNIBxAFBVV95cUxQeGR5UldNR1c0b2lUeVJYcDhNU2pFZ19DY2JiQnFXUGNqRUU5Q3k1WG9PRjdZTVlXY19lYkl2VmlvdTV0Qnp5Qlc5bXJPenpNc3ZqVW1Wam54SUVRWERLeGpEQnh6aFZ2SW5kQjVhR3pOZFItZEtJY1YwQXliUWViSHpUU1dlVHlNcGdqTTl6c2hrT05BODBVbFAtT3FjZ0hUWTEyRnJzTkt3bW1TMGdMeTJMeUozRFZyZy0zVEczQlNmWXNr?oc=5",
-      "published_at": "2026-11-24T18:26:22Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "5119d279c8cf44d3af05a072",
-      "title": "Zelenskiy confirms Ukraine hit Russian ship in Gulf of Finland, ally Norway urges caution - Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQM2ZZQnd0c3JtbHl5NFozeGhRRUotLUVZODlvQTVHT2ZmdVBoQ2lnanJyNVFkM0RaSXdCT3BncnMtRVdLdjM4UTVpS2JZeHNwbWlKSnhoZ0NQcmd3N1Mtd2hZaGxkZDBoUW80TXpVMHVtS0ctNmlWTE5nYlZXZXpqb2kxcW85VzRCTlFEWGprbTlhYnFpUFhiN3RzYW5MQU9GcTR2NVd6SHhSRTN3VWV2bjktWHRkdnY0djdRdlJXRG5VUEU?oc=5",
-      "published_at": "2026-11-24T18:25:57Z",
+      "id": "831a178b2b479207406abac2",
+      "title": "Libya vows to counter Ukrainian drone strike that killed 2 naval officers - Washington Times",
+      "source": "Washington Times",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNaHN1Qk5YaW5fLVVvaUVJUTJJWm41RDc2aUx1dWZzYU50ZVhMWk1ESnE4RTBHMFZzX3VkMVNjTUJzNW5TMUxZeEl3SFoydEM1bXVNNGxqNzZiOWotQnBRcWVpYjAxTWNsb3ZkOVM2QVl0MXhJLVE2QmRzYmM2LVFoNV9PRnRGRHJ6UktzZlFveE9QM1BTRlk5aHBjSGxtNnJ0dHEwSmlTQmNWTEg0cHZjRGZ5YUlfdw?oc=5",
+      "published_at": "2026-11-25T13:17:54Z",
       "label": "reported_fighting"
     },
     {
-      "id": "671fad45b8678f987c64a293",
-      "title": "Senior Hamas security official killed in Israeli drone strikes - Al Jazeera",
+      "id": "4028392da564253c8eddfa21",
+      "title": "A 26-year-old man was injured in an enemy drone strike in Slobidskyi District - Mezha.net",
+      "source": "Mezha.net",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVmdFZEJKRmxkMUZlUVpXckVtT2FocTU3UExXc3p5bDlMcXg3bWxnUHlWMHN5d1RfdU1RdWtnWEFvSl9FMmRxa2d2ZXY5T1RDbzRYWGI0UUtHcG5SRWdYSFJ0cFFhaUpZRFZEQ3ZRcDRJWlNNelV3MEJaZGdlbUllenBn?oc=5",
+      "published_at": "2026-11-25T13:05:07Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "c646ba6aba141b97f7917145",
+      "title": "A NATO ally bracing for the Russian drone threat says finding them can be harder than taking them down - Business Insider",
+      "source": "Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZUVmaUJSWUw4Q0V6Umc5cjdtbzVwWXJHV3FhNlhFTWtkQk5hdTQzQkxJRDBKZUE3WTk4SHpKcFhVYTVSdUpkbnZUUm82ejJLVWlQRW1xS2VPM0FtajdOejQ4a1dBNEUxcTBIbW1BTTZVcTZOd0prMS1VdkhvZFV0OG9QOFZaRktzQ2M3UVpVb3RxUlZlZmduMEtNR3pIQQ?oc=5",
+      "published_at": "2026-11-25T13:05:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "476b033407996e98ecfea0c4",
+      "title": "RSF drone attack in southeast Sudan kills 14: Medical source - War in Sudan - World - Ahram Online",
+      "source": "Ahram Online",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQSW9FY0JkTUR4MkZIYmJjSnlQTWpHdVVzS3ZPNHBvcDR3MUJNTXZtbC0tWVZuMW9rcHJhMDZ3RFhWVDVPMmlEZW5iM1VMUElJVWszWlRfR3NFZm90Y0RwTWFVV0tjUDNsSHVuSzFxZmtlSDQ4RzVKY1I1aVRIb3kxUWVjV28taWowUWx6QVdEbWIydVIzRVU4XzluSkRCSTlVRDhjdFlxbUNVdnAtd2Jjb1JR?oc=5",
+      "published_at": "2026-11-25T12:59:12Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "73bc3e28ba907ebad0fdeac1",
+      "title": "Israel targets $20 billion in defense exports by next year - The Jerusalem Post",
+      "source": "The Jerusalem Post",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9xUFdLWTM2SDdYRUJpdFJoQmhNNFV0VW8xeldZbkx1Mm5rTnkyUF85X1NvMHBobHFwZUp5bXBPZXR5ODZLUUZ3VGpMbUF4NDhFZDlOQWZGb3BVTjNhakJYTU1LTQ?oc=5",
+      "published_at": "2026-11-25T12:52:16Z",
+      "label": "background"
+    },
+    {
+      "id": "6d1a8c2ddd7cc5c603b9efd4",
+      "title": "Defense Intelligence of Ukraine Confirms Strike on Russian Aerospace Surveillance Facility in Smolensk Region - Мілітарний",
+      "source": "Мілітарний",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQLThOeEVSWHc5YXNuRmtNa21WUmpZMFBKYkxkVVduellkcVFYVUVZVlp0ek9kZ3JVWF9YUDJERWdvSFMzZHNQY2ZiZjcwTTVvMENHdHhMRFV4N2hHRFN2eWtBWlcwOERhcGtFYi1UV200enVPWkFXSUZ3Q0xsU3VYN1BWVzhyc2dwdk1tZzhGZXdLbjlTdnJ6ejZZLUhWM2oyN0U3RjJvdlZhaWdXbkhtZTVKN2FETldLaFZ5cHlHUnZUTkt6N3hSelBnLUFWSXR0TjJBaXhrclM?oc=5",
+      "published_at": "2026-11-25T12:40:07Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "925bb88fe6a6b5d898d3606b",
+      "title": "10-year-old Sudanese boy killed in drone strike as civilian toll mounts - MaltaToday",
+      "source": "MaltaToday",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPY3MxOGdaSVpWNGJRRkttbVFYbXNMbGFjbEhGRUo3QkFTTk9vekJKQlUzUTNLSGFjRldueG9DMVlaXzcwY2ZQZGlDcmhOTC1GRkRzdEFhU0Z4ZHFjWFl6QzBKNm9sU1pqalRfT3BaNnExbFFKN0tpbGtGQnR4NU1qeHNqRDM1Rk93Y3lvcmR3VkNUUWprZU5xdkwwcmsyNlFXeWFZOVE0bkt1NnVCR2JBSjA5UWVrQ2pN?oc=5",
+      "published_at": "2026-11-25T12:40:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "ccf88d40ec45f3110fb0ce95",
+      "title": "Ukraine Says Drone Strike That Sank Russian Corvette Merkury In Libya Was Self-Defence - Marine Insight",
+      "source": "Marine Insight",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOa2JKazlZNUdzV1NPbkc0dW53SW16dVNQTXVDOEJqMm9CMTBkOFJrUGgyNkpPUmtCRUhXekVZUVhidjFtbU9VOGprc0pQQ2xnQWFLTGdDcy1VNnFaYlU3bWVOdnNjcmJ4dE9BVjhBY0RhSGFKTlcta2NHZEhJcV94Z2hsZEkzbnhwajRCQlM3VDBfZVIzUllXYWM3N1h3M3hLMWlxVHZ1VWxpaTVTemJnTUZkVFNQbUYydkp6VDNpUkpXZUhIdFRYYmNkWWN3cGJxUm5LeUxNUThfLUprbHlFX0dWMXFkaXFZblRSMWR6YnlvZ0lGbGxOTXhCd1VOUzVTVG8wUmI0TEs?oc=5",
+      "published_at": "2026-11-25T12:18:03Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "0f4cbdce9af70b0cda9c686a",
+      "title": "Overnight RSF drone attacks kill 19 in Sudan - Al Jazeera",
       "source": "Al Jazeera",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR3lHaHp6WUpPN2V6ZHpCOHVZXzFCM291WjJSSmgtZnhObUo5d01KNzlZcWlKRkthcjZIcC1fNjJ3cXgtMFV4Rzg1TGJwZ1A0MnhvWFVpOGNTM3h0b2hPaUtHblA2Y0FwRWliT29rdVZiTWtiZjJidU5ndTF5WjUtZ0I3NDFPWEMyTFIzb2kzVXFVTllINXRlYUJMS3BIbi0xcEdnMFk1cFJkelZKTkVLbXpjZEbSAboBQVVfeXFMTTZOY3d3T2dHWVg1MXlYN2U5T2VndmI3SHVBa2phV0ZxbTlsQ2dEQ0ZVRURtcGlZeWVua1VPbzA5MDB2cWw3NzBYdGZCOEsyU1kzcW8zYkpLQWQ5Z0REWFp5NkpfRUZlZDNuUFdYc2Qwakc3dnBvZXhsdTh3UjZJcndTYlNFLVFFU254OGRRSVBZcVRIR1ZiTVNIMkdmZHFNY1NwZkdRWUpWcmJyc3FNUUNkMEt6bXlKNVFn?oc=5",
-      "published_at": "2026-11-24T18:20:22Z",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNzVfZXlPNmZ0RVVON0VDVWNlQlB5MlBJZXFOSWYxQl9sWGhkcTFKRWV0UTZyQ3NWMl91TElqci0zQmwwcndrVzRjeTNBaU8wdG40SVFpZ3kxZ3JnSGFMVXl6SnUwb3BlU1h6SXpHZ2pDM1NqaTRhcGdDTHAtcVN0d1FmaGFaWk9TRG1ieWxVY9IBlAFBVV95cUxPWGJUMDNxeDdvVzN1VW5wSjdra1NRb3pIZ3J0MG9NLWdFWlFrb0EycGpscmxNTHBzU1g0bXRlbWI4NTdOVlBUMXQtcHVLX0l0VFF3dHJodE4wRzJHQzFPV2Z4N3E1Q1FGRF9Zd2w1MnBYZDRrTTNQV1kxejJiZ1VNdVd5bGxQYmtIel9UNWxNMTA5N09Q?oc=5",
+      "published_at": "2026-11-25T12:04:19Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "ce059ea4840eaf18053474eb",
+      "title": "Inside EPIC: Alabama leaders see the technology powering the Army's air and missile defense network - Yellowhammer News",
+      "source": "Yellowhammer News",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOMllBVTZCNnJqeHJLQU5LeWRKdGxLRG8xQzZXS1puY1RWQlhyOXNLb250cWptVEE3d3pUS0QwYUxCNFZESFg4aFkxaDFHTS05eGlwa01YN1g1WDlIeUFFQ3BwNXk0RnppN1lNWEV6X0h2aFdONXdxMzRtTUUzYVNuS3drWkJOR3E5NDM2X2l2WkxBVTM5UFNoNGd0bURVZGhGLVlGeThrZTlmWW03NFIycF9WSVJTc2pCV3BHRFB2VG9BdnladGc?oc=5",
+      "published_at": "2026-11-25T12:03:26Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "1cdb4ef37b01e62e6698de72",
+      "title": "RAF move aircraft under cover at night to protect from drone attacks - The Times",
+      "source": "The Times",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVVlJbzV0WVNaMXZVN180Z0hCYWtQbldHOUZYNURoczNuaDdkY0RvSlJ6cFVnNUNJaDI5cGpJLTZ0eE1NR1MwRVBZOENLMmw4M3hCNzNfMmVKbFdsUG1uMWZ5UEkxRU5NZkl6NFA0YkRlTXJZLXJsa05SNkxiUUxmNzJiSkJoMjhaQUs5YzNvYk0tdGRxTDRtSg?oc=5",
+      "published_at": "2026-11-25T12:00:00Z",
+      "label": "background"
+    },
+    {
+      "id": "c9a076fbd88b4faa17083c27",
+      "title": "Fire breaks out following drone strikes on a residential area in Al Damazin - Al Jazeera",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUDVIckVRR0J3ZmdBdUhLdHF5aklmMEdXcXR5S1BTb1UyalhEemNZNkxNOVNsQl9rS1dYTXZTSFBvSThENlhnT3g4b24wWDRCejNRZUFEeUE1YU1WTzdNdGFmWXVaZWxIX29DVEtBRm83S3d4S3dJMTJJQmdQMXVzN1VrSlVielBGNllvUG1FMzRCVW1wM04ycUZmRmZWcGZIYXdtVFZPTEJsNkNNTTlfYmF5YW5JT1l1Wm1ZWjJ2YWFoNVp3TlHSAcsBQVVfeXFMTmMyaEhWaHJMcW50dUtxeFJkUDVwa3M4d3o2NWVxRUtFU3NvOWlZbGlKNkFsSGoxSUp2Z3ExRXV2dTBWMlF4Rk9wNnRCZjU1eVJ6emxlb3BmbEhfMGxRNjE1dEo0TlVyZEdramc0eEVyaXdlZDhPdHJ2Tm1NRFAzZExaOWs5Q2ZkLTM4czNnbjJsTGhyN2xyZEhiblp3YllhcnRwblRnYmlCT2hzcENrSzBlSUx0bjF5WGdGNXoyYkllYVpndlFBaFgtSXc?oc=5",
+      "published_at": "2026-11-25T11:51:22Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "f6c37ed7894575c5b3737175",
+      "title": "Germany Turns to Strike Drones to Counter a Potential Russian Armored Offensive - UNITED24 Media",
+      "source": "UNITED24 Media",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQmhJdGs0MjdWV2hIODExUlhYUEtUVDBoODRiTjN6dHJraWVadHZDSjVCWUYyWlQ0Z2ppUmVGNW9kRXN4QnJNN2tsUzM4QnB0M0I3WW4xMHJfZ0p6VnBKYU5MYUd2LW9CWVF6MWk4UXU1dlB1UVBUa01DbUR4R1NJR2tYWjF3UC14ZUZaYmxVV3l6dlp4WmV3bGZ0LUtrTzhlTTFySlJKX2xfYjBkTVo1VEppcGpnTnIz?oc=5",
+      "published_at": "2026-11-25T11:23:15Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "3da295b16383b47b2ec62adb",
+      "title": "Ukraine Confirms Drone Attack Near Benghazi Port, Killing Two Libyan Naval Officers: 12 outlets compared - NewsCord",
+      "source": "NewsCord",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPUWttLXpFZUQ5Nkd1VGpoSkE4WWZmX2hhN3ducm91V2lwcnMzU3FqV2tMS0s5alZKNkZxVEMyS09Vc0Z1T1p2RkdnNF9jYXNlZFpUVHBnUXh1Vk5YNzVDVHZhLU1pUHZkTHV3RlRNeXp6RThiSmxtcVc5MFctMHhMUndEakxjSEQ2dERNTElEREtOaDBmX2ZOLUNGRmcwUW9qUmNadDFSQ0R4Qmw0bW9xTjk2N21NOXVZbi13Y2RUSGowbU92bDQ5N2tTQzVWdVFEUHlPZF82RXFQTzhCal92bUwxUms1UlY2bHc?oc=5",
+      "published_at": "2026-11-25T11:22:41Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "73a9f14b3f6e9b132266f9e1",
+      "title": "What is Netaş? Telecom and defense electronics profile - Envanter Medya",
+      "source": "Envanter Medya",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrQVlVNFNmenVSbDh5c3dFbjEzazZqcXM3b1hEQlZHV1d5MWExcmZ6dXNjdEd3Qko3V05VZkpiUURqamh0UGMwY1QxNmZFbnZ0VUNNcGJxeldkUQ?oc=5",
+      "published_at": "2026-11-25T11:22:00Z",
+      "label": "background"
+    },
+    {
+      "id": "ae3af55f480485db677a3b90",
+      "title": "Libyan army vows retaliation after 2 naval officers die of wounds from Ukrainian drone attack - Durango Herald",
+      "source": "Durango Herald",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPLW81TFVKczZpLWZxNmZHazdidDVTRTVsR3lqWkU3ZEhnU0RDQmlTcUVIX2FCVUx0VW9sRUtTUDA3WmdEOEx5aU1mNnI0QS12NnU4Um5BcUNQU19ubk50bDBrT2lWSHlNRkhhMGNYTG5mMERMZFdnbnhVVkYxTC1Fa0Z6SEJMM3I1OTlkNDF3TVJQcU5BY0twOXMtUzVFQmhCQVdVVk1FYXdYMW5yZGpuTTFMN0V4NEJNSk0yeHBxbmNwSDg3Q2dhRUlNVk9KbDM1eHNwNWk2NnJmR1RaWF9jb21namRhajVY?oc=5",
+      "published_at": "2026-11-25T10:43:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "af5199c8109047ff0d7f4266",
+      "title": "Zelenskiy expects F-16 and air defense missiles under Ukraine Priority Needs List after talks with Hungarian PM Peter Magyar - ssbulten.com.tr",
+      "source": "ssbulten.com.tr",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOeVAybUZJenI0SEhuTk9KRkMwQVJieW91RXlFMTJLMkJxbDFrSmtYbW80UEw1YVJaN0JIN1RHZi13Um9IYkhESms4Q2t1MXhyXzlhQjRMdjNXUlV2ZmlHOXUxWUs0NF9jMHowYVRuMFQ1NUhPMElmOGlINmxhRFZET1MyQUI5MWl1UGpybHBIVW1oOGNUSGhiczFCS2o0RDhEQ0VqZ3o2SEJDNVlVTW1SdHlIVVU0V1J2UUxmcHYtR1ZCbV9Zc1d5MkhhTUxZaWg0dkQ5NFZzaE11eFVNZHN3UjRSaTRhZmp2NkxUV3lUbUhwOFJFbTZGYTVuRU15a3c2?oc=5",
+      "published_at": "2026-11-25T10:42:17Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "3683e4d6643e3aeae764befe",
+      "title": "Drone strikes kill 19 civilians in southeastern Sudan, says rights group - Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQUFl6aC1QT2ozUEthZ0V6aGJXcnRHek1YYWt4OXZCU2otdGxqanpDTHdtY090MUNYVEV6NFlXdHowV0tDSUpWWlpaaE1EWWFCRlgxNDMtRWRKUW1WemlJZ2ozWExFR2p2ZzhZeWRuQllURFdHekpZNkpKVWh5bnpwSVN2U3piTTFnYms1OEpjVVdGeHpZaTMzU2E4VC1XaXJQZ3QxMmJrYnFuamRUNUl0WGtPSk85ZV82?oc=5",
+      "published_at": "2026-11-25T10:40:40Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "7b04fc2809114cab7fd24ca7",
+      "title": "Libyan naval officers die following Ukrainian drone attack, and other Mideast news - WTOP News",
+      "source": "WTOP News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWHhwUnN2Qy12UjBudGlhZ0dlb2Q2UzMxLWVOWkZFNkZwMnN6aFJWWDNFRldCeFNKbHNxdnNQYnBUZi04YXR6S3RyZnF4V0lkbkxlZHo3MkJycGFJcEs0alZ1RmtPRzRSRFB3WG42eDVzMGtsSzF4V2t4UTQ2blZFTVZqb2VORGwwcU9yekd0eU5uMHdOZHY4bDJYWi1VcUt2YXRTSFJ3cVlFMGcxQ3J5cGY1UGljMjA?oc=5",
+      "published_at": "2026-11-25T10:38:52Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "10fb3175c4b0b2ada6654eb5",
+      "title": "Ukrainian drones attacked industrial facilities in Russia's Syzran, authorities say - Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbTlITFFXWWRkdlF3THc1WXhJTWxOWEJBSWhLdFZIWnN5WkR3UmRiVC1WX19hUk9FRG9BaFp0WmdpNEEtVlM2TG5NUDFRSGlyWldZSmF2MWstbDZiUS1ROGMydkdoRUV6UVBGMGFHVm9TSndYajcyejVIdW54VktMcVZ4YWNINXM1aHU1cmR4VFVUM3NxSFh5NnNrSFZuNWpCMHZSYkRvckFnMXRVME9BZGpCcjJIaDl2bjA4Q1NfN1VtNnF4Uk00Tk5sMHVxX1E?oc=5",
+      "published_at": "2026-11-25T09:51:46Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "9caf40b1e4c543913b31decd",
+      "title": "At least 14 civilians killed as RSF launches over 40 drones at Sudan’s Blue Nile towns - Sudan Tribune",
+      "source": "Sudan Tribune",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB6eGVWampIZERqTEN3eEtoeWpIc0FxR2tpZEtNR016SExnbk5qM1RRcmhXQkx2UVJfMWUzMF9IdklIWVNFNF9MemJLYktfUS03?oc=5",
+      "published_at": "2026-11-25T09:15:56Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "e1ea85df9978445332313ba7",
+      "title": "Ukraine calls Libya drone attack on Russian vessels self-defense | Daily Sabah - Daily Sabah",
+      "source": "Daily Sabah",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQd2gyY2doYko0Z0hoRHlXYjNITkNmREFRWHRHdFQycXV5THVoNkU2SjN0dTBpNkkyS1dRdnBaUEZpN3hLeGs4X1oxNU5xdUptclBtUUM5RW80am1XNGJScjNSU0l0RnkxWXhaQ0J2NFZVVmFsdnhUOVQ1Zlg3T3FkeXM3cXlWaWZseDh4YnA4cG4yaTIyV29MRUI0VUp6YmRTTnNJb25jVdIBrAFBVV95cUxPbXJ1VjZPdk5UNzFBWWk5ZWdxVVozb1hNeXdDNVVOWnA5c1p4TFNnY3dWNWx6bWR1WWJaNHFLRnhlOFdXNlpoWWkzdDdzYUh5M3JFWjNRSjE5cTVnVEVhSDdoYkhiVW0xcWpWeE1iQS02WTdfbkpMUEE2dW9zbzM2aHRxaDgyYlRiMUZ2YWEwbVNEbjBvMkl3czk3RmNVUzd0RlRpTzBtaU9CVG9U?oc=5",
+      "published_at": "2026-11-25T09:06:25Z",
       "label": "reported_fighting"
     }
   ],

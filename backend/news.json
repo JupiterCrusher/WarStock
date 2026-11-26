@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-26T05:51:58.272314Z",
+  "timestamp": "2026-11-26T15:58:27.391439Z",
   "feed_status": "ok",
   "feeds": [
     {
@@ -18,260 +18,260 @@
       "items": 102
     }
   ],
-  "archive_count": 956,
+  "archive_count": 1030,
   "window_hours": 24,
-  "story_count": 70,
+  "story_count": 90,
   "model_state": "active",
   "model_version": "2026-11-23T191421-784397Z",
   "class_counts": {
     "background": 14,
-    "threats_buildup": 18,
-    "reported_fighting": 38
+    "threats_buildup": 23,
+    "reported_fighting": 53
   },
   "class_shares": {
-    "background": 0.2,
-    "threats_buildup": 0.2571,
-    "reported_fighting": 0.5429
+    "background": 0.1556,
+    "threats_buildup": 0.2556,
+    "reported_fighting": 0.5889
   },
   "articles": [
     {
-      "id": "8ea862fe57340728e28f79e9",
-      "title": "2 killed, 3 injured in drone strike on Kharkiv - Breakingthenews.net",
-      "source": "Breakingthenews.net",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaVJ6ODJXZGFBcW5VZFlvaVdrOGxHTzZ5NC1zSk9GSkRuWVEzTE5wUm5hOFZaUVo1TDZPX2s1V284ekswdFB4OEhiY2pZcGxGMmhjc2FzN1Zpenk3WjRDZXFXbUt6aUx1UG1ZUVlvYlRsMVJHcVpsREdiYUViM256UVdhVVhqa3F4M2ZBb2Rway12S2pV?oc=5",
-      "published_at": "2026-11-26T05:23:00Z",
+      "id": "0fdad5af1355c5937d1a0d48",
+      "title": "Two Italians killed in Iranian strike on Kuwait - Financial Times",
+      "source": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNm4zZTlKbV96Q0dXS29sTnIwNGIzYi1JMnVzTjl0TjkzTTBhYlQ5YTVZVDF0MXdHMVduXzhJVzZxR2NmX2R0cHdwaXpGdFl1dURTc0tYZ2R4MUlrV242elRGYTBJSTMwbHhnMzBYS18zWnNualZiTXVwcUhmdXFFdWJzeW0?oc=5",
+      "published_at": "2026-11-26T15:56:25Z",
       "label": "reported_fighting"
     },
     {
-      "id": "67f17bf86a408e184f699f49",
-      "title": "Libya’s Eastern Army Vows Reprisal Against Ukraine Over Fatal Benghazi Warship Strike - The SOFX Report",
-      "source": "The SOFX Report",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNekI1eXgwWDdxbmYtdUpjZ0Y1cG11U2V1dnpYTDlYblBYaFlIcU5MUmNMMi1tak14dko5YkJuSFBiV2EtY0FvbnF3LXpmd2V1dXR6dnhGQzJKYTlZX0pETzV0LVZOUDF6WEI4dXBQN014MU5OeHNOLTNUSG5HYUNyUFpaZVJRMXRxVkJ1M2pPNjZiR2dwYWVncmJpTTNPYnBOYlFmaUpIdWFwdw?oc=5",
-      "published_at": "2026-11-26T03:53:20Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "830492b8968c833a1daf3812",
-      "title": "Three Palestinian deaths reported in Gaza drone strike - Breakingthenews.net",
-      "source": "Breakingthenews.net",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSjJfdUswLTFHRFVBdlNJSF9nMDJUQVRZazdaV3lETUhhbVJtc1Z3OUNMOERXQ2ZQM2tnZWswVkdJOE5hLUFCWkF1WTJSY2dPUHpDN05nQnkxMjhYdXNnYXI0OWo5d2ZqRk81ZktvWTVQOFNGQnoycGVJU3lzamR4RlNpSXlEWlg4bU5qQmt5SEN0Z2hmOTVNM2FaTmtMUkFN?oc=5",
-      "published_at": "2026-11-26T02:58:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "3c0de55343e37873dc215b6b",
-      "title": "Israeli drone strikes on Gaza kill 6 Palestinians - Anadolu Ajansı",
-      "source": "Anadolu Ajansı",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPQ1lEd2tIU2ZpdVoyaG5rT2g2Nl9wa0laQ2t6bUxIYmlqbDJvM1dkcndXaC1hRlhGNHFkSElCZHNCZlBBcmJBTmFSdG1VSlFhdHJld01PUzN3bWNwRVdzNENjeThqaldVUHI0RlBWMzZhdjd1bHJRUWtLamdPcmZoMUtRSV9uV1ZyRVdlMk5Ia1Y5c2l1MGhFZ1RqUQ?oc=5",
-      "published_at": "2026-11-26T02:15:18Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "d96bcf570929f20af87e1eb0",
-      "title": "In Gaza City, Palestine, an Israeli drone strike killed three Palestinians — Anadolu Agency - UA.NEWS",
+      "id": "40659a09ae295054f4fdd861",
+      "title": "Ukraine Will Be Involved in the Production of Patriot Missiles Alongside Europe — Pentagon - UA.NEWS",
       "source": "UA.NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdG14RVFta1VqUU4yclQxelQ3dlFFY1Ezc3JkMDBDNU5uV291N1BpcWhic3M5aUNjRV8zT281Z3B2LVNiN0daME4yUGhTLUt4R3Z4ZE9TYWwyMzVGdUxIYU0yVFR3dHN0VDFuZDBidlRkNHlEZlhmRHBmNmRfbF95RWM2NXJnUWVsb3pBRXF1X0ttSTFiVXZZbVI0dTBKSFVBQThvZFhWcVNLdTVmU0pXSm9kcHoxSVVtNXo0?oc=5",
-      "published_at": "2026-11-26T00:51:57Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "e17de90fe7d603f6ce76a167",
-      "title": "Israeli drone strike kills 3 Palestinians in Gaza City - Anadolu Ajansı",
-      "source": "Anadolu Ajansı",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTkZfNnFneWJmb1dKRFZBT1lxSkE2b2VzQmJlMWkyNUt1QzhWbF9QTlVHV0RSdi1JSFlqallNSGp4ZUloRWVDbmNpSnRSLXprcHBMamVtdUtkR0ZGelRQWjJFemRlMGJWZ05vSVRoajJNNm9OTEtTM2FNN2Z5bFNGbDItRjBKVVZ0RGM4ZnFLVW9qMmJMNXpBdXBPVTJrZmlX?oc=5",
-      "published_at": "2026-11-26T00:39:10Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "4fb72dc70cadbfd73b827e51",
-      "title": "Finland and Norway secretly contacted Putin to avoid a military conflict in the Baltic Sea - WSJ - Українські Національні Новини (УНН)",
-      "source": "Українські Національні Новини (УНН)",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNlF2RlJRVkdZSy0zNVlWaTJkYkp4N1NrSThuLTVBRzRhTy1ZRnQ2UFlna0lEOWlHWXlVclBtNFZ6SkhvdVJwMTFxME1sLXlvRERXS3NpNVFqdVhSelhhaVo3dDdfZGtnUm1NTlc4djhZOEZuNFFmX0F3TFd2N2VvdW1wb25UMGljaWk1aEZZeDJDVDVsa2Vqdl9qZ0NfaUpBTi1QNGVzeXlQS1MtdmE3bnRHdi11bFBK0gG3AUFVX3lxTFAxbG9TU1RTQ2M2a2RBTTk1VHFGVnQyQ0lDZWhEeXRMbmt0YmdnU0NWTHhDdXotSUZITG9jRVRDWXZMemxSUnhXMzIyR2F5bFlPclgzaE1fZ0ZhXy1PZXVreVBSMWRfaENPUEtlY2JmMTI0UUw3MmxRRkgxS1kwZzFJSWRlV1VaakktMUJjMnl4MHNWR3R4bWh0Q3NYb1dQMnRTNThEenVoSXBzb0Q1bVpSd2U3aVZfVQ?oc=5",
-      "published_at": "2026-11-25T23:55:17Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRmM3dzNUX0UwdFBNM01JVHdrZnhrQnY1aGVCR2tMNGxOcjFqeFg0d2xxRlJYSU1sb09MaUFQX2Z0X2NxZ3hoTFIyRkFPWVFLV2JZNW9LTlAwVTFVTzN0S09CZ2lUVWRaUzVGRlVzYjdMOEx2Y2t3MG02S3dmMFc3aGdCTm1HeFlIZlRoVW4yc3VLYy00ZXpxdHRCaUtYWkNDT1E?oc=5",
+      "published_at": "2026-11-26T15:55:39Z",
       "label": "background"
     },
     {
-      "id": "7406501c32a46774e21c35f4",
-      "title": "RSF Drone Attacks Kill At Least 19 Civilians in Sudan’s Blue Nile, UN Condemns: 13 outlets compared - NewsCord",
-      "source": "NewsCord",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNUEtVMTB0cTBqMEVyaVJCOGs3SmxSSWQzdjZDZlN6X2dYN0VVWVpqLUIyNGpLSTJoN1E4MC1Jc0NCam5fQ2NfekNYSzJnbGw0MGt2Y1hPc1YxNGVwb040TTFQcFd1cTZMQmI4a2FHZ1VGYVFoUUZORmNyS0k1Q185VWtkbVFwVElVZU1CQjFhS3ZvSmRkTjRiUU84THpMQjVmUTMwWU54cTk1WDVGMXY1NWY4WTBJMDJTTEhLX3ZWYmEzdmdZNzJJbllQV085SkNyaHVwVnpDRkp3U3RsSHFJbUk4MDA?oc=5",
-      "published_at": "2026-11-25T23:20:06Z",
+      "id": "5971798caed426ab44877d0f",
+      "title": "Iranian drone attack on Kuwait leaves two Italians dead - Al-Monitor",
+      "source": "Al-Monitor",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNaVRrMVNMWVN1aG13M0dtNE14U29tYzRRZXVjUTh6R0xVWnZVUjZCSGd4RmVfczRwM0ZTbkl5S1cwQWRaSFppY2tZa1dhRzRKV2liNk45MHNyckNjT2JjS0owQXF0WXc0dTJVUHBHZUZGVEVBVUFIcEhHRVRoWVQ1aTVxX3Zfc19HMkhLMUt5ZTZfVzMxWHZLbmlZN1FhZw?oc=5",
+      "published_at": "2026-11-26T15:47:04Z",
       "label": "reported_fighting"
     },
     {
-      "id": "04a875929fe0359d4cfb1fa9",
-      "title": "Chariot Defense to supply power systems for combat vehicles programmes - Janes Defence Intelligence",
-      "source": "Janes Defence Intelligence",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVVhpOXBhS3p3bVRmMnVXYXR0LV9tSWxJYXJsWm5tSnZDQ045UzlqOGw0UnI4aXZIOHNUaFAwR1dFeGthMGZfVm5VaXl1aUpVcGF6WHd1Zk90MUdrYjR2aXlvNm9KYVVsN0FxclJYTDBQLTFyX2syTDZiZlREQ0RqT3pSZExpbzhNX3pDTWVxcUpWb2xIS3ZIM3NEMWY0dDE1Wmxrb05RN0JSZHp4TkNrLVlnNlFaS1ZMMVRSZTJIdHFzcjVyN19uWUt6SktHbFR4NHVPQjNn?oc=5",
-      "published_at": "2026-11-25T23:09:22Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "a0ba1069b4033f04f1a0f3e7",
-      "title": "No good news from US on accelerating air defense missile deliveries, Zelensky says - The Kyiv Independent",
-      "source": "The Kyiv Independent",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUczbXhSUnFWaXktWlpwRFJ5RmcxMjVabjdTTjVVU241aERIaVhKRGVwbldUNVhFVkhrN1NnUk5FX1JhanRDWWZmQXlYVkNmOXRjTHdWempfNXFOYzgtbUthZC1Wb0R6QmFEaFozWHkwU1hYdWlfaks2dWh4MG9aZ3AzWDRTN1JPVmtTbEh2WHg4Qm5Sc0RRaVpqdXZHWWZ5QWdTN2ZaQlMtaWlpS1hj?oc=5",
-      "published_at": "2026-11-25T23:05:31Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "e88103a382ae70d2dbbfdc0b",
-      "title": "Libyan naval officers die after Ukrainian drone strike as ship comes under fire in Novorossiysk - TradeWinds News",
-      "source": "TradeWinds News",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNVzd1MWxoWGJndXBFZHBENm1YZjNiX2hEdTIzc1RaWnIyMkFyd3ZxVm12eU43ZUJURlFtNnJCeTNnUUhLaXFEbGFHcDdXMi05ZlVvMW5sR2dxa3V2SkJ1VWRvR2Z2UXdyR0pNTmg1Q2h4eXEzWFkydFJ4Zk1zMlRoQnExTEtJNnVWLUhGSnRCS2Vid1dZdkpRaVRDTWplbTdoNVFYdzBmVzFBRG8zQVp0R24tQ2dlMDNQTG1FQ1BfQWNEdkVqQlZBT3lkaFUxWTA2Vlg0ZG9zek5OX2ZVUy1iSHR1QQ?oc=5",
-      "published_at": "2026-11-25T22:21:49Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "878e7450beec9d2713034839",
-      "title": "Libyan military vows revenge after two officers die following Ukrainian drone attack - Nacionale",
-      "source": "Nacionale",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOd09BekRrenRfVExIb2QwYURERlB6WjNGeFBEMEJZVXhIdE1ibExYNnFUT1F1dkxQSW55b29WdDFCdVBBUjJjSlYxY2VlSkltM1ZhaS1iNHd4bmJfeHNJZWM4djNvNFBUZjlFSjhia1YxRGhJOG9WLWZIVjFQdFAxdV85NjQ0X2VYdlBGaGwwQVNBbUQ4SVhYT19CWk1mXzRqYmpadHFEUVcxdw?oc=5",
-      "published_at": "2026-11-25T22:07:18Z",
+      "id": "483e1d62eef85e54140fb875",
+      "title": "Israel and U.S. test new ways to stop drones after battlefield defenses come under pressure - www.calcalistech.com",
+      "source": "www.calcalistech.com",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5WZmIzenRObUdEY0trWWZodDIzbGtPSG1ON2QwVWFkQ0U1NjgwQXhyNUQxcWwwRjFSZnc4QkQwaXBDZUM4VDRNd0VwVmdOZkFTZGViSGhNRzVkWEZnckd5LVZEUkl6Y1Fh?oc=5",
+      "published_at": "2026-11-26T15:43:00Z",
       "label": "background"
     },
     {
-      "id": "5c645ecbb9e0b47fe0e85b53",
-      "title": "Israeli drone strike on Gaza kills three - Middle East Eye",
-      "source": "Middle East Eye",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUXIwVGpYOU5fVm55VUdQN2R0N0JoR2VDSzM1Z2xLS05MaTMxMUVOMXpra2dBT2JCWm9SMFZwZEdyaXU4RkhXSmNQYWFaak1RbXFHQXpiTGwyRW9fRVNabTNrUmFFMFFadGxqREl3V1ktUDdaUGhaX1VkOFhQdWk1REFJMFJFMzFvelJ2ZU8td21ldVNHdWlPQzhn?oc=5",
-      "published_at": "2026-11-25T21:22:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "f1f96ee757809520f3a57f86",
-      "title": "Israel approves $5 billion increase in defense budget — Breaking Defense - UA.NEWS",
-      "source": "UA.NEWS",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUWJuZlZNM1JxOWRraHNoMTVLNHR5S1prRE5qR1lDMkJGRDluTjNOZDFicW5iQUtEdnowWkZwNmtod1k4cXZDSXA3SEZBREQyR2k3akdWZHVMOExidzFqVUR3NUFIakl1WWw0M0ozZV9Sbm5kUnVGSWJ2WVF2b0pIREtsNWdxVndJdXNpMlN1OUVuTEVQVTRILThlM2l2aVNFUE5xUVN2NzlZT1BBRlE?oc=5",
-      "published_at": "2026-11-25T20:58:18Z",
+      "id": "d90419b2c81d0b34959aa022",
+      "title": "Drone defense under scrutiny: New systems safely intercept drones - DW.com",
+      "source": "DW.com",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ERTdhaVIxTjZxRHlYNkFaSmQxcU1STGtYV2J6bXZfRC1nVm54bDhaa0syS0JZZ2FDUTY0LUx5QjJfNlFrNlk1OWFqZTBKeFk1UTV5YWcxbXd6VlRfbExXTTVaVmNiRG82NzBFeEs2eWd2dw?oc=5",
+      "published_at": "2026-11-26T15:42:21Z",
       "label": "threats_buildup"
     },
     {
-      "id": "7cdce7bd3022a91d71405b72",
-      "title": "Drone Strikes Kill 19 Civilians in Southeastern Sudan - ASHARQ AL-AWSAT English",
-      "source": "ASHARQ AL-AWSAT English",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSWN1TU9mNXRkUzNuUUpfOUlkcXNQekV0bzQ1bDVjS3dWZVlmSTFyQ2t4TnZMOHZhU0R6WGtJTEFqQXM0RDFfRWlRMFRpeXlOSlVoUEtiMUFpeEdpVGFiTld6QUhOY28wQnh6UDMwQWszSXAtbDBKd2FNdVdIM3VKN05LQ3phcHU0dDVtSzQzQnkycjF2SlVPWVp1QUg?oc=5",
-      "published_at": "2026-11-25T20:37:48Z",
+      "id": "fa3aa7f2b42ed58283d115fd",
+      "title": "Iranian Drone Attack Kills Two Italians in Kuwait - WSJ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR0JXYTAzOTNnajlLczdFM0FKUXdjbHlSLUFPRlhHQWpXaV9JRnQzNGRETWR6c1pWM3hQZnptczZaQVZqeExWa1JqdFRDWlJDcUItNEVra09WVEFfSDlSUm1nT3B3SUVZRGZHMTdieHlaSDhBWDdvMUhTVjJ0eTZmbFlfWHM2MUYyYnpHNWtFcTg3Q2JndEw4LTl3MHg?oc=5",
+      "published_at": "2026-11-26T15:41:21Z",
       "label": "reported_fighting"
     },
     {
-      "id": "4fe9e3079ee01ab42b5306b6",
-      "title": "Denmark Awards Galvion DKK 1.88 Billion Helmet Frameworks - Defensehere",
-      "source": "Defensehere",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdjJWVWw1N1RDZXJCdmNVMkR5a2ZWNEl5emh1QWpRcE81WmNzbFpSRU5WY0ZvM1BMOW1LLTNNVW1rYU93N1EwaWVNWlZzbG9UdjNJb1R1X1V4UDk1YXRBcVlWNl9sdHRGZncyejVXUXFoVlk2VVU4R2Rsc0EyT2QxZWJXOS1Db3ZkVVdNV21B?oc=5",
-      "published_at": "2026-11-25T20:19:36Z",
+      "id": "362f9cb5b3ed7513571a53a6",
+      "title": "Iran Attack on Kuwait Kills Two Italian Rheinmetall Workers - Bloomberg",
+      "source": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVE9yWG9JenZCTFpSOFJUeGxZcDVXTXE1eXRUOTdkRW5nelVQcU9DU2RfNmQzTlBWWnZXdlFoWmpGNktHUnJBTjdaV0w0M2tZUlFjZzA2SEljMzlHVklrOU80R09oenRVRG9FT2puQWVhcjVFNjV6dDlvRmhta1NCMWF4c3ZUbFBSMzlaMU5Vd2syOHozTzNCQ0VMc1JCdjA5NW9kTjdkQ1F4Q0Q5cXRF?oc=5",
+      "published_at": "2026-11-26T15:22:09Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "8b3e7edf51d29c1c5803db60",
+      "title": "EU chief urges 'pressure' on Iran after Italians killed in drone strike - Naharnet",
+      "source": "Naharnet",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZ3JxQUxuX3VwZHhLM1V3OEVnX1d1UzdROTBoNy1JU1U4RG1vVmRWYXF6VlJveVozUmtFRW1uSmpacEVKVnBkazVQS2dQcnBORWZWRF9iNlItb284TDdJRktPd3ZaRklGUGJqNGxlSE83dVFRVHMyVEFQakcwSlZiSV9LbFhZLWVXcXZjMG81SjVFUFZlbjhzSDlHU2JkWjNleDNEQ3FaRW5WSy1JY2hpMTBB?oc=5",
+      "published_at": "2026-11-26T15:22:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "328f2d4bb97f9120dbe531e0",
+      "title": "Zelenskyy warns of imminent major Russian attack on Ukraine’s power grid - Jacksonville Journal-Courier",
+      "source": "Jacksonville Journal-Courier",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMnl0cU52a0tXS29mZGY2cTJfMk5OcnM0M2VTRTMtWFlKSVBBb1VWejdOSGxrZHhEdExVTWJDeXlTaXl2Y1hYbG9MWTRtckdscE40Z3A5NjBqRDNPNng2R09FcVU4RDN6b3g3YTIxNUhjYldaWlNvcTVzLVhSTjI1dGpOdl9KZllYRFkzVGhUWUY3SUtySWtucjlxc21UVGlZQ0JqamNNemFvenZHSy01NUdycw?oc=5",
+      "published_at": "2026-11-26T15:06:45Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "a50f717c2f29142a26e538cc",
+      "title": "Passenger flights diverted as Kuwait intercepts Iranian drone attack - Euronews.com",
+      "source": "Euronews.com",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPeTVRaEJwRjVGNTBMemFRQ0NEYlAyZktOd2lhbV9iV2tNbjFmVVBKR2ViSW51RzBKS003TXFXNl82TVBZYm5zUnJ0UzhOdjVHMXY5cVNjS0FXblVwcGdiMWxHU0taNjFNUi1LcFZKbzRKdVkyOGhSU2dWelpCTWNSZk0zcmI1bWZWWHYtNmlOd3hSbEgtLWJZVjd2b3ViVjlVVWlIR0tRbzdrd093?oc=5",
+      "published_at": "2026-11-26T14:48:38Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "ac928572ba41a18dbc43b39a",
+      "title": "Kuwait says 4 injured in Iranian drone attack on vital facility - Middle East Monitor",
+      "source": "Middle East Monitor",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNnZXSjdlUTh6V0ExSUJ3a2Y2ZGtsQWlubXZLR3FMTzBJLUl6dTJaTVREMVJmZWNCV19jd1JpZHBCaWdQay1Qa0QzVlQ2ZW8yWHBFaGtuMXZ5ZHJ5Um10bS1RNGxKSENDcVZDbnNWLTdwSGlVNm9RVFZabmlIdVZQVnB1XzZJVENjQ3dhZWJwc3dnY0VqVEhZdmxJNjluN2k0azlsMFZacUlDR03SAbABQVVfeXFMTm5Yc3BMenpNM3pKVU9oMkh4eUFkXzY3Mld1Qmdnd3F1SWZoNk1jQXU5c3BBRUNIa1hHRWdWR2tBbm9BSm43czAxZ2RjM3JFQmJuMXBveW15clg5ajZHTjZ3SzNHQU9HRFItNU9fdWlqYTNUOTZOTm5RSXhiMWhIcWtlRFhZR05Fd1Fwb29oaG5sNER4ekVEUG1nS2ZicWc1czdRa01YUktYcW5jTzlaSEU?oc=5",
+      "published_at": "2026-11-26T14:45:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "50ab66505728b4d992016b24",
+      "title": "Russia, Ukraine exchange drone and missile strikes, leaving dead and wounded - سانا",
+      "source": "سانا",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1LeHRPcVVXVmRoNUptMERrOENOeUdCbWcyNTZKXzFub3hia2FQQkF6OXBQZ3NSa1M0ejFialFXMk1ueU4zS3RRdnZVbFJXVnA4eXVr?oc=5",
+      "published_at": "2026-11-26T14:43:37Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "61c5da438c5c046ba8ef1deb",
+      "title": "Iran live updates: Iranian drone attack killed 2 Italians, Kuwait says - ABC News - Breaking News, Latest News and Videos",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU1BGOERUU2w0SW1pM2JId3A4aGZCcEhnMHg2TU5mOXpPa3MycFl3VU1SSlkxSmRnbUJxaF9HaElhaFdoUmVzNjJnc3lxc083OEF4WHUya3JNTlB2ek5CellXdUp4VUlOVjRqY0xzMGVWOERrOThXTko0WEtHdVR4OXNIWHN0VC1pT0RYeHhNNHJzRjI0cE1tMDhzcGpqTS00UkpoQjM1SlJKUzFFRGpTWFVB0gG3AUFVX3lxTE12V1BWVTBIMUpHMEFDV0g2N25CVkd3dWtoOWtiOUQ0b0UtM0ZRTWtrYmZPMDVLamR1c25RYng0ZHhlaDZ4T00yc0pqbEhIdFlpMmxKb2JtYlBxSXR0UDdXd0FhSlpOOFRvTXd2TWZSYlhSNEZ4VlNKb28teHp2Zk1OeG1BQ2lWaDEtN3FMVDNoS1ExN2drTUg1SEdrMWo0YUJCRW5Bc01Ld3RPbXZIU3dJLUlJOTYwWQ?oc=5",
+      "published_at": "2026-11-26T14:39:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "351d6d60e3a2002a9bdd3795",
+      "title": "Two Italian defense technicians killed in Iranian drone attack on Kuwait - Ynetnews",
+      "source": "Ynetnews",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9rX2NWR3BRZlljdVpJRHlHdXJSUmNBQ1NPOGxhMFlVN2JNazgxX1BYcDVOSlVUNjhtQXBNdU5DSVozd3RCY0VBRXViMDF1MWtqWThxb0ln?oc=5",
+      "published_at": "2026-11-26T14:18:34Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "15ff1123e3cd2ce2521f6b0a",
+      "title": "North Korea temporarily suspends military support for Russia amid a diplomatic conflict between Pyongyang and Moscow - Informat.ro",
+      "source": "Informat.ro",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQX2VoNjZ5S3pPVVRPOUFXcnRPQ0ZSY0NfUTdGeGg5SjVicU93ZjJURkFHb3h1a2xYWlBtcG02QndrOEViZkp5V0tmdzF6U1V5ZVU0RkVGR1JjSHFsTmRSN19WZl84Z0hDOVpmSEFQYnQ5WjJKOUtwRE5tOEt3MUFiSTlyM1RjbU1iVWlORXBwVlEweUhxUlpXTVFCbjdkOVg0?oc=5",
+      "published_at": "2026-11-26T14:18:16Z",
       "label": "background"
     },
     {
-      "id": "833330648135e188da55ba52",
-      "title": "Canada condemns surge in violence, drone attacks in Sudan - Anadolu Ajansı",
-      "source": "Anadolu Ajansı",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdk5mRWl0ZkxhZnViNEZLWWc4aFVieE1LemVTVVpJNEpUV0RpMjM0Q2dmYTMxQnNQWjN3eXFoRFVxUUtCTUl5Qmp2QWwxVjM1LXBRWGdFdHpnUEd6SjREcTc5Z3F2X0VIMW50UmtWVHl5LTdxTHZyRGEtdk1zVnFXcWZLX2VaS3V4N0hJVHR6dE9Uekxwa2pBa2lkTDV2Y00?oc=5",
-      "published_at": "2026-11-25T20:00:56Z",
+      "id": "e88df696016131501f24dcff",
+      "title": "Russian Attacks Kill 3 in Kharkiv, Damage Hospital and Homes as 113 Drones Target Ukraine Overnight - Kyiv Post",
+      "source": "Kyiv Post",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5sTkRGVWhCaERyVTZPdjdfWmI2Vk9pUEZsWl9YT3d0cWpaNjFLbHJpRDZmOEczT21XU2h2R0IwdFZKbExwVDFrQm03TQ?oc=5",
+      "published_at": "2026-11-26T14:11:30Z",
       "label": "reported_fighting"
     },
     {
-      "id": "a308eb70134cfee94d1da552",
-      "title": "Ukraine to test its own ballistic missile defense system this winter - Zelenskyy - RBC-Ukraine",
-      "source": "RBC-Ukraine",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZkpXYzlQWFA4MG1feWRfODl0cUlGbDNfbjVzM0Y1ZVM4N05MZTJzc1JXanFHcDdERUt1a2xsY1JkZXY2Vkh1RTlpVmhmaUhWY29JMTN6S2xFQ1VCdGxwZ3JrWWRsbmR5ZE5ENU9hWEh4cl9hVGRKN2hzMWczSzhpcGdwQ1NrSjNiM3ZteUJRSU9ieWc?oc=5",
-      "published_at": "2026-11-25T19:43:00Z",
-      "label": "threats_buildup"
+      "id": "2520be6894d630d9c32bf580",
+      "title": "Middle East latest: Two Italians killed in Iranian drone attack in Kuwait - The National",
+      "source": "The National",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZjlZcjNRWExvSC0zaURTVmE2YjJuTHI5Z3ZQb3dxMGtCS09EMEVwNVc3T1hzTnZ5Z3czZGhqWDRNU2tNb1RTTFZOempjZHFKNE95SG54NjBGSlBHb2VqVlRqTTlwd3h0UUcyd3lGMDZuejRyamV5cmg5cVBlNlVZeVdNTDlyXzRhRjR1Qm1pbWI?oc=5",
+      "published_at": "2026-11-26T14:10:38Z",
+      "label": "reported_fighting"
     },
     {
-      "id": "72b68dd8d518d0e939978d27",
-      "title": "Pentagon Budgets Up to $500 Million for Extended Range Drone Strike Program - Dronelife",
-      "source": "Dronelife",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNR05KMEcwbEI3SXZVOXNzcmhMVUxGZVlVT0xJOFd4T3FHb0dvTDVVR3JCZGMzRlkyWVVfamFkSjRrRDJ0bG9fc3l3dEdMR2Z5M2lpX2VURTluS1JlNzdtZ3QzMEFYTGR2ZWtHLWRqTDVSY2dzeWUyY1ZDTEpURXNKOWhCS1o?oc=5",
-      "published_at": "2026-11-25T19:01:26Z",
-      "label": "threats_buildup"
+      "id": "39c9dc095ba84d2042601b02",
+      "title": "Russia launches ballistic missile and drone barrage on Ukraine, killing at least three - Euronews.com",
+      "source": "Euronews.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTWx6UlBJNHU3Y1RtVS1qYVR4djFmdHcyeXdzd2d0VHJLUjBSQ2RXQ1JoTFRpRUlpMHVFTG9pcHNyUnR1bEhKX1Q4UmRsTkRNTUtreTFoOWx2bkJXbl9OV2x1eXdWTTBONnlCQVRZeC1TcWFvam1sWWFwRjRWQVUxMkt4VXV0ZXlYenJZb3ZlUk40ZG0tOXFSSjFndWcyRVNIdWFpYUNsX1NPelo3R0Q4My1fTnhKWFIySE9IcWpB?oc=5",
+      "published_at": "2026-11-26T14:02:41Z",
+      "label": "reported_fighting"
     },
     {
-      "id": "97867d07210cd8c0adf6aa24",
-      "title": "New UK Defense Trade Group Aims to Accelerate Adoption of Autonomous Systems - Dronelife",
-      "source": "Dronelife",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9CaXJHb0ZIRUlnNTRoVlRwLW0zaEk0dGk4X3ZIejdXRUpFb1JtM2FOUFZsWlJOOTd0cWM5aEIzam0xZ1lMYlhNbklEeEtDcXVGUWdNYUF4aHpGM2pQR1pCQ3J1akt5ektvNFp2NzBaSzlEcm5WN3JrVGln?oc=5",
-      "published_at": "2026-11-25T18:51:26Z",
-      "label": "threats_buildup"
+      "id": "ba1eabeb1957aef1a13feb6f",
+      "title": "Two Italian workers killed in Iranian strike in Kuwait, source says - Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ2hPQWhhdW9HTWxtRndjQkN3aFhQTzhyWV9sQ0NTbHNsRFpINkRjMHhKRGN4QTk1NTJYWU1yVHhmYVJSazJEVGtOdVIzZ2xsNFJFeHF0YXNEbXBqTF94bnBDOEFnMV9JdGRRbWVROFJGRmZISmZWUXhtYTlJTXFFMlBWa2IwdXBfUXY4OENRd2tVeWh0Q1M1OThsMl9kMkVEamJiTjMzdWxwZHRzdlVHYmtwTUI?oc=5",
+      "published_at": "2026-11-26T14:02:19Z",
+      "label": "reported_fighting"
     },
     {
-      "id": "99234208515e92e199a96aef",
-      "title": "New air defense system pairs homegrown missiles with advanced command technology - Yahoo",
-      "source": "Yahoo",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOaVpDeVA5M1FfZTV3QUtMa0ZHel8ybWh0UGFIam1seUhMZVViQXNPUHZXWG80MkoySENEZGNaMDVQOTAzRkRLQy1XNmt2SE1GTVRoOHVyNzBYeXlhVmRZZ21pb2t3eDNTREF2SXFGOFREMXpaMWpxOWRGbEhUTFM3TzR0cjdpSnA3b0pCbnVwc0xFVEVEMlE?oc=5",
-      "published_at": "2026-11-25T18:49:29Z",
+      "id": "bc32a7f1b23c203c3e9240f9",
+      "title": "Saudi Coalition Strikes Sanaa After Houthi Drone Wounds 11 in Riyadh - https://houseofsaud.com/",
+      "source": "https://houseofsaud.com/",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA1OE1JTXlJWEg0TG5jRUVISWljZ1EtbDRLOW9kYzViMnRFZFlhc1J0RVFQcGI5cTYzS001aHBCVjU1VTJVWm0xQk1QT0xpejU1YUZBZWlDYkRxTGZQSzJ0WHNZa3ZId3NPVEdkSw?oc=5",
+      "published_at": "2026-11-26T13:47:42Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "b63254baab6f4e58aa805d99",
+      "title": "Anammox Bacteria Diverged 2.7 Billion Years Ago with Distinct Defense Systems - Bioengineer.org",
+      "source": "Bioengineer.org",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMXA4czFuQTE2YWJNalZGVFVrX1RyT2sxRkVGSU1XdVZpdGFTWWlQN0NlcDVXbEpEeXZ2QTV2LU1RN29ZM01rZjZhdGRPLWhwVVJaMS1zVUVKbEs3NUFIUjk2S3VKcE9Yc2VnNzRhdF8xdmdCbGVUNmhMdlMyR0JybDU3TGUwaGxtRzBMU3VnYmlSbENkTHlUZy0tQjVDSGNSVjBKcg?oc=5",
+      "published_at": "2026-11-26T13:40:25Z",
       "label": "background"
     },
     {
-      "id": "c490ad2e82a3677240d70346",
-      "title": "India Outlines Four Priorities for AI in Conflict at United Nations - South Asian Herald",
-      "source": "South Asian Herald",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZVVXeVkzRDFCX0s5TXJ4SVlMUS1JMFZXUXFCalJiNVZYTDh2XzdKRUltOTZEZGxIWWFhUkZMOXVpMjE1WlpVd3ZCbTJKN3poWlh6ZnNvdGVacjJmWWdNaWRHdUlHdXkwSV8tc0h5aWp0NmxmVkRheWRubjB3dVB5REJxSk43RkZUT0F6X09EVXpVQVBWd25xeFlJYktmdw?oc=5",
-      "published_at": "2026-11-25T18:33:24Z",
+      "id": "aae848eb3c1043fb4d78ddce",
+      "title": "Report: Two Italians Killed in Iranian Drone Attack on Kuwait's 'Vital Site' - Haaretz",
+      "source": "Haaretz",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQRmlKR3Y1WFFwWnh4NVNwVXFodDFQazZkSm8yS3Q1bU5BbWVBWTB5Q1I3T2FOUXNSN3M0X3VEck55RVYzQjFPQy1PMFBQQVpoZ0FOLVlnR1ZuSEJqMk81TzhqVE1uSU9jTFRqbjN2N2MtQmZnUGl2d1pKdzVhZHI5UHk3ZzhpQ1JyWG96VEdxZHFYQ0FWSDZTU044WlFPMi02MGZYNVJOU0JxaHlwdk85LTAwdEtUUXI5UWIwUjh0R0pfZHRpdWRXVFdvYjNCZFZoQUpiXzBHQUJuTklycmRJOUphTGZTeEd5NWptckhhMmtld21QYzJEN3NDOA?oc=5",
+      "published_at": "2026-11-26T13:11:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "349f1bcff99cba461b8bbdce",
+      "title": "All the signs the UK is preparing for conflict on home soil - The i Paper",
+      "source": "The i Paper",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rUzVSMFlIZTBSczZ3SjZWRkcxVjVsZWV1RlNURUlKXzVjRERRMXZKOWZ5dnliT1VWczZ3QmpKMF9GRmxtT1BWYmdKWXVQQ3lWbjl1ak1HZm1xVlppOHBUeF9QREUtdHQ1RlN0Yg?oc=5",
+      "published_at": "2026-11-26T13:03:10Z",
       "label": "background"
     },
     {
-      "id": "b3b8cda98e5aeebd1a08c39a",
-      "title": "UN condemns deadly drone strikes in Sudan's Blue Nile state - Anadolu Ajansı",
-      "source": "Anadolu Ajansı",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQM2hjbXhBM1hPdElTLTNXWi1LR1Vvb0hGSzY2QnNCZXlDRHVYTmR2WDBaSWxJTXVpY0pyak0zbWd1ZWhsX29kUWxEbXUweDl3SExYLTFqeVg0cWtra3l5bk9zMzJQa3hJY0xJOXR4WC1zaWlremFZdUJ6VmpLZ3FURlVWQWhqNHVqaGVuYXRnX2FsNFgzRzR6djVEbUM4ZkU?oc=5",
-      "published_at": "2026-11-25T18:10:32Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "3a876887803deeb8640f8401",
-      "title": "Ukrainian combat laser intercepts Russian jet-powered drone for first time - The Kyiv Independent",
-      "source": "The Kyiv Independent",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZXhTa1ZDcEs1ZHVoSTNIbldfMnVpT3U3aFhvQ2hSdl9kRVVwd3d1YjJKeUFuQ25DT28wQzQ3RVRjN0h1Mk5Pbksyc3BiSU13YUlCRWFESXNtbE1QVnVtRmI3TVN5MmpocE0zTVBLQ2NFWnhJc0JYeTdxcEVuRVFXM0V0cElZTDdjNWZPMlBDdUpLcjFLY3NiRkxlZjlyRER5d3BvQkhB?oc=5",
-      "published_at": "2026-11-25T17:47:01Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "2555d1d98cf9294b639030d7",
-      "title": "Zelensky reports Ukrainian drone strike on Russian military airfield - Mezha.net",
-      "source": "Mezha.net",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdG1sZWNpSThVTTluSjJEYTZwRW1xUlJZSjBSOF9IbEswNWZjT3pIZ29LZnl6NE0zUkRJbE5kd3hZMENtNVRWeFRlVGRMbkxOWnM3RzAwenVZYmxZdS1XTTY0ZFdoQVhOSzYyTmZ1S3V4cm4xTnRrUFE3dUVrMTI3dURFZDhXM2VwcXY0NkpR?oc=5",
-      "published_at": "2026-11-25T17:44:54Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "9d6bdec9a0f406321a6545c2",
-      "title": "Massive Drone Attack on Odessa Leaves Two Injured and Causes Blackouts - Oj - Odessa Journal",
-      "source": "Odessa Journal",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQ1d0NGNmVk1tZGEta2ZMVUhzZEJ6UXQ5cHZ6c291Nm5OUEdSclhwRnBtNmxTSl9sZ3FqbER0ZjlvZ25ieXJKaDhDaUM1TnVQajBUTzRxN2hlNzZIeXlJNHdQUy11VWUtczBXMG9pZXN4SkpoSlNCSmd3NDdtZmd4eEJxUFhKRzJ0blJaZm5VM3lpVm9aOHk4QVM1V1hPSkU?oc=5",
-      "published_at": "2026-11-25T17:34:35Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "b25e960a68195aaeec7f2575",
-      "title": "Ukrainian laser air defense downs Russian jet-powered drone for the first time - Ґвара Медіа",
-      "source": "Ґвара Медіа",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQkZnZ3RwU1p2Wi14dTh3VTE0NWRhSTVISzVzNDJXWkpWZ3dweDBxWkt2bWRSRHVSV3c0SnNUVzhHNENOOENHS0pEMHZQdjBvdmMzejVQc3VkZGVHV0xwclNtVzhWbjRFNkthaW5lN2hvTkZBN1RqU0RQcEFOQVlQaWdzRGx3b1JfbW1mTTFOS19YSTZwbGhxVnZlOHNLc1RGRnB5RnRRcUg?oc=5",
-      "published_at": "2026-11-25T17:26:05Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "4d445f1d5b4bbb07851fb0e8",
-      "title": "Ukrainian Blysk Laser System Shoots Down Geran Jet-Powered Drone for the First Time - Мілітарний",
+      "id": "433bfbec477f61c2e266f39d",
+      "title": "Britain Begins Sheltering Fighter Jets in Hardened Hangars Amid Drone Attack Threats - Мілітарний",
       "source": "Мілітарний",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOWxtVjRIcTdTSEZ1VFhGaHkwN3RCOHlCUFNHNmU0VFBCWHQtTWtmaWszN0ZhNzMyaWM2d19MTFJ0cHdRWEpMeU5PZXE0NF9SaGdyY0x4Y3dlOVd2LXl6dmcwOVdwOWRBZjJiZmQ0Szg3Yzc2V0tkVzRMdnZETnVCLVhfSjNQMFpJcHl6QjZyRFFneXVxbzhVTUhVQV95XzFyaFFfU2thUkI0eXljVDJfR1pvdUEtQQ?oc=5",
-      "published_at": "2026-11-25T17:11:36Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "ba086478118923e12f6ce769",
-      "title": "Russian Official Warns of Ukrainian Drone Attacks on Utility Infrastructure This Winter - The Moscow Times",
-      "source": "The Moscow Times",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOSVJfMzcwLXl3WnNQbU5wa2I2WkJBaktiQkNmUU03QTBfdFkwcTNIRnd3YVdPLWpJeGRhUnJuSVRpX0Flbkg5WnoyZ3RyVzVBY3luSVJKNDlzaEpHZmVWLVViUmsxU2lYbGFiS0Y0Y3Z2X2wycVM4MjVabDdpb0lQQW5pUE8zVzlEcEhabDVWYnpMTmkwSGQ1d1ljX2Y3ZzBjdG1oZmN1d1BELV9nQlFTaWNyeHlhVUxFaUVlak1ia0dTU05CRXJRRjhR?oc=5",
-      "published_at": "2026-11-25T17:00:56Z",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNc1RqV3dSWUV1UWhubWxLLWNGb2ZHOW01bmF0VEhISVh4cnZGVFhLc3lyQmYyay01dEZPWElHWWlxMkRPcUsxbHpCc3RFZFN5NFNhYV9tZUVmbjctbW5lcnpYaVRTNjAtTTVQUGFhdGNXQVpucUJlZUE3ZTZHTzh5R3I3aVowLWdQbG16OEFxTDN0QVd2ZE1tZHpvUXIxZVE3enhleFlYaEhwZ3FnSlNQcktqZXFEVDQ?oc=5",
+      "published_at": "2026-11-26T12:09:11Z",
       "label": "reported_fighting"
     },
     {
-      "id": "922fb24e1817a20b2bfb2c6c",
-      "title": "Russian drone attacks car in Kharkiv Oblast, killing two - Українська правда",
-      "source": "Українська правда",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1kTjFFTUZzbUFtMHBwNGYyMEhIUEl2OTI2TzhFNVFzVmE1QVVjOUFqb01fNmlrX0RzeEk5QjdSLWNpVWpsX2xScUJnQUIzUXRGakxpX2pBcWROUXdZeTQwcjQzcEXSAXBBVV95cUxQSms3WWRjQkFyT2VHQThnbnFKc2lJcWRibDBCWlZncjZaMmNqMWl5dUdpWXdCaHEzTHZQYnlQbjZIUjROeUtyMF83N3NQM09PaVVVOHRKVF9UV2FURG5ibTg2cGZkNXNGWHVOdDB4ZG1M?oc=5",
-      "published_at": "2026-11-25T16:43:00Z",
+      "id": "f987689ebab4165ed0ff49d3",
+      "title": "Elbit to Supply Electronic Warfare Suites for German Navy Frigates - Israel Defense",
+      "source": "Israel Defense",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA2cms0bjZsODJQdUJIelBuRW5ZbWJBdURra3lYclZOT21JYzJGem8xQTdlTGFzRkFBSzZWbXpFMGNtdEFadndncmx5Z0kzNl93dGIwWV90dk8?oc=5",
+      "published_at": "2026-11-26T12:05:33Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "e3da4492c20f6ebc81644fbf",
+      "title": "Russian Air Defense Chief Arrested as Ukrainian Drone Attacks Expose Defense Failures - Kyiv Post",
+      "source": "Kyiv Post",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBjU2NvZDZhZEQzcERDRHoyTXdxWmhMaGdlWFJ5M3N3RHRiMzhxMGN4b1RGMXRzLU10N2V3VWhleE9WQUI1LWJVS3ctZw?oc=5",
+      "published_at": "2026-11-26T12:03:29Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "175f81c7312df8e39b884c9b",
+      "title": "Ukraine says it has intercepted a Russian jet-powered drone with a laser for the first time - CBS News",
+      "source": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWGVSaWFRWm5vY1pIZ2R5RFVxSjRwVjBNN3dWcTh0Z3VFR0o0Xzc0TWhMTHJQX0RHWG54RWI2dWhxenZmbGo1RFJsZ2Q3TC1aSmwyTzBRZWc3S3lDT2tNVGlQVWQzbmVyYTJ6U1pUcm9jcG5rQngtb3Q4R2JoXzBxSW1XWkZYZVV6SWt6YTNQbHBDejBFSzJ0Zy1OX0RVTVJY?oc=5",
+      "published_at": "2026-11-26T12:02:53Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "0853a7afb25db71232ccd0bd",
+      "title": "#Daily_Brief: More than 40 #RSF drone strikes kill 19 civilians in #Sudan’s #Blue_Nile State, displace thousands RSF-aligned forces have intensified fighting in Blue Nile, approaching Ed Damazin following advances in several localities, including Bau, Kurmu - Facebook",
+      "source": "Facebook",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOREIySTdMRG4wbVRTdFNYVms5bzVZZFplMFV2MU5qMVNJcFNzeGpVRWpZQjJvQTlnNnJHY0IwN2xEN0FRV0Y5Vzl4U1RqT1BFOEFodmJHd2pleGMtMDlFZHRFWU1SdDVPQmxEMlQ2b2FRV2s5c3VVUmJOYmc0b28xT2xBcVg4ZERvclJNWnFjMllnVkpnMlgzQnExbk95NGdXV3JzU2J2dkU5ejg4VzhNODBFdEFzc0xzZUNaWTcxVUdEUGRmU1JkRTlsQVV4RGVOaW9yOWV2QW4yZklac1Vr?oc=5",
+      "published_at": "2026-11-26T11:54:57Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "245865d9abf1f94945c5e0ae",
+      "title": "Under Test Ukrainian Laser Air Defense Shoots Down Russian Geran Drone - Defense Mirror",
+      "source": "Defense Mirror",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYzRfY3JqYmF6NlNZSEdON09SeXk0MGlyd01DcllVZ3JJWk5qMVVINWllMlRGMTJtbm1rd0g1TkFoTGxyRmdMb2RVV2g5NVltS1ZPU183d1pYODNNXzRNMEhFeHRuYzJyUmZZNFlaN2cxMVMydFZJSi02SHlWNmluMlNNMVU0T1dkY2xhNlVmQkJfRk1Ya0txdmVncHhMLXJNRmk5VzYzWFZmVlk?oc=5",
+      "published_at": "2026-11-26T11:51:43Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "5d7302bb4b0047c9ea13c68a",
+      "title": "Benghazi drone strike exposes deep mistrust stalling Libya's unity - The National",
+      "source": "The National",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOY2xtUTdhcTdRaXM2dXhkbWh0NlcwRlpiT05WZFJjYmJxOEwwbUQtUEwtMmdmWjRyeWtqd20xSXl3N3RFVmJNR2d4eFVrdDdqSUd4TWRLSnhxMFlRTVg0NGNpVWxLSE9oVnhjeVN0bGNRTkxLZ1lEeWh3c2dCa3dNRFBMZUlKNVFmTVAzbzQ2a1gwb3RiS1FhWXZnSjREMnFVTVlxUmdfMDFVRmNNWENGSHQza2JRODRCWkd3?oc=5",
+      "published_at": "2026-11-26T11:47:24Z",
       "label": "reported_fighting"
     }
   ],

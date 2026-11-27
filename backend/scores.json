@@ -54560,5 +54560,13 @@
     "raw_score": 29.03,
     "news_feed_status": "ok",
     "score_version": "keyword-v2-dedup"
+  },
+  {
+    "timestamp": "2026-11-27T00:16:48.364621Z",
+    "stock_score": 0.262,
+    "news_score": 0.424,
+    "raw_score": 29.42,
+    "news_feed_status": "ok",
+    "score_version": "keyword-v2-dedup"
   }
 ]

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-27T19:14:40.605741Z",
+  "timestamp": "2026-11-28T02:20:23.465696Z",
   "feed_status": "ok",
   "feeds": [
     {
       "query": "https://news.google.com/rss/search?q=military+conflict&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "items": 58
+      "items": 100
     },
     {
       "query": "https://news.google.com/rss/search?q=defense+systems&hl=en-US&gl=US&ceid=US:en",
@@ -15,32 +15,120 @@
     {
       "query": "https://news.google.com/rss/search?q=drone+strike&hl=en-US&gl=US&ceid=US:en",
       "ok": true,
-      "items": 98
+      "items": 99
     }
   ],
-  "archive_count": 1197,
+  "archive_count": 1222,
   "window_hours": 24,
-  "story_count": 65,
+  "story_count": 62,
   "model_state": "active",
   "model_version": "2026-11-23T191421-784397Z",
   "class_counts": {
-    "background": 11,
-    "threats_buildup": 17,
-    "reported_fighting": 37
+    "background": 8,
+    "threats_buildup": 18,
+    "reported_fighting": 36
   },
   "class_shares": {
-    "background": 0.1692,
-    "threats_buildup": 0.2615,
-    "reported_fighting": 0.5692
+    "background": 0.129,
+    "threats_buildup": 0.2903,
+    "reported_fighting": 0.5806
   },
   "articles": [
     {
-      "id": "c4d318e0d37a5b5e8e16a4ed",
-      "title": "Kuwait drone attack ‘false flag’ to drag more countries into war against Iran: Report - thecradle.co",
-      "source": "thecradle.co",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ1pWc2c3TGtnQXFDaDFjM2s5WG9PelI4aUM0ZC1CNUVJU3F4SjROamtfYncwQldJMGNLeUFUZFowRkNveWVoc2lfRnRkUjVTdDh2N2cxbG5fNWlVRngzbGtmYjZSby1nOGdfS1FWNDAzNW9UVXFxUU9jeDVZTHNuTzZWeXJSZnlMa3k5anZKRU96ZlRXdERYQVNIQTZ2b1Z1cEVJLXVuMF93d3dkNXJWLXBR?oc=5",
-      "published_at": "2026-11-27T18:48:36Z",
+      "id": "427d349ae0176bc446a5ff28",
+      "title": "U.S. Marine Troop Carrier Prepares To Defend Against Drone Attacks - Forbes",
+      "source": "Forbes",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOSE16QlI3dEYtUVByYVF6dVpVVU5rMUVheTNPMUhJbktld0NCdVk4YXQzMm5OTURIaG04clVVS3VPMGo5N2UxckI3UERrTGM4V18tVlpoc0xodVpBbGltTWFHVnNvTzA3Tlh4eTlYNk9yY3drX29raTg1Zlc5bWFIY2RxWmhrOHVoSlRWc1hrc1dGVkZRdmxCc0xvTElrY1NiMVRrelJZejNRTXBOOTktSDlNM2lob1R5ejl6eUVKbk5uWnZKY0E?oc=5",
+      "published_at": "2026-11-28T02:02:48Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "8e0963a4830f94159e083bc8",
+      "title": "Moscow reported a drone attack; restrictions were introduced at 2 airports - Mezha.net",
+      "source": "Mezha.net",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPejJUMWNMbmZhNkV4RGExS3JqajNPYk9yNHFGN0JCUk1GUlVsYXNCOHl4OS14S3JjTUU4Y3o0U0RSRFItZ0p3NWdnQjlyX1RJelNpdHFyUVBUajQzejlrcUkzejA2VS1rX1RWTjJNbjNfbk5heGMxYkE2U05uNlB0NHJR?oc=5",
+      "published_at": "2026-11-28T01:34:49Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "56ed74f0ebb2e5c37c9e50ef",
+      "title": "Syrian Security Forces Killed in Deir Ezzor and Daraa Attacks, Including Drone Strike: who 9 outlets blamed - NewsCord",
+      "source": "NewsCord",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQNTY1NW9ieURGWWlWQVlmY3hBcjVtWVdIMDBzZ3YtMEdhbkdKV3JBSWVObVhpamhyVjhPNkN6Q0VDVGtlN0xwbGRYUFVBb3BFb3h1bU0xSjlfaWVScW1jUVpZVFdGNml5U1VDU25DdGlrNm13TDdXU1JDMElkRlpFNHZCYjlXdUhQYUdPY1JYd1RDNjhBemM5MFdLcnMzM1I5bFdMVVl3cDItV0JiWjdBRk9nTEtNS1BOZ2d4Z003UkdNU1ZXeXlMOEt2dXZib28?oc=5",
+      "published_at": "2026-11-27T23:22:36Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "63fad593bb9eb73bad9ef56e",
+      "title": "Basem Naim Says Izzeldeen Al-Hayya Survived Israeli Drone Strike in Gaza City: how 10 outlets framed it - NewsCord",
+      "source": "NewsCord",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOc1N0LUlpTDJSVDJoSHA0NFg4S2dMLVJJdC1URmlPTmRZMExiMkU0clFTQ3hvWVNoSHMyeTR3UE1xUUZCWGlpVjNnN2VqMGxWVFZYU1E2SmVyRFhveUlFeVlqMW1iaUMtcl85X1h4MEVGbUpnMjgtQjVyVVFrQU5Kd2ZybTBydlo5cTltbFoxMnJIUjNvd0VKUzMxbHo5Y2VuanktMUl4MENaTGVqajlRTGVnV24zV1hwWjFlcHdxNzYzT3R4ZzJQOTNyaE1pNlh5M3JiRnJQM0h3Tk1ZTXRFQnhlZzZ1UQ?oc=5",
+      "published_at": "2026-11-27T23:20:03Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "abdd8d81bcb5dc9e221d3e77",
+      "title": "Russian Strikes Injure 13, Including 3 Girls, as Homes, Shops Hit Across Kharkiv Region - Kyiv Post",
+      "source": "Kyiv Post",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1MeXg2VnNuVmZhZmxRVDVQX29oV3VnYXpuR3Q5SzdZckdSMS04dmdScGh5ck81d05mdGNmWnh6QWJ2SmxlWnJUZU5sQQ?oc=5",
+      "published_at": "2026-11-27T23:07:31Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "ce3a6090a2c72bb4b979baf4",
+      "title": "Russian drone attack on Kremenchuk injures 4, including 3 children - The Kyiv Independent",
+      "source": "The Kyiv Independent",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORmstN09GRzgwLTRXbVhlbHdMSFozZzl1Q21WTzlySzA4aVBSck1nYl9uV0NLYjBJemd5cWt6Zjc1U19ON3hZSlB3UElzVG51RU9iV0pyLWx6dFJ4Y3VpZWxta3c5T0VCTWpvaWVSQUYxTzd5OXdLTGV4T0QwUUlEeTZGRWplT3V4U01BaHBwTGRscmVxVzdhX2tR?oc=5",
+      "published_at": "2026-11-27T22:13:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "f90056b58d0b0997d481c557",
+      "title": "Iran Questions Kuwait Drone Attack, Suggests Possible False Flag Operation - اسلام تايمز",
+      "source": "اسلام تايمز",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOWg0NzVVX1ZObnRkNnAyZWdNekVVS0pMY2dxSlZuMnB6enVuX0NkXzJqRklObkJ2dTBBVWZNcERCS0JNbFNJakdQZldHUnA4cUJRYXBBWGZiTVBRTl92dmhjS3NkbDFHdDY0NTVMcXN4NmZ2U21oQ0o3VXRGRnhKN2xoSnpTWFNiMUdNeElZcTNLTUNERXVaek4xM05DRWx3eVdBOGNrN09QYWNQcXM0WUl6X1FvczQ?oc=5",
+      "published_at": "2026-11-27T21:33:41Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "e85b4796a2681e1985ffa7f0",
+      "title": "‘ELITE’ Hostile Radar Simulator Tested with B-52 for the First Time - The Aviationist",
+      "source": "The Aviationist",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBmTXhXemJXN2dfQ0ZkR1BoRjF1bzI4UFhSX0wtd1gzd0k5VjZkcDdFXzR2SnJlSWlZU3BkTldRaHBJd1NEaGpzNXpJSW9rcm5GNzJBMzdTNUtTYm5BOUNnQ0JVLXNmMWV6bS1zaUo4ekhRT3dGRGVqaGJ4TjJxQQ?oc=5",
+      "published_at": "2026-11-27T21:28:00Z",
       "label": "background"
+    },
+    {
+      "id": "08e1c5a4d0dd8b8ffd9a80cb",
+      "title": "BAE Systems Wins $6 Billion Five-Nation CV90 Deal - Defensehere",
+      "source": "Defensehere",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZkw0ajFKM2VFWDd4d3pwSzE3c3BmRlVmOHJscjktZDc5WFhuNUk0dFNmVUxSQ0ZkeDctdHhJUEx5UVl0a2ZHN3p5RnJhVjVKYzdtYnFCcm1QTjktdWVWOUsyaDZib3VNSloyUXEwS0ZzSDc1YVNMQTRzLXpSSmVQeEZB?oc=5",
+      "published_at": "2026-11-27T20:26:26Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "6009421bdc63f5bc34fd95c6",
+      "title": "Russian drone attack damages two educational facilities in Kremenchuk, injuring two children - Ukrinform",
+      "source": "Ukrinform",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQUXQxZUt5eFk2cnMtalF1eTlRUkMzRm5SLW5iRWk1WVNwVVVodGFxeElKaFhjMTFYTGRjZ3c2VzlMZFBnNmVjcGRHY0tNSEV5aU9wYzRmWWRwY2hNem9kREZHZDFNLUQ4blMtQS1YWk1VVU1QQ216cHQ2ci05MUdyN2podjUydFBiQjZrZno0emNHUUZvU19XR083S0NQZGlFczJIMUNZSkJwcW5waV96NGJobnNiSVpzaThJTGEtOS14Yy10enR4d1p2UTAwd2Z2WjNPQS0tdzU?oc=5",
+      "published_at": "2026-11-27T20:20:00Z",
+      "label": "reported_fighting"
+    },
+    {
+      "id": "dc2b0c8dbff9f531fae59036",
+      "title": "BAE Hägglunds lands record $6B deal for 400+ CV90s from five NATO nations - Breaking Defense",
+      "source": "Breaking Defense",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQXzVSN0tkM3d1eWhtOVFlUnZwM0p5U2ZCUms1d0RoSXAwWXZrNlBtQkJNQVZpeWFhS1RhYWVQV1VITnBWRlBJZlZrdWdtWjNKYTkzbjlOMXN6UXRtbUFzMjZPQm14THotLTdiVGV4elBiSnk2bG4tR2VrZDZvdWtpNUZxTDNvWEpWVDdSVl9JRV9Ya2V6dEtiQkhSZGJsQm1TUjQyNldEZXJzY1dI?oc=5",
+      "published_at": "2026-11-27T20:02:45Z",
+      "label": "threats_buildup"
+    },
+    {
+      "id": "1bbcf859f719c2814459b383",
+      "title": "Tehran Denies Kuwait Drone Strike as a 'Pre-Cooked Recipe for War' While EU Demands Tougher Pressure on Iran - Envanter Medya",
+      "source": "Envanter Medya",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeVNwNGhIdHoxTWtjTTlpX25hdFpEVlZNRzhZYUx4aWNQRFhwYkNTQ3N2QUdnWmhRZ2VCQmJQdkNraXc1M2FBNnF6VktyX2tqcHA5WWdtNHY4UVZaMGM3RkpQb0FpdGwxVHlxRUczS0U3SzdQZlliNUhjS1V4STV4ZjJpZldheHI1VTFvdlF3?oc=5",
+      "published_at": "2026-11-27T18:48:50Z",
+      "label": "reported_fighting"
     },
     {
       "id": "0063811352517a72b31ddb1e",
@@ -48,22 +136,6 @@
       "source": "Middle East Monitor",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcGRVUWVPSnVyWlVXcERtQkt0eExzM2JDVURINWpGT1FQSU9jOGZ5LTBsVlZLX0NzYmlfN09FZ0ZEajM1NWRucjJtN0RVdEdmMnRHbnVIVWZnbGpsUnFwQ0lyeXAtQVBNV2lyOWhSODdWUW5uaHltcFI5UFZaV3VfeEJsUDFnTWx1UzdQUTNRUko0bGpvZ0x3MlVzbjR5VF9xVW9jZ0NXeEpyeXJhWUJ5TXVxVzJqTTBaNFRndGFRc9IBxAFBVV95cUxNWDZZcUZ3b0IwVlZiYXJEekZOaVdEcEMwNk04RGpUNUtTVWloa2ZIU3EyNVJNdXdSYmhER2d4MkFNaTNlRGlfQk9oeEp3X2ZQa3FYMmgzNUN6TTBJTE9wZjJvMm83NVdJWHA2QkJmelB4akpLVkdJMlNLYi1lUE9OT1BlM2dPNndLM09QRndpb2o3MVBFaDNXY21Hdi0zZTJ0NjlwTHFLcGRWdEFQSERxS3FLN1M1ZUZ3LURibS01SFk3dGJ4?oc=5",
       "published_at": "2026-11-27T18:41:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "835d82002f8a7ea14ef3461f",
-      "title": "Missiles for Patriot and strengthening air defense: Zelenskyy coordinated key messages for Trump with Rutte - Українські Національні Новини (УНН)",
-      "source": "Українські Національні Новини (УНН)",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaXNKNXI0UGhYZWp4N08ta0dyWTZ6Q1V3YllseDAyTzFvMXFGUW44WGwwUDdRZ3RjaUt5aloxc2l6YVh5NGF5U1E0LURCaUF4QW9NanVLYml5bjVScld2eE9NZnM2dUtuemt4eWNTU1c5clVTT2NheE5JV204SlJ0OEswUTNXTmFhVFdwZldDZnJUODlmMHNwbDZna3hvazVoQVB2bVBtallwU1d1QldkMklWZ2Q4UWZpeGhxNGwzWW5wM3d6a3fSAcQBQVVfeXFMTnRyUGxmRlJjN1VuVGdxcklHcTZXSXNfZVVuT1o2LXBVd0RFSngtWFctTDltMDVRT2YwdGtaT1QyZ0U3blIxdllLdXNyNEc2S1gyLVZIYkRRTDVYRUNBdS1tMzRnUW1aajFtVmI5dlJoeG9FZ0QzbXB2eEtkX3laTVA2ZnFZSUEyWXVoTDRRNmk5aWZqaEVDYno3b0xlZFlJcHZINVdaWjgyc2pBd3haaHdnRzI3ek9rWGNjRDI3SHZ3QTNYTw?oc=5",
-      "published_at": "2026-11-27T18:25:57Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "16c109a84d393558f9363d5e",
-      "title": "Drone attack wounds security personnel in Syria's Suwayda - TRT World",
-      "source": "TRT World",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9yLVpBb2RvWnRlTlI5cTJOTEk4cWlJU2VQVXhsWm5FQ01oeFZCbC1rRmg3UGk5aTlGeDdFRHhISThvYVdYVnU3RE5ZeC10REJCRkF5RzZlbkw?oc=5",
-      "published_at": "2026-11-27T18:17:58Z",
       "label": "reported_fighting"
     },
     {
@@ -123,6 +195,14 @@
       "label": "reported_fighting"
     },
     {
+      "id": "d66614ac3c39f9bcd60fdb00",
+      "title": "UAE Condemns Aggressive Iranian Drone Attack on Kuwait - Global Arab Network",
+      "source": "Global Arab Network",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOGkzZEo4Mm5LdFNZQ29NOTV5WTZzWDRkY2xCblBTR3E0S19Xak5xeXdiVW5Tb0NaZzYxbjdaUDhMSWJJX2toNnVnQ3gwNzhPSGhvWi1QM2pLZFN4YUh4M0lqUDZ2MW9DWTBrQnc2cWdrT0lxdnM0RWgwZDZmLTc0bW1RY3AzYUhUaHRnY2VHblVZUkNjd0VkYXdHZzg0TGlqaEphcUoyYw?oc=5",
+      "published_at": "2026-11-27T17:28:46Z",
+      "label": "threats_buildup"
+    },
+    {
       "id": "5b95aa865420282fb4103ba1",
       "title": "Iran denies role in drone strike that killed 2 Italians in Kuwait - DW.com",
       "source": "DW.com",
@@ -131,19 +211,19 @@
       "label": "reported_fighting"
     },
     {
-      "id": "9eeed1fee2108d902ba8af1c",
-      "title": "19-year-old Colombian police auxiliary officer killed in explosive drone attack on Condoto station - Latin Times",
+      "id": "bd7861e59179a68a56bf5326",
+      "title": "Third Attack in 2026: Drone Bomb Kills Colombian Officer at Condoto Police Station - Latin Times",
       "source": "Latin Times",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQU1DSWh6aU5kMkZVZG4zWTdOXzZUQUtRMGhiVzNsN04takpLc2haR19xVVVwSGwxLUhyRWJpdy1FcTR0RTkzNGlqeF9OUmo4bTMyS0ZaTmtHZDBqVzA3c0J6WThmRFU0aWZ4RDVINm9nN3N1OHFTNVBJZkljQlpmcVJ2UDlaV1lFNkJUOU5hVENqWnF6bW5pXzl1Q2EzOXlZSzNvdzNzWHUtWV9halE?oc=5",
       "published_at": "2026-11-27T17:14:39Z",
       "label": "reported_fighting"
     },
     {
-      "id": "3df061525989ad548d1a018b",
-      "title": "Rafael’s high-energy laser zap aerial targets in US-Israel drone trial - Interesting Engineering",
-      "source": "Interesting Engineering",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZ3ZnUW9uS3h4cmZxSFh1ZGF5azh5ejN3b1dkOW93N0dOOUdET0ZFcU55eV94WWh2aDhzdmdxMFVpQ0VFMngtSTZBR29ITU5HVVpvY3JMOHA3UEtzMGVoYkgtQWVGYlAxRjFKYkFTRDJSRFJKYzlYQkc1VHZnUmFJTm9ZUXgxX0VSb285Y2JB?oc=5",
-      "published_at": "2026-11-27T17:13:00Z",
+      "id": "d6bfabd1f428908b2e881fee",
+      "title": "IWI and AIA for ARAD 5 and NEGEV UX in the Netherlands - All4Shooters.com",
+      "source": "All4Shooters.com",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQXh0OGFNV19mRHlNYXZzcHVjdTV1LXBXT0dxbzNuMVpJX09qZzBiZFNBbENZTWFSOFFBWUVzaWlWd2p3aDBzMURacjNUQnVqZnFvblFNREZQVFowTmtoZlZLa3VSQ05tQ0JNLTduUlhkZXBZWHlyZVlkcjZ2NGt0S1ZqaTh4VVJTTFBoR1lQdTlRSkZHS0l1dHJFR1cxX0E?oc=5",
+      "published_at": "2026-11-27T17:00:00Z",
       "label": "background"
     },
     {
@@ -163,20 +243,12 @@
       "label": "reported_fighting"
     },
     {
-      "id": "39041ec94d2cf80b9c5fe347",
-      "title": "Kuwait summons Iran's ambassador after drone attack kills two Italians - Yahoo",
-      "source": "Yahoo",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN0VnV1RzUnU3V2pYSFZ3dVA3c1dXUUh4SWtCeE14Nk1JYWllbkM1WEtKdmxVUlFWOFhpZDBYZUtqMG1MSElkTjFTWWQwY1pRRUVweWZIYjJVTEl5aVR2TTJLemVYNGU2NkI3Qmt5eEg1bEVuRTJYUzhTMk9zYkphc1E4czlxSTRvbGxrN0VKYkVSdWl2LUt5ZzBR?oc=5",
-      "published_at": "2026-11-27T16:03:37Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "94606c88e0d11a4d804467d4",
-      "title": "Russian drone attacks gas station in Kharkiv, one person injured - Mezha.net",
-      "source": "Mezha.net",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTjI5cVYtZmlXenpYQ3VzM21mdlpZaU9XLTROYlRMcTMtWDdHOU1ndGlYVjI3ZEExTWNieU1VZUFtdHBSaTc4UEdXNFJJZk5COUtDbHp1NW5qNDlSTklyVndIc1pTTFBWRnJWODA0X3oyMmNXSy1YSmgwU05sUEZXUTJNXzBhZDA?oc=5",
-      "published_at": "2026-11-27T15:21:23Z",
-      "label": "reported_fighting"
+      "id": "740fffc44d6bd3ea3f0f1dda",
+      "title": "DW News. . In an age of modern drone warfare, Ukrainians and Russians are being forced to go back to old-school war in one part of the frontline. Three years ago, a Russian attack destroyed a reservoir in the southeast Ukrainian region of Zaporizhzhia. The - Facebook",
+      "source": "Facebook",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQNW5QUVgwak00LU9tTlZSc3RaSHVrTDhvNDl6dVV5Vkd4bVpIbko1NVc5RS1qNTd0MWpyREdYdkRSZjNyUG1GZnVHY3B5WnQxU2lPSFJLcTdNamhBbGJkWEM4bWpXTzBOZFpyd00wNTdIdlc3Uk5tM2p3cm0xSmNyaDRLODBBNVRCUEhDdWN5RUtqbHBuV3FvSkFOTllBVDhINE1fNkdGcjMzbTJZZ2I4cVUtYTBWT05aM1J2VzZfMjZfZU1wbzlpVFdxOUI0eHZDRzc4dkdLYWpDdFlxNzF6TVh3?oc=5",
+      "published_at": "2026-11-27T15:30:32Z",
+      "label": "background"
     },
     {
       "id": "9a6a4bab17027b58247836c0",
@@ -187,91 +259,19 @@
       "label": "reported_fighting"
     },
     {
+      "id": "12508004d239a5934aefc1ff",
+      "title": "Kuwait Summons Iranian Ambassador After Drone Attack Kills 2 - NDTV",
+      "source": "NDTV",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOSVI0N1hSM3ZKWi0zN21ucDZKOHNmRENCLXRJNkVzTnU3bUt2anlzODk3S2JtSEg2alZFYkxLYjRQOWxHSDdiSS1TSEpOSmstVWs4bW1LcFVZZGVTNUFVTWViMmpwczRjVUhZM2lSaXNCYU9pMFlyMHhiY1RWU0ZTemdaZnhMSE0tNGUxOG9ZMk1yUVJlT0dGV2hadEctMWp0MGxv0gGrAUFVX3lxTE00UFJPNlNYenBER1JodHNhZmJocVVrOGVvQVhwdU1rRHl6N21MV0N1NjNONHdZeXpxYUZBQlRXNWtaczQ5Skp4YzAzVWtYdmh0MzhHMlkzZE04ZDh3VHJGM0tsa3E3bWtQemRiR3dOdzhYU3N1V2o0dXpmeWVoblVfaXZ6QjgyanM1bjlOV2ZYaTRCRUoxU1ZDcE5fbnlMeWhENVFOQWpfdU03cw?oc=5",
+      "published_at": "2026-11-27T15:15:49Z",
+      "label": "reported_fighting"
+    },
+    {
       "id": "afa1eb481622776901d350b4",
       "title": "Kuwait summons Iranian ambassador over deadly drone attack - Anadolu Ajansı",
       "source": "Anadolu Ajansı",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdEVJOHdLVVF5aE1PNXJGLTlMVkZ0LWJPX3VoclJaOG45Qzdvc2xRZWh1TXVBblktQWNFemxVVEFtOVZnSTh2LWkyVlVseEZvbXozRVRMX0Eyb25jTFduY1gyakh3amM3OVd0Sk5Tb1F5eEpITDBJa2ZtUU80d3MxYVhJdGhRblo1b0JLNV91OWdwb0JETjZiTkprQS1vdjhCcjdfdEtn?oc=5",
       "published_at": "2026-11-27T15:09:20Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "1e601b57a51776b4a1bc6bfc",
-      "title": "Romania orders 66 additional Lynx armored vehicles from Rheinmetall as part of 5.7 billion euro SAFE package - ssbulten.com.tr",
-      "source": "ssbulten.com.tr",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQUm5TMXJOX0g2Sm4xUWpXYnBrbFhpXzNPSjdZVWZGNnp1WEJiUjV2eHRXcFBmMU5Ha2pxRnV6UVJUZnU0TDlDd0Q2OGhQTUxiOFZwUnpoLTE0M0FKRVJLRDN5MU0yMnJoSFUxMUlZcF8xdWtramxNUm0tTTlWMHhmdWo4WmE1Zl9RcmstNkpGN0FyM0czSW5Zbk05czFwTjZRUWVzSEUtLWg1YzRmN3dkNlBVeXhnQXlsWlJudFh5SFpZZ0RucGtKaUx1c3pUSmtJU2t1d3oyU2k4MnlVOGQtcDI4T292WWxJSVE?oc=5",
-      "published_at": "2026-11-27T15:05:58Z",
-      "label": "background"
-    },
-    {
-      "id": "4719b2179ac8d9a679b4a68b",
-      "title": "Deadly drone attack rocks Kuwait, Iran denies involvement - Fox News",
-      "source": "Fox News",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1yZUltYTIwNktxeTF5VlJES2FXVm03cWNZV0o1V0hYSTVpYlhuVnd0bEtjNE1JY2k3NTJGeWxLbWo3Q0NnZWVibmN2bW5wLXc2M2hwU2tB?oc=5",
-      "published_at": "2026-11-27T14:51:04Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "5b0545fa9e3f16e3bd4e5f3c",
-      "title": "Vice Admiral Robert Harward analyzes Iran blockade after deadly drone strike - Fox Business",
-      "source": "Fox Business",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKU0VGdVYxSGRRSTIwQzVVSnVfcFhCZGVmUmFMbHRXdnN0dzA1R0Y0RVM0RU1ZZUF3cl85YkpXc1pONzNkUnh3OHZ6cFVJVTh4R2RjV0U5eGVNbzQ?oc=5",
-      "published_at": "2026-11-27T14:18:37Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "0075090c7a5693fba9cff2fd",
-      "title": "Golden Dome Technologies Could Reshape US Missile Defense, Retired General Says - MeriTalk",
-      "source": "MeriTalk",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVThkckpiVXZ2d1lTNmRKQ1hGQmdrM3dnX3k0ODQ3Qm9WajRaYk1QeXlPMkhkWU53UHFCTTk5SENWa3hqMEZEYlJxTDNaOGRsVm5Lam9mbHRiV1laOXBwQmVQSEd2SzFZZHdHTFVQWTFyR21Hc0w0bUNZcFBLNThqODVVVnBZMkRfS0tTcEdGZ1BHb1hESHY0SkVZZ2VRVVl5ekdmN0ZGcl9wYXJnOHZMOUZfWQ?oc=5",
-      "published_at": "2026-11-27T14:03:14Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "8d71e97f045a8221f9b781fe",
-      "title": "Greece Receives Israeli SPICE Bombs and Rampage Missiles for Its F-16s - Мілітарний",
-      "source": "Мілітарний",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdlVWcUxXTkdlT0JmV2Z0YjVUYjdtUlh3YW9hbUxhWm5SRzJvaWoxN25YLXFFV2N1RjNqUktJQXVQUWNYQXlJT1R3amtlOXJTS1NCNVowWHhJd01TMzcxVHlwOWZ6cThRYmVpNVE0bmp0ejZlV2p4cjFZOXowbGlvS3dJSEhFRDZlaE1LX05lckp5OVEwRFQ5N3NlQ1JqN1M3aGFhbQ?oc=5",
-      "published_at": "2026-11-27T13:39:49Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "1adfe7ca842e9252b2f2239f",
-      "title": "Russian drone attack on Kremenchuk injures two - Ukrinform",
-      "source": "Ukrinform",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSTRXQTlaSWFMNVhiSFQ2RzRzYWlxODVETzB2MGJxb3BScUZJREhNQVZLaG9DR2pZa19ScS1qS2FORnFvNzQ0THpNRmx5OXAwMThRck5xZFBwcXhVaXNKVTMwNWluVi1jMnlYMVJPUjVxMV9oa1ZWblBjelp1dXUwNnFTZzAyUmFUYndvUHdWMjRjM2NlWWJVc2ltMEzSAaIBQVVfeXFMTVpSWTRIZHZFVWVYLWpQQXJGX193TUlHOE1wdDYxYk5tNk5aUHdNYkNlZG5MUHItc19YOFZCTkhTaU9pWklOWVF4Q3Rza3NhX0cyN2hrbWNzUnpfc2oxc2NOdEV6QUszemtaME03YzZqQXNlTEdldGRadnRudUZIUnBPLXc1WEJMOUpBQ0Q3RzhuZDhQWWVQVm1QTXBRM1lqREpB?oc=5",
-      "published_at": "2026-11-27T13:35:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "60230428599881073eb5659c",
-      "title": "Ukraine’s Benghazi strike hands Washington a rare opening in North Africa - Washington Examiner",
-      "source": "Washington Examiner",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTjBvdXg4RjBEM0tORng5aDZValNrV3lWQ2hQRnJ6SUUxMFVhOVRtZFRSRVlsR0NaSDh0X1FDOE9OR1FwNVA1cUFVRlc3eWJLVjBGOS10SVQ3aHphM2xrY09SeHRtcFh4N2V0Zm1kY2JNY1NJeTQ3ckV3UUtUVFVNLU1SQlRjb2NyVFZUb0U4SQ?oc=5",
-      "published_at": "2026-11-27T13:00:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "3737f5d75b1ec0387322b5e2",
-      "title": "Raid Regiment Destroyed Russian Pantsir-S1 Air Defense System - Мілітарний",
-      "source": "Мілітарний",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1oQ0JTUGtHOHJnbHdxNkVVVzd3NjBTbU9uWlFMTkx1eXVfUjBVZGZKblNoM0VmMzU0NV9IVTNSM2c1S1lOZVVOc3VNVi1UeC1yR09jN0NlbkYtOFFMTzQ0aHZtSk5QRW1nTm5YQTZmOVRlTnQyVkNJNkZBWDBmd2M?oc=5",
-      "published_at": "2026-11-27T12:49:20Z",
-      "label": "threats_buildup"
-    },
-    {
-      "id": "1977a4b1b5777c895cc29832",
-      "title": "\"They tried to build their lives\": IT couple killed in Russian drone attack on Kharkiv - Українська правда",
-      "source": "Українська правда",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5iMUVBZURjS3dFR3BuYmt0TVZMdTdrWDQwNG9naUtzZVR2bk9oX1RPZWxTNHJDdi1RaVZIZXU1V254ZS14Yk1XNlUxYk1rOEoyMGhNOTloQjZWVnMwdTUtSkVBZkfSAXBBVV95cUxQLWk1eXFyYnFRZ283TGtCQVVyMXlfQlp1bUIzTUlNM2lrWjNnVnQ3M3VYVkpSSVJOYzBTc2M2OENOS3VzV0JlU1dVLXVtT1pUb2dQcnEtRzIyd2hiMDctV2lOY0JDcUhmcnZ4cmVIMHhV?oc=5",
-      "published_at": "2026-11-27T12:48:00Z",
-      "label": "reported_fighting"
-    },
-    {
-      "id": "bb4a003498a557a4f9f414ee",
-      "title": "A drone attack in Kremenchuk damaged windows in homes and commercial premises - Mezha.net",
-      "source": "Mezha.net",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE56ZjN3ZDhNcHlCR2JGeFVqSzRlQzlkUUFUeGFYT2ZoRzZMWjdXeGF1aUVHb3oxNlFZbjRaQVBQR1BHSHNsQnduWVNGbmlQRVVIWm9VcDIxT2xmRTJCcER4NUpNc0pneUxUZl81UXRhbjR6eW5DSXAwUHRsX1RWQQ?oc=5",
-      "published_at": "2026-11-27T12:46:44Z",
       "label": "reported_fighting"
     }
   ],
